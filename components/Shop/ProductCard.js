@@ -5,6 +5,7 @@ import useSWR from "swr";
 import { API_URL } from "config";
 import { Loader } from "react-overlay-loader";
 import { PER_PAGE } from "config";
+import Select from "react-select";
 
 const ProductCard = ({ total }) => {
   const [page, setPage] = useState(1);
@@ -64,6 +65,21 @@ const ProductCard = ({ total }) => {
     )
   );
 
+  const categoryOptions = () => {
+    let options = [];
+
+    options =
+      categories &&
+      categories?.map((item) => {
+        return {
+          value: item?.id,
+          label: item?.name,
+        };
+      });
+
+    return options;
+  };
+
   const nextButtonHandler = () => {
     let next = +page + 1;
     setPage(page + 1);
@@ -99,34 +115,11 @@ const ProductCard = ({ total }) => {
                 <h2>Categories</h2>
                 <div className="bar"></div>
               </div>
-
-              <div className="row">
-                <div
-                  className="col-lg-3 col-md-6 pointer"
-                  onClick={() => setCategory("")}
-                >
-                  <div className={`box ${category === "" && "active"}`}>
-                    <Icon.Star /> All
-                  </div>
-                </div>
-
-                {categoryError && <div>{categoryError}</div>}
-
-                {categories &&
-                  categories.map((cat) => (
-                    <div
-                      className="col-lg-3 col-md-6 pointer"
-                      onClick={() => setCategory(cat?.id)}
-                      key={cat?.id}
-                    >
-                      <div
-                        className={`box ${category === cat?.id && "active"}`}
-                      >
-                        <Icon.Star /> {cat?.name}
-                      </div>
-                    </div>
-                  ))}
-              </div>
+              <Select
+                placeholder="Select any category"
+                options={categoryOptions()}
+                onChange={(e) => setCategory(e.value)}
+              />
             </div>
           </div>
         </div>
