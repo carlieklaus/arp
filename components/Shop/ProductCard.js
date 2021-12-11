@@ -17,7 +17,7 @@ const ProductCard = ({ total }) => {
   );
 
   const categoryFetcher = async () => {
-    const res = await fetch(`${API_URL}/categories`, {
+    const res = await fetch(`${API_URL}/categories?_sort=name`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const ProductCard = ({ total }) => {
   );
 
   const { data: categories, error } = useSWR(
-    `${API_URL}/categories`,
+    `${API_URL}/categories?_sort=name`,
     categoryFetcher
   );
 
@@ -68,16 +68,16 @@ const ProductCard = ({ total }) => {
   const categoryOptions = () => {
     let options = [];
 
-    options =
-      categories &&
-      categories?.map((item) => {
+    if (categories === undefined) {
+      return [];
+    } else {
+      return categories.map((item) => {
         return {
           value: item?.id,
           label: item?.name,
         };
       });
-
-    return options;
+    }
   };
 
   const nextButtonHandler = () => {
@@ -120,6 +120,8 @@ const ProductCard = ({ total }) => {
                 options={categoryOptions()}
                 onChange={(e) => setCategory(e.value)}
               />
+
+              {categoryError && <p className="mr-2">{categoryError}</p>}
             </div>
           </div>
         </div>
