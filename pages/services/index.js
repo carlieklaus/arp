@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { Container, Button, Row, Col, Form } from "react-bootstrap";
 import Link from "next/link";
 import * as Icon from "react-feather";
+import Image from "next/image";
 
 import { API_URL } from "config";
 import { useDebouncedCallback } from "use-debounce";
@@ -204,20 +205,56 @@ const SearchServices = () => {
                       </div>
                     )}
 
-                    <div className="row">
+                    <div className="row mr-2">
                       {allServices &&
+                        allServices !== undefined &&
                         allServices.map((item) => (
                           <div
-                            className="col-lg-6 col-md-6 pointer"
+                            className="col-lg-6 col-sm-6 col-md-6"
                             key={item?.id}
-                            onClick={() => serviceRouter(item?.slug)}
                           >
-                            <div className="box">
-                              <Icon.Star /> {item?.name}
+                            <div className="single-solutions-box">
+                              <div
+                                style={{
+                                  marginTop: "1rem",
+                                  marginBottom: "1rem",
+                                }}
+                              >
+                                <Image
+                                  src={item?.image?.url}
+                                  layout="intrinsic"
+                                  width={100}
+                                  height={100}
+                                />
+                              </div>
+                              <h2>
+                                <Link href={`/services/${item?.slug}`}>
+                                  <a>{item?.name}</a>
+                                </Link>
+                              </h2>
+                              <Container>
+                                <p style={{ marginTop: "2rem" }}>
+                                  {item?.description}
+                                </p>
+                              </Container>
+
+                              <button
+                                onClick={() => serviceRouter(item?.slug)}
+                                className="btn btn-secondary"
+                                style={{
+                                  marginTop: "1rem",
+                                  marginBottom: "1rem",
+                                  backgroundColor: "#0077b5",
+                                }}
+                              >
+                                Explore
+                              </button>
                             </div>
                           </div>
                         ))}
                     </div>
+
+                    <div className="row mr-2"></div>
                   </Container>
                 </div>
               </div>
