@@ -125,9 +125,15 @@ const ProductDetails = ({ product }) => {
                     data-item-weight={Math.ceil(
                       Number(type?.weight) * Number(453.592)
                     )}
-                    data-item-length={Math.ceil(Number(type?.bookLength))}
-                    data-item-width={Math.ceil(Number(type?.width))}
-                    data-item-height={Math.ceil(Number(type?.height))}
+                    data-item-length={Math.ceil(
+                      Number(type?.bookLength) * Number(0.1)
+                    )}
+                    data-item-width={Math.ceil(
+                      Number(type?.width) * Number(0.1)
+                    )}
+                    data-item-height={Math.ceil(
+                      Number(type?.height) * Number(0.1)
+                    )}
                     data-item-shippable={type?.name !== "Ebook"}
                   >
                     Add to Cart
