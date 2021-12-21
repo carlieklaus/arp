@@ -85,7 +85,7 @@ const ProductsDetailsTabs = ({ product }) => {
                             type?.name !== "Ebook" && (
                               <tr key={type?.id}>
                                 <td>{type?.name}</td>
-                                <td>{type?.weight}g</td>
+                                <td>{type?.weight}lbs</td>
                                 <td>{type?.width}cm</td>
                                 <td>{type?.bookLength}cm</td>
                                 <td>{type?.height}cm</td>
