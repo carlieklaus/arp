@@ -71,7 +71,7 @@ const ProductsDetailsTabs = ({ product }) => {
                     <span>Dimensions</span>
                   </Col>
                   <Col sm={12} md={6} lg={6}>
-                    {product?.book_types && (
+                    {product?.book_types.length > 0 && (
                       <Table size="sm">
                         <thead>
                           <tr>
