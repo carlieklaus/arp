@@ -43,11 +43,13 @@ const ProductsDetailsTabs = ({ product }) => {
                     <span>Contributor/Author</span>
                   </Col>
                   <Col sm={12} md={6} lg={6}>
-                    <Link href={`/authors/${product?.author?.username}`}>
-                      <a>
-                        {`${product?.author?.firstname} ${product?.author?.lastname}`}
-                      </a>
-                    </Link>
+                    {product?.author && (
+                      <Link href={`/authors/${product?.author?.username}`}>
+                        <a>
+                          {`${product?.author?.firstname} ${product?.author?.lastname}`}
+                        </a>
+                      </Link>
+                    )}
                   </Col>
                 </Row>
               </li>
@@ -69,31 +71,33 @@ const ProductsDetailsTabs = ({ product }) => {
                     <span>Dimensions</span>
                   </Col>
                   <Col sm={12} md={6} lg={6}>
-                    <Table size="sm">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Weight</th>
-                          <th>Width</th>
-                          <th>Length</th>
-                          <th>Height</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {product?.book_types.map(
-                          (type) =>
-                            type?.name !== "Ebook" && (
-                              <tr key={type?.id}>
-                                <td>{type?.name}</td>
-                                <td>{type?.weight}lbs</td>
-                                <td>{type?.width}cm</td>
-                                <td>{type?.bookLength}cm</td>
-                                <td>{type?.height}cm</td>
-                              </tr>
-                            )
-                        )}
-                      </tbody>
-                    </Table>
+                    {product?.book_types && (
+                      <Table size="sm">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Weight</th>
+                            <th>Width</th>
+                            <th>Length</th>
+                            <th>Height</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {product?.book_types.map(
+                            (type) =>
+                              type?.name !== "Ebook" && (
+                                <tr key={type?.id}>
+                                  <td>{type?.name}</td>
+                                  <td>{type?.weight}lbs</td>
+                                  <td>{type?.width}cm</td>
+                                  <td>{type?.bookLength}cm</td>
+                                  <td>{type?.height}cm</td>
+                                </tr>
+                              )
+                          )}
+                        </tbody>
+                      </Table>
+                    )}
                   </Col>
                 </Row>
               </li>
