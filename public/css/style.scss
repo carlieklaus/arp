@@ -191,6 +191,9 @@ a {
   left: -0.6px;
   z-index: 45;
   background-color: #f2e9e4;
+  overflow-y: scroll;
+  min-height: 20rem;
+  height: 20rem;
 }
 
 .search-all-services {
