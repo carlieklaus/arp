@@ -82,12 +82,12 @@ const Bookstore = ({ total }) => {
           onChange={(e) => debounced(e.target.value)}
         />
         {loading && (
-          <div className="search-results" style={{ padding: "1rem" }}>
+          <div className="no-results" style={{ padding: "1rem" }}>
             Loading...
           </div>
         )}
         {books?.length === 0 && (
-          <div className="search-results" style={{ padding: "1rem" }}>
+          <div className="no-results" style={{ padding: "1rem" }}>
             No results..
           </div>
         )}

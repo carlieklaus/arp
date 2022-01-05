@@ -196,6 +196,15 @@ a {
   height: 20rem;
 }
 
+.no-results {
+  position: absolute;
+  width: 100%;
+  left: -0.6px;
+  right: -17px;
+  z-index: 50;
+  background-color: #f2e9e4;
+}
+
 .search-all-services {
   position: absolute;
   width: 100%;
