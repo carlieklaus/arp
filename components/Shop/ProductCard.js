@@ -236,7 +236,7 @@ const ProductCard = ({ total }) => {
                   </li> */}
 
                   {page < lastPage && (
-                    <li className="page-item">
+                    <li className="page-item pointer">
                       <a className="page-link" onClick={nextButtonHandler}>
                         Next
                       </a>
