@@ -147,7 +147,9 @@ const Bookstore = ({ total }) => {
                           style={{ fontSize: "1rem" }}
                         >{`${book?.title}`}</span>
 
-                        <p>{`by ${book?.author?.firstname} ${book?.author?.lastname}`}</p>
+                        {book?.author && (
+                          <p>{`by ${book?.author?.firstname} ${book?.author?.lastname}`}</p>
+                        )}
                         <p style={{ marginTop: "-1rem" }}>
                           {book?.categories.map((cat) => (
                             <Fragment key={cat?.id}>{cat.name}, </Fragment>
