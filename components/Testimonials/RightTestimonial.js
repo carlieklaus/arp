@@ -4,7 +4,7 @@ const RightTestimonial = ({ title, description, author, image }) => {
       <div className="container">
         <div className="row h-100 justify-content-center align-items-center">
           <div className="col-lg-6 col-md-12 center">
-            <img src={image} alt="main-pic" />
+            <img src={image} alt="main-pic" width="50%" height="50%" />
           </div>
 
           <div className="col-lg-6 col-md-12 services-content">

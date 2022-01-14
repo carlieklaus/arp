@@ -44,6 +44,7 @@ export default function Testimonial() {
         testimonials.map((test, index) =>
           Number(index + 1) % 2 === 0 ? (
             <LeftTestimonial
+              key={index}
               title={test?.title ?? ""}
               description={test?.description ?? ""}
               author={test?.author ?? ""}
@@ -51,6 +52,7 @@ export default function Testimonial() {
             />
           ) : (
             <RightTestimonial
+              key={index}
               title={test?.title ?? ""}
               description={test?.description ?? ""}
               author={test?.author ?? ""}
