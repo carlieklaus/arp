@@ -10,7 +10,7 @@ import { API_URL } from "config";
 
 export default function Testimonial() {
   const testimonialFetcher = async () => {
-    const res = await fetch(`${API_URL}/testimonials`, {
+    const res = await fetch(`${API_URL}/testimonials?_sort=id:desc`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

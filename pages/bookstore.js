@@ -9,6 +9,7 @@ import { useDebouncedCallback } from "use-debounce";
 import QueryString from "qs";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 const Bookstore = ({ total }) => {
   const [books, setBooks] = useState(null);
@@ -71,6 +72,30 @@ const Bookstore = ({ total }) => {
 
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Author Reputation Press is where you can find the most reliable team of author consultants with a combined experience of more than two decades in the industry."
+        />
+
+        <meta
+          property="og:title"
+          content="Bookstore | Author Reputation Press"
+          key="ogtitle"
+        />
+
+        <meta
+          property="og:description"
+          content="Author Reputation Press is where you can find the most reliable team of author consultants with a combined experience of more than two decades in the industry."
+          key="ogdesc"
+        />
+
+        <meta
+          property="og:image"
+          content="/images/logo-book.png"
+          key="ogimage"
+        />
+      </Head>
       <Navbar />
       <PageBanner pageTitle="Bookstore" />
       <Container style={{ position: "relative" }}>
