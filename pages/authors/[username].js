@@ -26,7 +26,24 @@ const AuthorProfile = ({ user }) => {
               <>
                 <div className="col-lg-4 col-md-4">
                   <div className="image">
-                    <img src={user?.picture?.url} alt="profile" />
+                    {user?.picture ? (
+                      <img src={user?.picture?.url} alt="profile" />
+                    ) : (
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src="/images/user.png"
+                          alt="profile"
+                          width={200}
+                          height={200}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
 
