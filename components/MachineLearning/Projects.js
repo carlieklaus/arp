@@ -95,8 +95,8 @@ const Projects = () => {
                   <Image
                     src={product?.bookCover?.url}
                     alt={product?.title}
-                    width="350%"
-                    height="350%"
+                    width={500}
+                    height={600}
                     layout="intrinsic"
                   />
                   <div className="plus-icon">
