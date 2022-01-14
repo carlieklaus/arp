@@ -10,7 +10,7 @@ const MainBanner = () => {
           className="bigdata-analytics-content"
           style={{ marginBottom: "12rem" }}
         >
-          <h1>Fulfill Your Publishing Goals</h1>
+          <h1>Fulfill Your Publishing &amp; Marketing Goals</h1>
           <p>
             Author Reputation Press is where you can find the most reliable team
             of author consultants with a combined experience of more than two
