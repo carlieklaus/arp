@@ -118,21 +118,19 @@ const ProductDetails = ({ product }) => {
                     data-item-image={product?.bookCover?.url}
                     data-item-description={type?.name}
                     data-item-file-guid={
-                      type?.name === "Ebook"
-                        ? "c0fe4c16-9cbb-47b0-b872-60a5048edf41"
-                        : null
+                      type?.name === "Ebook" ? type?.ebookFile : null
                     }
                     data-item-weight={Math.ceil(
-                      Number(type?.weight) * Number(453.592)
+                      Number(type?.weight ?? 1) * Number(453.592)
                     )}
                     data-item-length={Math.ceil(
-                      Number(type?.bookLength) * Number(0.1)
+                      Number(type?.bookLength ?? 1) * Number(0.1)
                     )}
                     data-item-width={Math.ceil(
-                      Number(type?.width) * Number(0.1)
+                      Number(type?.width ?? 1) * Number(0.1)
                     )}
                     data-item-height={Math.ceil(
-                      Number(type?.height) * Number(0.1)
+                      Number(type?.height ?? 1) * Number(0.1)
                     )}
                     data-item-shippable={type?.name !== "Ebook"}
                   >

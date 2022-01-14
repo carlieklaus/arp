@@ -88,7 +88,7 @@ const GetStarted = () => {
         html: `
         Please click the link below to download your guide. Thank you! <br />
         <a
-        href="/guide/testfile.pdf"
+        href="/guide/ARPAuthorGuide2021.pdf"
         target="_blank"
         class="btn btn-primary mr-2"
         download

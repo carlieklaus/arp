@@ -29,9 +29,9 @@ const ProductCard = ({ total }) => {
 
   const bookQuery = () => {
     if (category === "") {
-      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}`;
+      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}&_sort=title`;
     } else {
-      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}&categories.id=${category}`;
+      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}&categories.id=${category}&_sort=title`;
     }
   };
 
