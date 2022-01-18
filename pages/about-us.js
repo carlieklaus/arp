@@ -61,14 +61,6 @@ export default function AboutUs() {
             readers, we aim to work with more authors who are driven by their
             passion and confidence in their work.
           </h6>
-
-          <h6 className="text-center mr-2 ">
-            We have been delivering on our promise of total customer
-            satisfaction while bringing out the best in every published story.
-            With a large volume of books already available to the global
-            readers, we aim to work with more authors who are driven by their
-            passion and confidence in their work.
-          </h6>
         </Container>
       </div>
 
