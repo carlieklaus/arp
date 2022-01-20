@@ -1,5 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import Navbar from "@/components/_App/Navbar";
+import NavbarStyleFour from "@/components/_App/NavbarStyleFour";
+
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import ProductCard from "@/components/Shop/ProductCard";
@@ -96,9 +98,9 @@ const Bookstore = ({ total }) => {
           key="ogimage"
         />
       </Head>
-      <Navbar />
+      <NavbarStyleFour textLogo="white" />
       <PageBanner pageTitle="Bookstore" />
-      <Container style={{ position: "relative" }}>
+      <Container style={{ position: "relative", marginTop: "10rem" }}>
         <Form.Control
           style={{ marginTop: "1rem", width: "100%" }}
           type="text"

@@ -1,34 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "@/utils/ActiveLink";
 import * as Icon from "react-feather";
 import Image from "next/image";
 import { useSession, signOut } from "next-auth/client";
+import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 
-import { useRouter } from "next/router";
-
-const Navbar = () => {
+const Navbar = ({ textLogo = "white" }) => {
   const [menu, setMenu] = React.useState(true);
 
   const [session, loading] = useSession();
 
-  const toggleNavbar = () => {
-    setMenu(!menu);
-  };
+  const [itemsCount, setItemsCount] = useState(0);
 
   const router = useRouter();
 
-  React.useEffect(() => {
-    let elementId = document.getElementById("header");
-    document.addEventListener("scroll", () => {
-      if (window.scrollY > 170) {
-        elementId.classList.add("is-sticky");
-      } else {
-        elementId.classList.remove("is-sticky");
-      }
+  useEffect(() => {
+    const Snip = window.Snipcart;
+    const initialState = Snip.store.getState();
+    setItemsCount(initialState.cart.items.count);
+
+    const unsubscribe = Snip.store.subscribe(() => {
+      const newState = Snip.store.getState();
+      setItemsCount(newState.cart.items.count);
     });
-    // window.scrollTo(0, 0);
-  });
+
+    return () => unsubscribe();
+  }, [setItemsCount]);
+
+  const toggleNavbar = () => {
+    setMenu(!menu);
+  };
 
   const logoutHandler = async () => {
     const data = await signOut({ redirect: false, callbackUrl: "/login" });
@@ -44,6 +46,18 @@ const Navbar = () => {
     router.push(data.url);
   };
 
+  React.useEffect(() => {
+    let elementId = document.getElementById("header");
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 170) {
+        elementId.classList.add("is-sticky");
+      } else {
+        elementId.classList.remove("is-sticky");
+      }
+    });
+    window.scrollTo(0, 0);
+  });
+
   const classOne = menu
     ? "collapse navbar-collapse"
     : "collapse navbar-collapse show";
@@ -52,11 +66,14 @@ const Navbar = () => {
     : "navbar-toggler navbar-toggler-right";
 
   return (
-    <header id="header" className="headroom navbar-style-one">
+    <header
+      id="header"
+      className="headroom navbar-style-four navbar-color-white"
+    >
       <div className="startp-nav">
         <div className="">
           <nav className="navbar navbar-expand-md navbar-light">
-            <Link href="/">
+            <Link href="/it-startup">
               <div className="brand-logo">
                 <a onClick={toggleNavbar} className="navbar-brand">
                   <Image
@@ -66,7 +83,9 @@ const Navbar = () => {
                     alt="logo"
                   />
                 </a>
-                <span className="text-logo">Author Reputation Press ®</span>
+                <span className="text-logo" style={{ color: textLogo }}>
+                  Author Reputation Press ®
+                </span>
               </div>
             </Link>
 
@@ -89,7 +108,7 @@ const Navbar = () => {
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
                   <Link href="/" activeClassName="active">
-                    <a onClick={toggleNavbar} className="nav-link">
+                    <a onClick={toggleNavbar} className="nav-link ">
                       Home
                     </a>
                   </Link>
@@ -124,7 +143,8 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                {/* <li className="nav-item">
+                {/* 
+                <li className="nav-item">
                   <Link href="/#">
                     <a onClick={(e) => e.preventDefault()} className="nav-link">
                       Services <Icon.ChevronDown />
@@ -208,14 +228,13 @@ const Navbar = () => {
                   >
                     <a
                       onClick={toggleNavbar}
-                      className="nav-link"
                       target="_blank"
+                      className="nav-link"
                     >
                       Blog
                     </a>
                   </Link>
                 </li>
-
                 <li className="nav-item">
                   <Link href="/about-us" activeClassName="active">
                     <a onClick={toggleNavbar} className="nav-link">
@@ -228,7 +247,7 @@ const Navbar = () => {
                     <Icon.ShoppingCart /> <span>{countCartItems()}</span>
                   </a>
                 </li> */}
-                <li className="nav-item snipcart-checkout">
+                <li className="nav-item snipcart-checkout pointer">
                   <a className="nav-link ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -244,7 +263,7 @@ const Navbar = () => {
                         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                       />
                     </svg>{" "}
-                    <span className="snipcart-items-count"></span>
+                    <span>{itemsCount} </span>
                   </a>
                 </li>
 

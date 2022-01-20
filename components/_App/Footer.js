@@ -138,7 +138,7 @@ const Footer = () => {
                 <li>
                   <Icon.Mail />
                   Email:{" "}
-                  <a href="mailto:startp@gmail.com">
+                  <a href="mailto:info@authorreputationpress.com">
                     info@authorreputationpress.com
                   </a>
                 </li>

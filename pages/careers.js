@@ -1,6 +1,7 @@
 import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
+import NavbarStyleFour from "@/components/_App/NavbarStyleFour";
 import Head from "next/head";
 import * as Icon from "react-feather";
 import { useState } from "react";
@@ -19,9 +20,9 @@ export default function Careers() {
       <Head>
         <title>Careers | Author Reputation Press</title>
       </Head>
-      <Navbar />
+      <NavbarStyleFour textLogo="white" />
 
-      <PageBanner pageTitle="Join our Growing Team!" />
+      <PageBanner pageTitle="Careers" />
 
       <div className="features-details-area ptb-80">
         <div className="container">
@@ -211,13 +212,15 @@ export default function Careers() {
                     </div>
                   </div>
 
-                  <button
-                    className="btn btn-primary"
-                    style={{ marginTop: "20px" }}
-                    onClick={handleShow}
-                  >
-                    Apply Now!
-                  </button>
+                  <a href="mailto:recruitment@authorreputationpress.com">
+                    <button
+                      className="btn btn-primary"
+                      style={{ marginTop: "20px" }}
+                    >
+                      Apply Now!
+                    </button>
+                  </a>
+                  {/* 
 
                   <Modal
                     show={show}
@@ -316,7 +319,7 @@ export default function Careers() {
                         Submit
                       </button>
                     </Modal.Footer>
-                  </Modal>
+                  </Modal> */}
                 </div>
               </div>
             </div>

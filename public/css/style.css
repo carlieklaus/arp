@@ -984,7 +984,7 @@ Navbar CSS
 }
 
 .navbar-color-white .startp-nav nav .navbar-nav .nav-item a:hover, .navbar-color-white .startp-nav nav .navbar-nav .nav-item a:focus, .navbar-color-white .startp-nav nav .navbar-nav .nav-item a.active {
-  color: #44ce6f !important;
+  color: #f48665 !important;
 }
 
 .navbar-color-white .startp-nav nav .others-option .cart-wrapper-btn {
@@ -6188,15 +6188,72 @@ Page Title CSS
 .page-title-area {
   position: relative;
   z-index: 1;
-  background: transparent url(/images/banner-bg1.jpg) right top no-repeat;
+  background: transparent url(/images/books/books.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 190px;
   padding-bottom: 100px;
   text-align: center;
 }
 
 .page-title-area h2 {
-  font-size: 28px;
+  font-size: 50px;
   font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.page-title-area-career {
+  position: relative;
+  z-index: 1;
+  background: transparent url(/images/books/suit.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 190px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.page-title-area-career h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.page-title-area-career {
+  position: relative;
+  z-index: 1;
+  background: transparent url(/images/books/suit.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 190px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.page-title-area-career h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.page-title-area-services {
+  position: relative;
+  z-index: 1;
+  background: transparent url(/images/books/service.jpg) no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-top: 190px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.page-title-area-services h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
   margin: 0;
 }
 

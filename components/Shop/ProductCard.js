@@ -29,9 +29,9 @@ const ProductCard = ({ total }) => {
 
   const bookQuery = () => {
     if (category === "") {
-      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}&_sort=title`;
+      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}`;
     } else {
-      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}&categories.id=${category}&_sort=title`;
+      return `${API_URL}/books?_limit=${PER_PAGE}&_start=${start}&categories.id=${category}`;
     }
   };
 
@@ -92,15 +92,15 @@ const ProductCard = ({ total }) => {
     setStart(Number(prev) === 1 ? 0 : (Number(prev) - 1) * Number(PER_PAGE));
   };
 
-  const getPaginationText = () => {
-    var start = (page - 1) * PER_PAGE + 1;
-    var end = Math.min(
-      start + PER_PAGE - 1,
-      category === "" ? total : products?.length
-    );
+  // const getPaginationText = () => {
+  //   var start = (page - 1) * PER_PAGE + 1;
+  //   var end = Math.min(
+  //     start + PER_PAGE - 1,
+  //     category === "" ? total : products?.length
+  //   );
 
-    return `${start} - ${end} of ${category === "" ? total : products?.length}`;
-  };
+  //   return `${start} - ${end} of ${category === "" ? total : products?.length}`;
+  // };
 
   return (
     <div className="shop-area ptb-80">
@@ -125,19 +125,16 @@ const ProductCard = ({ total }) => {
             </div>
           </div>
         </div>
-        <div className="woocommerce-topbar">
-          <div className="row align-items-center">
-            <div className="col-lg-9 col-md-7 col-sm-7">
-              <div className="woocommerce-result-count">
-                {products?.length > 0 ? (
-                  <p>Showing {getPaginationText()} results</p>
-                ) : (
+        {products?.length == 0 && (
+          <div className="woocommerce-topbar">
+            <div className="row align-items-center">
+              <div className="col-lg-9 col-md-7 col-sm-7">
+                <div className="woocommerce-result-count">
                   <p>Nothing to show</p>
-                )}
+                </div>
               </div>
-            </div>
 
-            {/* <div className="col-lg-3 col-md-5 col-sm-5">
+              {/* <div className="col-lg-3 col-md-5 col-sm-5">
               <div className="woocommerce-topbar-ordering">
                 <select className="form-select">
                   <option value="1">Sort by Popularity</option>
@@ -149,8 +146,9 @@ const ProductCard = ({ total }) => {
                 </select>
               </div>
             </div> */}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="row justify-content-md-center">
           {!products || !categories ? (

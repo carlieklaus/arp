@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "@/utils/ActiveLink";
 import * as Icon from "react-feather";
 import Image from "next/image";
@@ -6,12 +6,27 @@ import { useSession, signOut } from "next-auth/client";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 
-const NavbarStyleFour = ({ textLogo }) => {
+const NavbarStyleFour = ({ textLogo = "white" }) => {
   const [menu, setMenu] = React.useState(true);
 
   const [session, loading] = useSession();
 
+  const [itemsCount, setItemsCount] = useState(0);
+
   const router = useRouter();
+
+  useEffect(() => {
+    const Snip = window.Snipcart;
+    const initialState = Snip.store.getState();
+    setItemsCount(initialState.cart.items.count);
+
+    const unsubscribe = Snip.store.subscribe(() => {
+      const newState = Snip.store.getState();
+      setItemsCount(newState.cart.items.count);
+    });
+
+    return () => unsubscribe();
+  }, [setItemsCount]);
 
   const toggleNavbar = () => {
     setMenu(!menu);
@@ -232,7 +247,7 @@ const NavbarStyleFour = ({ textLogo }) => {
                     <Icon.ShoppingCart /> <span>{countCartItems()}</span>
                   </a>
                 </li> */}
-                <li className="nav-item snipcart-checkout">
+                <li className="nav-item snipcart-checkout pointer">
                   <a className="nav-link ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +263,7 @@ const NavbarStyleFour = ({ textLogo }) => {
                         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                       />
                     </svg>{" "}
-                    <span className="snipcart-items-count"></span>
+                    <span>{itemsCount} </span>
                   </a>
                 </li>
 
@@ -307,4 +322,5 @@ const NavbarStyleFour = ({ textLogo }) => {
   );
 };
 
+NavbarStyleFour.defaultProps;
 export default NavbarStyleFour;

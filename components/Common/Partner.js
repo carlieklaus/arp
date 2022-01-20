@@ -22,11 +22,13 @@ const schema = yup.object().shape({
   // ),
   manuscript: yup
     .mixed()
-    .required("You need to provide a file")
+    .test("fileSize", "File is required", (value) => {
+      return value === undefined;
+    })
     .test("fileSize", "The file is too large", (value) => {
       return value && Number(value[0]?.size) < Number(500000000);
     })
-    .test("type", "We only support pdf files", (value) => {
+    .test("type", "We only support pdf, docx,  files", (value) => {
       return value && value[0]?.type === "application/pdf";
     }),
 });
@@ -150,8 +152,10 @@ const Partner = () => {
                   <PhoneInputWithCountry
                     defaultCountry="US"
                     placeholder="Enter phone number"
+                    defaultValue={""}
                     control={control}
                     name="contact"
+                    rules={{ required: true }}
                     // {...register("contact")}
                   />
                   {errors?.contact && (
