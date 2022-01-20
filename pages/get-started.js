@@ -234,11 +234,11 @@ const GetStarted = () => {
                   </Col>
                   <Col lg={6} md={6} className="center mr-2">
                     <Image
-                      src="/images/authorguide1.png"
+                      src="/images/authorguide2022.png"
                       className="animate__animated animate__fadeInUp animate__delay-0.6s"
                       alt="Authors Guide"
-                      width={800}
-                      height={700}
+                      width={400}
+                      height={550}
                       layout="intrinsic"
                     />
                   </Col>

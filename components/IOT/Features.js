@@ -29,12 +29,12 @@ const Features = () => {
 
             <div className="col-lg-6 iot-features-image">
               <Image
-                src="/images/authorguide1.png"
+                src="/images/authorguide2022.png"
                 className="animate__animated animate__fadeInUp animate__delay-0.6s"
                 alt="Authors Guide"
-                width={700}
-                height={600}
-                layout="responsive"
+                width={400}
+                height={550}
+                layout="intrinsic"
               />
             </div>
           </div>
