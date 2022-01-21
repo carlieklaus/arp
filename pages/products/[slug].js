@@ -6,7 +6,6 @@ import ProductSlider from "@/components/Shop/ProductSlider";
 import ProductsDetailsTabs from "@/components/Shop/ProductsDetailsTabs";
 import { useRouter } from "next/router";
 import { API_URL } from "config";
-import disableScroll from "disable-scroll";
 
 const ProductDetails = ({ product }) => {
   const router = useRouter();
@@ -14,8 +13,20 @@ const ProductDetails = ({ product }) => {
   const [bookTypePrice, setBookTypePrice] = useState("");
   const [selectedType, setSelectedType] = useState(null);
 
+  const disableScroll = () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+    // if any scroll is attempted,
+    // set this to the previous value
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+      window.onscroll = function () {};
+    };
+  };
+
   const selectChangeHandler = (price, name) => {
-    disableScroll.on();
+    disableScroll();
     setBookTypePrice(price);
     setSelectedType(name);
   };

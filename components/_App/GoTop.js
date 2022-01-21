@@ -1,6 +1,5 @@
 import React from "react";
 import * as Icon from "react-feather";
-import disableScroll from "disable-scroll";
 
 const GoTop = ({ scrollStepInPx, delayInMs }) => {
   const [thePosition, setThePosition] = React.useState(false);
@@ -24,7 +23,6 @@ const GoTop = ({ scrollStepInPx, delayInMs }) => {
   };
 
   const scrollToTop = () => {
-    disableScroll.off();
     timeoutRef.current = setInterval(onScrollStep, delayInMs);
   };
 
