@@ -11,22 +11,22 @@ const NavbarStyleFour = ({ textLogo = "white" }) => {
 
   const [session, loading] = useSession();
 
-  const [itemsCount, setItemsCount] = useState(0);
+  // const [itemsCount, setItemsCount] = useState(0);
 
   const router = useRouter();
 
-  useEffect(() => {
-    const Snip = window.Snipcart;
-    const initialState = Snip.store.getState();
-    setItemsCount(initialState.cart.items.count);
+  // useEffect(() => {
+  //   const Snip = window.Snipcart;
+  //   const initialState = Snip.store.getState();
+  //   setItemsCount(initialState.cart.items.count);
 
-    const unsubscribe = Snip.store.subscribe(() => {
-      const newState = Snip.store.getState();
-      setItemsCount(newState.cart.items.count);
-    });
+  //   const unsubscribe = Snip.store.subscribe(() => {
+  //     const newState = Snip.store.getState();
+  //     setItemsCount(newState.cart.items.count);
+  //   });
 
-    return () => unsubscribe();
-  }, [setItemsCount]);
+  //   return () => unsubscribe();
+  // }, [setItemsCount]);
 
   const toggleNavbar = () => {
     setMenu(!menu);
@@ -263,7 +263,9 @@ const NavbarStyleFour = ({ textLogo = "white" }) => {
                         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                       />
                     </svg>{" "}
-                    <span>{itemsCount} </span>
+                    <span className="snipcart-items-count">
+                      {/* {itemsCount}  */}
+                    </span>
                   </a>
                 </li>
 
