@@ -59,7 +59,7 @@ const Barrie = () => {
               <p style={{ marginTop: "1rem" }}>
                 Regale your young readers with stories of magical creatures or
                 animated objects. Let us help you turn those tales in to print
-                with our Seuss publishing package, complete with your desired
+                with our Barrie publishing package, complete with your desired
                 illustrations and other inclusions. See the full package
                 inclusion below:
               </p>
