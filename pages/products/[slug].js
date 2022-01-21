@@ -6,9 +6,7 @@ import ProductSlider from "@/components/Shop/ProductSlider";
 import ProductsDetailsTabs from "@/components/Shop/ProductsDetailsTabs";
 import { useRouter } from "next/router";
 import { API_URL } from "config";
-import { Form } from "react-bootstrap";
-import Link from "next/link";
-import * as Icon from "react-feather";
+import disableScroll from "disable-scroll";
 
 const ProductDetails = ({ product }) => {
   const router = useRouter();
@@ -17,6 +15,7 @@ const ProductDetails = ({ product }) => {
   const [selectedType, setSelectedType] = useState(null);
 
   const selectChangeHandler = (price, name) => {
+    disableScroll.on();
     setBookTypePrice(price);
     setSelectedType(name);
   };
@@ -64,7 +63,11 @@ const ProductDetails = ({ product }) => {
                   </li>
                 </ul> */}
 
-                <div className="row" style={{ marginTop: "3rem" }}>
+                <div style={{ marginTop: "2rem" }}>
+                  <h2>{bookTypePrice !== "" ? `$ ${bookTypePrice}` : ""}</h2>
+                </div>
+
+                <div className="row" style={{ marginTop: "2rem" }}>
                   {product?.book_types.map((type) => (
                     <div
                       className="col-lg-3 col-sm-3 col-md-3"
