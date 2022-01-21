@@ -42,9 +42,7 @@ const ProductDetails = ({ product }) => {
 
             <div className="col-lg-7">
               <div className="products-details">
-                <h3>{product?.title}</h3>
-
-                <div className="price">{product?.priceRange}</div>
+                <h2>{product?.title}</h2>
 
                 {/* Rating */}
                 {/* 
@@ -66,11 +64,7 @@ const ProductDetails = ({ product }) => {
                   </li>
                 </ul> */}
 
-                <div>
-                  <h2>{bookTypePrice !== "" ? `$ ${bookTypePrice}` : ""}</h2>
-                </div>
-
-                <div className="row ">
+                <div className="row" style={{ marginTop: "3rem" }}>
                   {product?.book_types.map((type) => (
                     <div
                       className="col-lg-3 col-sm-3 col-md-3"
@@ -86,24 +80,6 @@ const ProductDetails = ({ product }) => {
                     </div>
                   ))}
                 </div>
-                {/* <Form.Select
-                  aria-label="Book Type"
-                  style={{ marginBottom: "2rem", maxWidth: "30rem" }}
-                  value={selectedType ? selectedType : "Select book type"}
-                  onChange={selectChangeHandler}
-                >
-                  <option disabled>Select book type</option>
-
-                  {product?.book_types.map((type) => (
-                    <option value={type?.id} key={type?.id}>
-                      {type?.name}
-                    </option>
-                  ))}
-                </Form.Select> */}
-                {/* <p>
-                  Select a book type to reveal the <strong>Add to Cart</strong>{" "}
-                  button and the <strong>Price</strong>
-                </p> */}
 
                 {product?.book_types.map((type) => (
                   <button
