@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const DiscoverArea = () => {
   return (
@@ -7,29 +8,33 @@ const DiscoverArea = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12">
-            <div className="discover-image">
-              <img
-                src="/images/bigdata-analytics/discover-img1.png"
-                alt="image"
-              />
-              <img
-                src="/images/bigdata-analytics/discover-img2.jpg"
-                alt="image"
-              />
-            </div>
+            <Image
+              src="/images/authorguide2022.png"
+              className="animate__animated animate__fadeInUp animate__delay-0.6s"
+              alt="Authors Guide"
+              width={400}
+              height={550}
+              layout="intrinsic"
+            />
           </div>
 
           <div className="col-lg-6 col-md-12">
             <div className="discover-content">
-              <h2>Take The Easy Path To Publish Your Work.</h2>
+              <h2>Get Your Author's Guide</h2>
               <p>
                 Author Reputation Press’ publishing guide provides a
                 step-by-step method of bringing your manuscript from scratch to
-                completion.
+                completion as well as harness our broad distribution network for
+                books, reaching millions of readers worldwide.
+              </p>
+              <p>
+                Sign up for the Author’s Guide to Successful Publishing today!
+                Inside, you’ll have access to a proven roadmap to take your work
+                from idea to a professionally published book.
               </p>
 
               <Link href="/get-started">
-                <a className="btn btn-primary">Discover More</a>
+                <a className="btn btn-primary">GET IT NOW!</a>
               </Link>
             </div>
           </div>

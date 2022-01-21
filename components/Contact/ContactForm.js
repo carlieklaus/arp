@@ -173,6 +173,9 @@ const ContactForm = () => {
                       placeholder="Enter phone number"
                       control={control}
                       name="phone"
+                      defaultValue={""}
+                      rules={{ required: true }}
+                      r
                       // {...register("contact")}
                     />
                     {errors?.phone && (

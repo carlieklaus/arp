@@ -176,6 +176,8 @@ const GetStarted = () => {
                           placeholder="Enter phone number"
                           control={control}
                           name="contact"
+                          defaultValue={""}
+                          rules={{ required: true }}
                           // {...register("contact")}
                         />
                         {/* <Form.Control

@@ -65,6 +65,7 @@ export default function AboutUs() {
                         src="/images/books/callcenter.jpg"
                         className="animate__animated animate__fadeInUp"
                         alt="image"
+                        loading="lazy"
                       />
                     </div>
 
@@ -158,6 +159,7 @@ export default function AboutUs() {
                         src="/images/books/achieve.JPG"
                         className="animate__animated animate__fadeInUp"
                         alt="image"
+                        loading="lazy"
                       />
                     </div>
                   </div>
