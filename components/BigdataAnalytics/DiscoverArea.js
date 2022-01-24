@@ -33,7 +33,7 @@ const DiscoverArea = () => {
                 from idea to a professionally published book.
               </p>
 
-              <Link href="/get-started">
+              <Link href="/authors-guide">
                 <a className="btn btn-primary">GET IT NOW!</a>
               </Link>
             </div>
