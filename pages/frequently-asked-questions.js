@@ -230,10 +230,10 @@ const FrequentlyAskedQuestions = () => {
                         Yes, we handle the registration of copyright for your
                         book. For more information, visit{" "}
                         <a
-                          href=" https://authorreputationpress.com/content-creativity/"
+                          href=" https://authorreputationpress.com/services/content-creativity/"
                           target="_blank"
                         >
-                          https://authorreputationpress.com/content-creativity/
+                          https://authorreputationpress.com/services/content-creativity/
                         </a>
                       </Accordion.Body>
                     </Accordion.Item>

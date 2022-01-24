@@ -23,7 +23,7 @@ const SubmitManuscript = () => {
           <ul style={{ fontSize: "1rem" }}>
             <li>Use double line spacing</li>
             <li>
-              Use the common fonts such as Times New Roman, Georgia, Calibri
+              Use the common fonts such as Times New Roman, Georgia, and Calibri
             </li>
             <li>Set your font size to 12</li>
             <li>Include page numbers</li>
@@ -54,8 +54,7 @@ const SubmitManuscript = () => {
         </h6>
         <h6 style={{ lineHeight: "2rem" }}>
           Our team of editors and proofreaders will guide you through every step
-          of polishing your work if it needs a bit more work and revision. We
-          are accepting manuscripts in the following genre:
+          of polishing your work if it needs a bit more work and revision.
         </h6>
       </Container>
 
