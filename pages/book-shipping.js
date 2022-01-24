@@ -237,7 +237,7 @@ const BookShipping = () => {
                   <ul>
                     <li>
                       Shipping rates for Alaska and Hawaii may vary, call Author
-                      Reputation Press at 1-800-220-7660.
+                      Reputation Press at 1-888-829-0229.
                     </li>
                     <li>
                       Delivery time may take up to 10 business days, depending

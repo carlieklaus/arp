@@ -144,7 +144,7 @@ const FrequentlyAskedQuestions = () => {
                       Yes, Author Reputation Press offers translation services
                       in a number of languages other than English, including
                       Spanish. To know more about other language support we
-                      offer, call us at 1-800-220-7660.
+                      offer, call us at 1-888-829-0229.
                     </Accordion.Body>
                   </Accordion.Item>
 

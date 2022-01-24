@@ -394,7 +394,7 @@ const PrivacyPolicy = () => {
                       <p style={{ color: "black" }}>
                         45 Dan Road Suite 36 Canton, MA 02021
                       </p>{" "}
-                      <p style={{ color: "black" }}>PHONE: 1-800-220-7660</p>
+                      <p style={{ color: "black" }}>PHONE: 1-888-829-0229</p>
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>

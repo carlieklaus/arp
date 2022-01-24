@@ -136,7 +136,7 @@ const NTS = () => {
                     been exhibiting published works at national and
                     international book events over the past 85 years, cementing
                     its reputation as a reliable resource for publishers,
-                    librarians and educators.
+                    librarians, and educators.
                   </p>
                 </div>
                 <div style={{ marginTop: "2rem" }}>
@@ -160,7 +160,7 @@ const NTS = () => {
                     For bundles and discounts, our Marketing Consultants are
                     available for pro bono consultation via e-mail at
                     info@authorreputationpress.com or telephone at
-                    1-800-220-7660.
+                    1-888-829-0229.
                   </p>
                   <p style={{ marginTop: "1rem", fontStyle: "italic" }}>
                     Disclaimer: Prices are subject to change without prior

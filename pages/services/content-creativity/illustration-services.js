@@ -236,7 +236,7 @@ const IllustrationService = () => {
 
                 <h5 style={{ marginTop: "2rem" }}>
                   Avail of any of our book illustration services today by
-                  calling one of our author advisors at 1-800-220-7660.
+                  calling one of our author advisors at 1-888-829-0229.
                 </h5>
                 <h6 style={{ marginTop: "2rem", fontStyle: "italic" }}>
                   Note: Authors can supply their own illustration or graphic
