@@ -28,7 +28,7 @@ const BigdataFunFacts = () => {
           <h3>Have any question about us?</h3>
           <p>Don't hesitate to contact us</p>
 
-          <Link href="/contact-us">
+          <Link href="/contact">
             <a className="btn btn-primary">Contact Us</a>
           </Link>
         </div>
