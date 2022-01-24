@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-12" style={{ marginBottom: "30px" }}>
             <div className="logo">
-              <Link href="/it-startup">
+              <Link href="/">
                 <a>
                   <Image
                     src="/images/logo-2.png"

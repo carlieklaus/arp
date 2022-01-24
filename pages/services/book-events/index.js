@@ -52,22 +52,6 @@ export default function BookEvents() {
                 </div>
 
                 <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/national-show">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Exhibit – National Show
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/nts">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Exhibit – NTS
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
                   <Link href="/services/book-events/package-international-show">
                     <div className="box" style={{ cursor: "pointer" }}>
                       <Icon.Film /> Book Exhibit Package – International Show
@@ -75,6 +59,13 @@ export default function BookEvents() {
                   </Link>
                 </div>
 
+                <div className="col-lg-6 col-md-6">
+                  <Link href="/services/book-events/national-show">
+                    <div className="box" style={{ cursor: "pointer" }}>
+                      <Icon.Film /> Book Exhibit – National Show
+                    </div>
+                  </Link>
+                </div>
                 <div className="col-lg-6 col-md-6">
                   <Link href="/services/book-events/package-national-show">
                     <div className="box" style={{ cursor: "pointer" }}>
@@ -94,6 +85,14 @@ export default function BookEvents() {
                   <Link href="/services/book-events/international-book-signing">
                     <div className="box" style={{ cursor: "pointer" }}>
                       <Icon.Film /> Book Signing – International
+                    </div>
+                  </Link>
+                </div>
+
+                <div className="col-lg-6 col-md-6">
+                  <Link href="/services/book-events/nts">
+                    <div className="box" style={{ cursor: "pointer" }}>
+                      <Icon.Film /> Book Exhibit – NTS
                     </div>
                   </Link>
                 </div>
