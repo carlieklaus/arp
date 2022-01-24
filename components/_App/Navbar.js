@@ -73,7 +73,7 @@ const Navbar = ({ textLogo = "white" }) => {
       <div className="startp-nav">
         <div className="">
           <nav className="navbar navbar-expand-md navbar-light">
-            <Link href="/it-startup">
+            <Link href="/">
               <div className="brand-logo">
                 <a onClick={toggleNavbar} className="navbar-brand">
                   <Image
