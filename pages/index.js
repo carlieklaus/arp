@@ -50,5 +50,16 @@ const BigdataAnalytics = () => {
     </>
   );
 };
+export const getServerSideProps = async (context) => {
+  const { req, res } = context;
 
+  if (req.headers.host.match(/^www/) !== null) {
+    res.writeHead(301, {
+      location: "https://" + req.headers.host.replace(/^www./, "") + req.url,
+    });
+    res.end();
+  }
+
+  return { props: {} };
+};
 export default BigdataAnalytics;
