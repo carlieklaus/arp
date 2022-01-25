@@ -12,14 +12,12 @@ module.exports = {
   images: {
     domains: ["res.cloudinary.com"],
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.authorreputationpress.com" }],
-        destination: "https://authorreputationpress.com/",
-        permanent: true,
-      },
-    ];
-  },
+  redirects: async () => [
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "www.authorreputationpress.com" }],
+      destination: "https://authorreputationpress.com/",
+      permanent: true,
+    },
+  ],
 };
