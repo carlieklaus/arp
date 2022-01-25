@@ -6,11 +6,8 @@ import Services from "@/components/BigdataAnalytics/Services";
 import BigdataFunFacts from "@/components/BigdataAnalytics/BigdataFunFacts";
 import Footer from "@/components/_App/Footer";
 import Projects from "@/components/MachineLearning/Projects";
-import Features from "@/components/IOT/Features";
-import Link from "next/link";
 import Head from "next/head";
 import PublishingMarketing from "@/components/BigdataAnalytics/PublishingMarketing";
-import GoogleMapsBookshops from "@/components/BigdataAnalytics/GoogleMapsBookshops";
 
 const BigdataAnalytics = () => {
   return (
@@ -47,7 +44,6 @@ const BigdataAnalytics = () => {
       {/* <Features /> */}
       <PublishingMarketing />
 
-      <GoogleMapsBookshops />
       <BigdataFunFacts />
 
       <Footer />

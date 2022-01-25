@@ -59,7 +59,7 @@ const AuthorSpotlight = () => {
 
                 <p style={{ marginTop: "1rem" }}>
                   Author Spotlight Inclusions: video editing, script writing,
-                  data gathering, advanced product.
+                  data gathering, and advanced product.
                 </p>
 
                 <div style={{ marginTop: "1rem" }}>
@@ -118,8 +118,8 @@ const AuthorSpotlight = () => {
                     metropolitan area only, additional travel tax may incur for
                     areas outside the metropolitan parts of each state, 10 miles
                     away from our partner’s studio, and particularly interviews
-                    to be shot in the UK, Australia & Canada.If you intend to be
-                    filmed in a public place, you must be able to secure a
+                    to be shot in the UK, Australia, and Canada. If you intend
+                    to be filmed in a public place, you must be able to secure a
                     release for the location before video can be recorded there.
                   </p>
                 </div>

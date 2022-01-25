@@ -5,6 +5,7 @@ import * as Icon from "react-feather";
 import Head from "next/head";
 import Link from "next/link";
 import { Button } from "react-bootstrap";
+import GoogleMapsBookshops from "@/components/BigdataAnalytics/GoogleMapsBookshops";
 import { useRouter } from "next/router";
 
 export default function BookstoreFundamentals() {
@@ -92,6 +93,8 @@ export default function BookstoreFundamentals() {
                   </Link>
                 </div>
               </div>
+
+              <GoogleMapsBookshops />
             </div>
           </div>
         </div>

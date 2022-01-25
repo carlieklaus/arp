@@ -63,7 +63,7 @@ const ComprehensiveFacebookAd = () => {
 
                 <p style={{ marginTop: "1rem" }}>
                   Building recognition with social networking sites won’t be an
-                  easy task if you do it all by yourself, however. You need not
+                  easy task if you do it all by yourself. However, you need not
                   to worry, our Facebook advertising offers a hassle-free
                   service tailored according to your requirements and needs.
                   From content creation to platform distribution, our social
@@ -72,7 +72,7 @@ const ComprehensiveFacebookAd = () => {
                 </p>
                 <p style={{ marginTop: "1rem" }}>
                   Are you ready yet? Reach hundreds of millions of people across
-                  the world with any of the following options.
+                  the world with any of the following options:
                 </p>
 
                 <div style={{ marginTop: "2rem" }}>

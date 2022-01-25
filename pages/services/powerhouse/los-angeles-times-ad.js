@@ -42,13 +42,13 @@ const LosAngelesTimesAd = () => {
                 <h5>Trusted. Credible. Ambitious.</h5>
                 <p style={{ marginTop: "1rem" }}>
                   The publication is the largest metropolitan daily newspaper in
-                  the country. They reach distinct, affluent and diverse
-                  audiences of multiple generations, demographics, preferences
+                  the country. They reach distinct, affluent, and diverse
+                  audiences of multiple generations, demographics, preferences,
                   and interests.
                 </p>
                 <p style={{ marginTop: "1rem" }}>
                   LA Times brings truth to power through creative storytelling,
-                  original reporting and accountability journalism that impacts
+                  original reporting, and accountability journalism that impacts
                   lives and pushes change. They have 1.2 million daily print
                   readers and 1.7 million Sunday print readers in the U.S.
                 </p>
@@ -104,7 +104,7 @@ const LosAngelesTimesAd = () => {
                           </h3>
                           <p>
                             LA Times will send an electronic version of the
-                            magazine to the authors; The arts and book sections
+                            magazine to the authors; the arts and book sections
                             run every Sunday.
                           </p>
                         </div>
@@ -117,13 +117,13 @@ const LosAngelesTimesAd = () => {
                         viewing than online ads. Since the newspaper or magazine
                         may sit on a table or rack at a business or home,
                         repeated exposures are allowed. Flyers, brochures, and
-                        other physical pieces are often reviewed multiple, times
+                        other physical pieces are often reviewed multiple times
                         and shared with other prospects. Unlike digital
-                        messaging, print media does not disappear after
-                        generating an impression. It piles up, creates clutter,
-                        and is thereby reviewed once more, even before recycling
-                        or discarding. Because of this long shelf life, you can
-                        benefits from having your ad seen by more people more
+                        messaging, print media do not disappear after generating
+                        an impression. It piles up, creates clutter, and is
+                        thereby reviewed once more, even before recycling or
+                        discarding. Because of this long shelf life, you can
+                        benefit from having your ad seen by more people more
                         often.
                       </p>
                     </div>

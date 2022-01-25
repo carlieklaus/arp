@@ -50,8 +50,8 @@ const HollywoodBookToScreen = () => {
                   See your book transform into motion picture through our
                   Book-to-Screen service. A film adaptation will be developed
                   based on your story after a thorough scrutiny and analysis of
-                  it. We will evaluate your book’s cover, title, character, plot
-                  and all its creative components.
+                  it. We will evaluate your book’s cover, title, character,
+                  plot, and all its creative components.
                 </p>
                 <div style={{ marginTop: "2rem" }}>
                   <h5>Movie Script Coverage</h5>
@@ -60,7 +60,7 @@ const HollywoodBookToScreen = () => {
                     through our Movie Script Coverage and be discovered by major
                     studios in search for stories to adapt into motion pictures.
                     To be considered for a movie adaptation, your book needs to
-                    have these basic elements: a cover sheet, synopsis and
+                    have these basic elements: a cover sheet, synopsis, and
                     comments. We will endorse your manuscript to movie
                     producers, production companies, and studios. Submit a copy
                     of your manuscript today and we will fine-tune your book to
@@ -73,12 +73,12 @@ const HollywoodBookToScreen = () => {
                   <h5>Our Movie Script Coverage Features</h5>
                   <p style={{ marginTop: "1rem" }}>
                     A carefully written summary of your work showcasing its
-                    characters and plot Comments about the strengths and
+                    characters and plot. Comments about the strengths and
                     weaknesses of your book as a factor for consideration of
-                    your work’s potential movie or TV adaptation US Copyright
+                    your work’s potential movie or TV adaptation. US Copyright
                     Office application to grant you full ownership of your
                     coverage, including those conducted during your pitch
-                    appointments
+                    appointments.
                   </p>
                 </div>
 
@@ -121,7 +121,7 @@ const HollywoodBookToScreen = () => {
                     Movie Screenplay service. We are connected to a network of
                     film producers who can help turn your book into a
                     blockbuster movie through creative concept video production,
-                    post-production, multimedia and advertising services. The
+                    post-production, multimedia, and advertising services. The
                     screenplay will focus on your story’s pivotal scenes, major
                     characters, and the dialogue that gives life to the story.
                   </p>
@@ -141,10 +141,12 @@ const HollywoodBookToScreen = () => {
                     </li>
                     <li>
                       Registration of your screenplay to gain attention from
-                      co-writers, movie reviewers, and producers US Copyright
-                      Office application to help you retain full ownership of
-                      your screenplay, which you can use to produce your own
-                      indie film
+                      co-writers, movie reviewers, and producers
+                    </li>
+                    <li>
+                      US Copyright Office application to help you retain full
+                      ownership of your screenplay, which you can use to produce
+                      your own indie film
                     </li>
                   </ul>
                 </div>
