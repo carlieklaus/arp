@@ -27,6 +27,8 @@ class MyDocument extends Document {
             async
             src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"
           ></script>
+          <script async src="/scripts/olark.js"></script>
+
           <div
             hidden
             id="snipcart"
