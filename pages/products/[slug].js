@@ -45,7 +45,7 @@ const ProductDetails = ({ product }) => {
           <button className="btn btn-primary" onClick={backButtonHandler}>
             Go Back
           </button>
-          <div className="row align-items-center">
+          <div className="row align-items-center" style={{ marginTop: "3rem" }}>
             <div className="col-lg-5">
               <ProductSlider images={[product?.bookCover?.url]} />
             </div>

@@ -49,12 +49,12 @@ const PublisherWeekly = () => {
                 </p>
 
                 <p style={{ marginTop: "1rem" }}>
-                  With a print readership of 68 , 000 , it is the most trusted
+                  With a print readership of 68,000, it is the most trusted
                   publication on the market. Readers rely on PW for its
-                  impartial book reviews as well as full- length articles
+                  impartial book reviews as well as full-length articles
                   featuring books and authors. As the most powerful and
                   influential brand in the book business, PW reaches into a
-                  critical market of industry insiders, key decision makers and
+                  critical market of industry insiders, key decision makers, and
                   a rapidly growing consumer segment.
                 </p>
 

@@ -138,14 +138,14 @@ const BrandingAndMarketing = () => {
                 <div style={{ marginTop: "2rem" }}>
                   <h4>Superior Express Custom Publicity</h4>
                   <p style={{ marginTop: "1rem" }}>
-                    This branding and marketing strategy transcend the
-                    traditional media exposure to involve outreach across social
-                    media platforms including Facebook, Twitter, Pinterest,
-                    LinkedIn, Goodreads, and dedicated blog sites. Additionally,
-                    this service includes book trailer placement, digital
-                    marketing, SEO consulting, feature articles on literary and
-                    academic magazines, coaching support for manuscript
-                    revisions, blog creation, and physical book tours.
+                    This branding and marketing strategy transcends traditional
+                    media exposure to include outreach across social media
+                    platforms including Facebook, Twitter, Pinterest, LinkedIn,
+                    Goodreads, and dedicated blog sites. Additionally, this
+                    service includes book trailer placement, digital marketing,
+                    SEO consulting, feature articles in literary and academic
+                    magazines, coaching support for manuscript revisions, blog
+                    creation, and physical book tours.
                   </p>
                   <p style={{ marginTop: "1rem" }}>
                     The timeframe for this type of publicity is flexible based

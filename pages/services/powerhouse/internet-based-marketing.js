@@ -15,7 +15,7 @@ const InternetBasedMarketing = () => {
   return (
     <>
       <Head>
-        <title>Internet Based Marketing</title>
+        <title>Internet-Based Marketing</title>
       </Head>
       <Navbar />
 
@@ -135,9 +135,9 @@ const InternetBasedMarketing = () => {
                         We will run an aggressive ad campaign for your book on
                         two of the world’s biggest online storefronts: Amazon
                         and Ingram. Amazon is one of the world’s largest online
-                        retailers with 183 million unique visitors every
-                        month.Majority of US consumers start their web searches
-                        with Amazon more often than anywhere else on the web.​
+                        retailers with 183 million unique visitors every month.
+                        Majority of US consumers start their web searches with
+                        Amazon more often than anywhere else on the web.
                       </p>
                       <p>
                         Over 40,000 retailers, educators, and librarians

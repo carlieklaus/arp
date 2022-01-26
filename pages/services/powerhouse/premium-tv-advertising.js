@@ -41,7 +41,7 @@ const PremiumTvAdvertising = () => {
 
                 <p style={{ marginTop: "1rem" }}>
                   Our TV advertising service will literally make your book known
-                  across boundaries with international and nationwide coverage.
+                  across boundaries with national and international coverage.
                   Since television is still one of the most powerful advertising
                   platforms, you will be able to get your message across your
                   target audience and create a buzz for your work.
@@ -237,8 +237,8 @@ const PremiumTvAdvertising = () => {
                         Our team will edit your existing TV ad material
                         (provided you submit it to us in an editable format) and
                         enhance the media with new text, logos, graphics,
-                        voiceover and/or high-definition music in accordance
-                        with your campaign needs.{" "}
+                        voiceover, and/or high-definition music in accordance
+                        with your campaign needs.
                       </p>
                       <h6>Services Included:</h6>
                       <ul>
@@ -281,7 +281,7 @@ const PremiumTvAdvertising = () => {
                       <h5>Production Package 3</h5>
                       <p>
                         This package is a combination of text graphics,
-                        voiceover, music and stock images and videos in high
+                        voiceover, music, and stock images and videos in high
                         definition. No actors or locations are included in this
                         package.
                       </p>
@@ -381,7 +381,7 @@ const PremiumTvAdvertising = () => {
                         and remember. This advertising is proven to have high
                         impact, high conversion, and highly talked about TV
                         commercial results. This package includes scripting, 2
-                        primary actors, 2 locations, makeup artist, stylized
+                        primary actors, 2 locations, makeup artist, and stylized
                         color correction.
                       </p>
                       <h6>Services Included:</h6>

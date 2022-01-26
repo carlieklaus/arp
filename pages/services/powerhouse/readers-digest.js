@@ -92,7 +92,7 @@ const ReadersDigest = () => {
                           </h3>
                           <p>
                             They run ads based on our advertiser’s schedule,
-                            needs and wants.
+                            needs, and wants.
                           </p>
                         </div>
                       </div>
@@ -104,10 +104,11 @@ const ReadersDigest = () => {
                   <Col lg={6} md={6}>
                     <p style={{ padding: "1rem" }}>
                       Every issue of Reader’s Digest delivers inspiration,
-                      entertainment and information that is relevant to readers
-                      and their lives – a fusion of current affairs, powerful
-                      human narratives, entertainment, good humor and helpful
-                      information on health, home, travel and adventure.
+                      entertainment, and information that are relevant to
+                      readers and their lives—a fusion of current affairs,
+                      powerful human narratives, entertainment, good humor, and
+                      helpful information on health, home, travel, and
+                      adventure.
                     </p>
                   </Col>
                   <Col lg={6} md={6}>
@@ -116,7 +117,7 @@ const ReadersDigest = () => {
                       countries, with a global circulation of over 10 million,
                       reaching a global readership of over 35 million in print
                       only – reader’s digest inspires by celebrating what is
-                      best in our world, our communities and ourselves.
+                      best in our world, our communities, and ourselves.
                     </p>
                   </Col>
                 </Row>

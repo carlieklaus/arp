@@ -59,11 +59,13 @@ const ExtensiveBlog = () => {
 
                 <p style={{ marginTop: "1rem" }}>
                   Author Reputation Press maintains a blog site
-                  (press.authorreputationpress.com) dedicated to authors who
-                  have published with us. It’s a great platform to build an
-                  audience and sell your book. The site features an Author
-                  Spotlight section where readers can get to know more about
-                  authors on a deeper, personal level.
+                  <a href="press.authorreputationpress.com" target="_blank">
+                    (press.authorreputationpress.com)
+                  </a>{" "}
+                  dedicated to authors who have published with us. It’s a great
+                  platform to build an audience and sell your book. The site
+                  features an Author Spotlight section where readers can get to
+                  know more about authors on a deeper, personal level.
                 </p>
 
                 <p style={{ marginTop: "1rem" }}>

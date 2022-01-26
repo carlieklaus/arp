@@ -45,7 +45,7 @@ const TraditionalPublishing = () => {
                   editors, and experienced publishing strategists employs a
                   comprehensive and nurturing approach to the book-writing and
                   publishing process to ensure an exceptional result for
-                  authors, agents, publishers and readers alike.
+                  authors, agents, publishers, and readers alike.
                 </p>
 
                 <div className="funfacts-area" style={{ marginTop: "3rem" }}>

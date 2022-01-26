@@ -114,7 +114,7 @@ const OnlineVideoDiscovery = () => {
                           <p style={{ marginTop: "2rem" }}>
                             Our Intermediate Book Trailer is a more engaging and
                             dynamic way of engaging with your readers through
-                            motions and layers
+                            motions and layers.
                           </p>
 
                           <Link href="/book-trailer/intermediate">

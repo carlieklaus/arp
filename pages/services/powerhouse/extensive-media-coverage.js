@@ -60,7 +60,7 @@ const ExtensiveMediaCoverage = () => {
                   <h5>Why It Matters</h5>
                   <p>
                     Media coverage can help bolster your name in the literary
-                    would due to the third-party validation-effect bestowed by
+                    world due to the third-party validation-effect bestowed by
                     the media organization’s blue stamp. Obtaining publicity can
                     offer far greater value to authors seeking to grow their
                     readership than other marketing methods.

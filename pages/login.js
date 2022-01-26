@@ -13,7 +13,7 @@ import { toast } from "react-toastify";
 
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
 
 const schema = yup.object().shape({
   email: yup

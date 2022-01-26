@@ -176,7 +176,8 @@ export default function Powerhouse() {
                 <div className="col-lg-6 col-md-6">
                   <Link href="/services/powerhouse/advance-radio-interview">
                     <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Globe /> Radio Interview with Kate Delaney
+                      <Icon.Globe />
+                      Advanced Radio Interview with Kate Delaney
                     </div>
                   </Link>
                 </div>
@@ -199,7 +200,7 @@ export default function Powerhouse() {
                 <div className="col-lg-6 col-md-6">
                   <Link href="/services/powerhouse/advance-book-trailer">
                     <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Globe /> Advance Book Trailer
+                      <Icon.Globe /> Advanced Book Trailer
                     </div>
                   </Link>
                 </div>
@@ -281,7 +282,7 @@ export default function Powerhouse() {
                   <Link href="/services/powerhouse/advanced-youtube-promotion">
                     <div className="box" style={{ cursor: "pointer" }}>
                       <Icon.Globe />
-                      Advance Youtube Promotion
+                      Advanced Youtube Promotion
                     </div>
                   </Link>
                 </div>

@@ -42,7 +42,7 @@ const PrintAdTrioBlast = () => {
                 <p style={{ marginTop: "1rem" }}>
                   See your book featured in the reviews section of some of the
                   major English language publications in the United States
-                  including Publishers Weekly, Los Angeles Times and The New
+                  including Publishers Weekly, Los Angeles Times, and The New
                   York Times through our Print-ad Trio Blast service.
                 </p>
 
@@ -95,7 +95,7 @@ const PrintAdTrioBlast = () => {
                     advertisement in the Los Angeles Times Sunday Art edition.
                     This service also includes a press release for your book
                     meant for distribution across 1000 media outlets in print,
-                    broadcast and online platforms.
+                    broadcast, and online platforms.
                   </p>
                 </div>
 
@@ -106,7 +106,7 @@ const PrintAdTrioBlast = () => {
                     industry, with a special focus on international books. The
                     magazine pushes its book reviews on a weekly basis meant for
                     a wide range of audiences including publishers, booksellers,
-                    librarians, literary agents, authors and media outlets. Its
+                    librarians, literary agents, authors, and media outlets. Its
                     coverage includes feature articles and straight news
                     writeups about books, lists of bestselling titles across a
                     wide range of categories, and industry statistics. Most
@@ -117,7 +117,7 @@ const PrintAdTrioBlast = () => {
                   <p>
                     Our print ads are customized according to the desired
                     categories: religion, children’s books, international
-                    audience, best-seller’s club, review consideration and
+                    audience, best-seller’s club, review consideration, and
                     announcements of select titles.
                   </p>
                 </div>

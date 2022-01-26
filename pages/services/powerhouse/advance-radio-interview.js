@@ -3,8 +3,7 @@ import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import { useRouter } from "next/router";
-import { Container, Button, Table, Row, Col } from "react-bootstrap";
-import * as Icon from "react-feather";
+import { Container, Button } from "react-bootstrap";
 
 const AdvancedRadioInterview = () => {
   const router = useRouter();
@@ -29,7 +28,7 @@ const AdvancedRadioInterview = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>Advance Radio Interview</h2>
+                    <h2>Advance Radio Interview with Kate Delaney</h2>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

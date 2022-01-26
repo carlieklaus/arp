@@ -6,7 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
 import { getSession, signIn } from "next-auth/client";
 import { API_URL } from "config";
 import { useToasts } from "react-toast-notifications";

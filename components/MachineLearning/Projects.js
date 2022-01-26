@@ -65,8 +65,8 @@ const Projects = () => {
           <h2>Featured Books</h2>
           <div className="bar"></div>
           <p>
-            This section curated by our editorial team and will be updated every
-            month. Choose any title from the carousel below
+            This section curated by our editorial team will be updated every
+            month. Choose any title from the carousel below.
           </p>
         </div>
       </div>

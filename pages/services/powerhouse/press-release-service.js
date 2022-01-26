@@ -42,7 +42,7 @@ const PressReleaseService = () => {
 
                 <p style={{ marginTop: "1rem" }}>
                   Reach your target audience through our Press Release service
-                  that employs multi-channel distribution, social campaigns and
+                  that employs multi-channel distribution, social campaigns, and
                   personalized communication with hundreds of millions of
                   journalists and influencers on deck to pick your story.
                 </p>
@@ -50,7 +50,7 @@ const PressReleaseService = () => {
                 <p style={{ marginTop: "1rem" }}>
                   Our Press Release team has been providing vital resources to
                   journalists on the lookout for interesting stories, leveraging
-                  the power of our media relationships and wide distribution
+                  the power of our media relationships, and wide distribution
                   network. Whether you are looking for a local media outlet to
                   grab your story or wish to distribute it to a broader scope of
                   audiences, Author Reputation Press has your back. Choose the

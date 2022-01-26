@@ -7,7 +7,7 @@ import { Button, Form, Row, Col } from "react-bootstrap";
 
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup/dist/yup";
 import { API_URL } from "config";
 import Swal from "sweetalert2";
 import XLSX from "xlsx";

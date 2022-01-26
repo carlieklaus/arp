@@ -162,9 +162,6 @@ const Einstein = () => {
                         <h6>Author Discount for Bulk Book Orders</h6>
                       </li>
                       <li>
-                        <h6>3 Advanced Illustration Service</h6>
-                      </li>
-                      <li>
                         <h6>Book Returns Insurance for 24 months.</h6>
                       </li>
                       <li>
