@@ -15,7 +15,7 @@ export const getServerSideProps = async (context) => {
   const queryResult = await query.json();
 
   const fields = queryResult.map((book) => ({
-    loc: `${process.env.NEXT_PUBLIC_URL}/${book?.slug}`,
+    loc: `${process.env.NEXT_PUBLIC_URL}/products/${book?.slug}`,
     lastmod: new Date().toISOString(),
   }));
 
