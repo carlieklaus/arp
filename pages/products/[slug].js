@@ -75,7 +75,7 @@ const ProductDetails = ({ product }) => {
 
             <div className="col-lg-7">
               <div className="products-details">
-                <h2>{product?.title}</h2>
+                <h1>{product?.title}</h1>
 
                 {/* Rating */}
                 {/* 
