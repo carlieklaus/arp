@@ -5,7 +5,7 @@ module.exports = {
   exclude: ["/upload-authors", "/upload-royalties", "/server-sitemap.xml"],
   robotsTxtOptions: {
     additionalSitemaps: [
-      "https://authorreputationpress.com/server-sitemap.xml", // <==== Add here
+      "/server-sitemap.xml", // <==== Add here
     ],
   },
 };
