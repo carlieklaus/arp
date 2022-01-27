@@ -1,4 +1,5 @@
 import { getServerSideSitemap } from "next-sitemap";
+import { API_URL } from "config";
 
 const ServerSitemap = () => {
   return <></>;
