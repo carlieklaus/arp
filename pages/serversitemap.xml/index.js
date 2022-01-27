@@ -1,5 +1,8 @@
 import { getServerSideSitemap } from "next-sitemap";
 
+const ServerSitemap = () => {
+  return <></>;
+};
 export const getServerSideProps = async (context) => {
   const query = await fetch(`${API_URL}/books`, {
     method: "GET",
@@ -18,4 +21,4 @@ export const getServerSideProps = async (context) => {
   return getServerSideSitemap(context, fields);
 };
 
-export default () => {};
+export default ServerSitemap;
