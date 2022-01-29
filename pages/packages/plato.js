@@ -43,8 +43,8 @@ const Plato = () => {
                 self-publishing authors. In addition to the paperback and E-book
                 formats, it includes a hardback version and more complimentary
                 copies for giveaways during book-signing or promotional events.
-                This package combines the best services from or cover designs
-                and guaranteed listing on large marketplace such as Amazon,
+                This package combines the best services from our cover designs
+                and guaranteed listing on large marketplaces such as Amazon,
                 Barnes & Noble, and Waterstones. This package offers a scaled-up
                 publishing service to help accelerate the publication and
                 release of your book to the market.

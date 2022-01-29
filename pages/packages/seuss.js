@@ -48,7 +48,7 @@ const Seuss = () => {
               </p>
 
               <p style={{ marginTop: "1rem" }}>
-                However, that is only the first step, Creating an attractive
+                However, that is only the first step, creating an attractive
                 cover design, designing a thorough plan, and formulating an
                 effective marketing strategy are equally important for your
                 book’s success. At Author Reputation Press, we’ve got you
@@ -58,7 +58,7 @@ const Seuss = () => {
 
               <p style={{ marginTop: "1rem" }}>
                 Regale your young readers with stories of magical creatures or
-                animated objects. Let us help you turn those tales in to print
+                animated objects. Let us help you turn those tales into print
                 with our Seuss publishing package, complete with your desired
                 illustrations and other inclusions. See the full package
                 inclusion below:

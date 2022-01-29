@@ -82,11 +82,10 @@ const PrintedMaterials = () => {
                   <Col lg={6} md={6} sm={12}>
                     <h4 style={{ marginTop: "2rem" }}>Bookmarks</h4>
                     <p style={{ marginTop: "1rem" }}>
-                      Bookmarks make for perfect giveaways during book fairs or
+                      Bookmarks are for perfect giveaways during book fairs or
                       other promotional activities. These materials not only
-                      assist your readers in their reading process, they also
-                      help raise awareness of your work with a wider scope of
-                      people.
+                      assist your readers in their reading process but also help
+                      raise awareness of your work with a wider scope of people.
                     </p>
                     <h5 style={{ marginTop: "2rem" }}>Bookmarks Features:</h5>
                     <ul>
