@@ -19,6 +19,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css"
           />
+          <link rel="canonical" href="http://authorreputationpress.com/" />
         </Head>
         <body dir={dir} lang={locale}>
           <Main />

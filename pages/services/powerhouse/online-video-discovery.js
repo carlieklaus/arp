@@ -147,7 +147,7 @@ const OnlineVideoDiscovery = () => {
                             to life in a motion picture-like fashion.
                           </p>
 
-                          <Link href="/book-trailer/advanced">
+                          <Link href="/services/powerhouse/advance-book-trailer">
                             <a className="read-more-btn">
                               Read More <Icon.PlusCircle />
                             </a>
