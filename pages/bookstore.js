@@ -77,7 +77,7 @@ const Bookstore = ({ total }) => {
       <Head>
         <meta
           name="description"
-          content="Author Reputation Press is where you can find the most reliable team of author consultants with a combined experience of more than two decades in the industry."
+          content="Readers get the right and best books of different genres at the right prices at Author Reputation Press online bookstore"
         />
 
         <meta
@@ -88,7 +88,7 @@ const Bookstore = ({ total }) => {
 
         <meta
           property="og:description"
-          content="Author Reputation Press is where you can find the most reliable team of author consultants with a combined experience of more than two decades in the industry."
+          content="Readers get the right and best books of different genres at the right prices at Author Reputation Press online bookstore"
           key="ogdesc"
         />
 
