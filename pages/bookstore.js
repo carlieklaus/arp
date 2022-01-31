@@ -82,7 +82,7 @@ const Bookstore = ({ total }) => {
 
         <meta
           property="og:title"
-          content="Bookstore | Author Reputation Press"
+          content="Bookstore | Author Reputation Press LLC - Online Bookstore"
           key="ogtitle"
         />
 
