@@ -28,7 +28,7 @@ const PackageNational = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>Book Exhibit Package - National Show</h2>
+                    <h1>Book Exhibit Package - National Show</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

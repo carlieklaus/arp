@@ -29,7 +29,7 @@ const PublishersReview = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>Publisher's Review</h2>
+                    <h1>Publisher's Review</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

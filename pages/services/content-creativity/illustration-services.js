@@ -30,7 +30,7 @@ const IllustrationService = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>Illustration Services</h2>
+                    <h1>Illustration Services</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

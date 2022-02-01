@@ -30,7 +30,7 @@ const OnlineVideoDiscovery = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>Online Video Discovery</h2>
+                    <h1>Online Video Discovery</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

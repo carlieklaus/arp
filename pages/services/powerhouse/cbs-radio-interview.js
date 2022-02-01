@@ -28,7 +28,7 @@ const CBSRadioInterview = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>CBS Radio Interview on People of Distinction</h2>
+                    <h1>CBS Radio Interview on People of Distinction</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

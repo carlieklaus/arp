@@ -29,7 +29,7 @@ const SocialMediaBlast = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>Social Media Blast</h2>
+                    <h1>Social Media Blast</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

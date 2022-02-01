@@ -31,7 +31,7 @@ const NewYorkTimes = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h2>New York Times Sunday Book Review Ad Opportunity</h2>
+                    <h1>New York Times Sunday Book Review Ad Opportunity</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}

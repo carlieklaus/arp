@@ -27,7 +27,7 @@ const TermsOfService = () => {
             <div className="col-lg-12 col-md-12 services-content">
               <div className="section-title">
                 <div className="services-title-back ">
-                  <h2>Terms of Service</h2>
+                  <h1>Terms of Service</h1>
                   <Button
                     className="btn btn-secondary"
                     onClick={backButtonHandler}
