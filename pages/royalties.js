@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
@@ -23,6 +23,8 @@ import { API_URL } from "config";
 import { useRouter } from "next/router";
 import dayjs from "dayjs";
 
+import { NextSeo } from "next-seo";
+
 const Royalties = ({ jwt, user }) => {
   const [show, setShow] = useState(false);
   const [showRoyalties, setShowRoyalties] = useState("");
@@ -32,6 +34,12 @@ const Royalties = ({ jwt, user }) => {
   const [address, setAddress] = useState("");
 
   const router = useRouter();
+  const canonicalUrl = (
+    `https://authorreputationpress.com` +
+    (router.asPath === "/" ? "" : router.asPath)
+  ).split("?")[0];
+
+  // const [location, setLocation] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -79,7 +87,6 @@ const Royalties = ({ jwt, user }) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${jwt}`,
       },
       body: JSON.stringify({
         arpNumber: user?.arpNumber,
@@ -217,15 +224,30 @@ const Royalties = ({ jwt, user }) => {
   };
   return (
     <>
-      <Head>
-        <title>Royalties | Author Reputation Press</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        noindex={true}
+        nofollow={true}
+        title="Royalties | Author Reputation Press"
+        description="Royalties for Authors"
+        // canonical={canonicalUrl}
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Royalties | Author Reputation Press",
+          description: "Royalties for Authors",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
+
       <Navbar />
 
       <PageBanner pageTitle="Royalties" />
