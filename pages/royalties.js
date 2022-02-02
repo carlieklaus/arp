@@ -63,6 +63,7 @@ const Royalties = ({ jwt, user }) => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${jwt}`,
       },
     });
     return query.json();
@@ -120,6 +121,7 @@ const Royalties = ({ jwt, user }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${jwt}`,
         },
         body: JSON.stringify({
           user: user?.id,
@@ -141,6 +143,7 @@ const Royalties = ({ jwt, user }) => {
               method: "PUT",
               headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${jwt}`,
               },
               body: JSON.stringify({
                 status: "PENDING",
