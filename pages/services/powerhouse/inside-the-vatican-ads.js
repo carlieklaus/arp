@@ -79,19 +79,6 @@ const Inside = () => {
                 </div>
 
                 <div style={{ marginTop: "2rem" }}>
-                  <h5>Our Movie Script Coverage Features</h5>
-                  <p style={{ marginTop: "1rem" }}>
-                    A carefully written summary of your work showcasing its
-                    characters and plot Comments about the strengths and
-                    weaknesses of your book as a factor for consideration of
-                    your work’s potential movie or TV adaptation US Copyright
-                    Office application to grant you full ownership of your
-                    coverage, including those conducted during your pitch
-                    appointments
-                  </p>
-                </div>
-
-                <div style={{ marginTop: "2rem" }}>
                   <h5>Marketing Strategy</h5>
                   <p style={{ marginTop: "1rem" }}>
                     Our turnkey marketing service allows authors to choose to

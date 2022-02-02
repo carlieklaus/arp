@@ -7,6 +7,7 @@ import ProductsDetailsTabs from "@/components/Shop/ProductsDetailsTabs";
 import { useRouter } from "next/router";
 import { API_URL } from "config";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const ProductDetails = ({ product }) => {
   const router = useRouter();
@@ -38,34 +39,32 @@ const ProductDetails = ({ product }) => {
 
   return (
     <>
-      <Head>
-        <title>{product?.title} | Author Reputation Press LLC</title>
-        <meta name="description" content={product?.description} />
-
-        <meta
-          property="og:title"
-          content={`${product?.title} | Author Reputation Press LLC`}
-          key="ogtitle"
-        />
-
-        <meta
-          property="og:description"
-          content={product?.description}
-          key="ogdesc"
-        />
-
-        <meta
-          property="og:image"
-          content={product?.bookCover?.url}
-          key="ogimage"
-        />
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title={`${product?.title} | Author Reputation Press LLC`}
+        description={product?.description}
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: product?.title + "| Author Reputation Press LLC",
+          description: product?.description,
+          images: [
+            {
+              url: product?.bookCover?.url,
+              width: 800,
+              height: 600,
+              alt: product?.title,
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
       <PageBanner pageTitle={product?.title} />
 

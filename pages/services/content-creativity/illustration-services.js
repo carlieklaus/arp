@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { Container, Button, Table, Row, Col } from "react-bootstrap";
 import * as Icon from "react-feather";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 const IllustrationService = () => {
   const router = useRouter();
@@ -16,15 +17,32 @@ const IllustrationService = () => {
 
   return (
     <>
-      <Head>
-        <title>Illustration Services | Services </title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Illustration Services | Services"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Illustration Services | Services",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Content and Creativity" />

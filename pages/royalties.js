@@ -34,12 +34,6 @@ const Royalties = ({ jwt, user }) => {
   const [address, setAddress] = useState("");
 
   const router = useRouter();
-  const canonicalUrl = (
-    `https://authorreputationpress.com` +
-    (router.asPath === "/" ? "" : router.asPath)
-  ).split("?")[0];
-
-  // const [location, setLocation] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -225,11 +219,14 @@ const Royalties = ({ jwt, user }) => {
   return (
     <>
       <NextSeo
-        noindex={true}
-        nofollow={true}
         title="Royalties | Author Reputation Press"
         description="Royalties for Authors"
-        // canonical={canonicalUrl}
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
         openGraph={{
           url: process.env.NEXT_PUBLIC_URL,
           title: "Royalties | Author Reputation Press",

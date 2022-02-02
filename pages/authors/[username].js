@@ -6,13 +6,39 @@ import { Loader } from "react-overlay-loader";
 
 import Head from "next/head";
 import { API_URL } from "config";
+import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
 const AuthorProfile = ({ user }) => {
+  const router = useRouter();
   return (
     <>
-      <Head>
-        <title>Profile | Author Reputation Press</title>
-      </Head>
+      <NextSeo
+        title="Authors | Author Reputation Press"
+        description="Author's Profile"
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Authors | Author Reputation Press",
+          description: "Author's Profile",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Author's Profile" />

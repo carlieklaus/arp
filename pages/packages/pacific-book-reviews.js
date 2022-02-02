@@ -5,6 +5,7 @@ import PageBanner from "@/components/Common/PageBanner";
 import { useRouter } from "next/router";
 import { Button, Table } from "react-bootstrap";
 import * as Icon from "react-feather";
+import { NextSeo } from "next-seo";
 
 const PacificBookReviews = () => {
   const router = useRouter();
@@ -14,15 +15,32 @@ const PacificBookReviews = () => {
   };
   return (
     <>
-      <Head>
-        <title>Pacific Book Reviews</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Pacific Book Reviews"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Pacific Book Reviews",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Pacific Book Reviews" />

@@ -4,6 +4,7 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import { useRouter } from "next/router";
 import { Container, Button, Row, Col } from "react-bootstrap";
+import { NextSeo } from "next-seo";
 
 const Socrates = () => {
   const router = useRouter();
@@ -13,19 +14,34 @@ const Socrates = () => {
   };
   return (
     <>
-      <Head>
-        <title>Socrates | Publishing Package </title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Socrates | Publishing Package"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Socrates | Publishing Package",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
-
       <PageBanner pageTitle="Socrates Publishing Package" />
-
       <div className="services-area ptb-80 ">
         <div className="container">
           <div className="row justify-content-center align-items-center">
@@ -164,7 +180,6 @@ const Socrates = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );

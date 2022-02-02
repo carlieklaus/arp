@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Button } from "react-bootstrap";
 import GoogleMapsBookshops from "@/components/BigdataAnalytics/GoogleMapsBookshops";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
 export default function BookstoreFundamentals() {
   const router = useRouter();
@@ -16,15 +17,32 @@ export default function BookstoreFundamentals() {
   };
   return (
     <>
-      <Head>
-        <title>Bookstore Fundamentals | Author Reputation Press</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Bookstore Fundamentals | Author Reputation Press"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Bookstore Fundamentals | Author Reputation Press",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Services" />
