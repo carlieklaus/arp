@@ -44,7 +44,7 @@ const NationalShow = () => {
                   </div>
                   <div className="bar"></div>
                 </div>
-                <h3>$1599.00</h3>
+                {/* <h3>$1599.00</h3> */}
 
                 <h5 style={{ marginTop: "2rem" }}>
                   Boost Your Campaign With Exhibit Marketing

@@ -44,7 +44,7 @@ const BookSigningNational = () => {
                   </div>
                   <div className="bar"></div>
                 </div>
-                <h3>$3,499.00</h3>
+                {/* <h3>$3,499.00</h3> */}
 
                 <h5 style={{ marginTop: "2rem" }}>
                   Boost Your Campaign With Book Signing
