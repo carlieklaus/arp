@@ -5,8 +5,10 @@ import ContactInfo from "@/components/Contact/ContactInfo";
 import GoogleMap from "@/components/Contact/GoogleMap";
 import ContactForm from "@/components/Contact/ContactForm";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function ContactUs() {
+  const router = useRouter();
   return (
     <>
       <Head>

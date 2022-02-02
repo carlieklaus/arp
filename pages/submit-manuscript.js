@@ -4,8 +4,10 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import Partner from "@/components/Common/Partner";
 import { Container } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 const SubmitManuscript = () => {
+  const router = useRouter();
   return (
     <>
       <Head>

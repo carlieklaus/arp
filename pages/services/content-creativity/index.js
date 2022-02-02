@@ -3,8 +3,10 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import ServicesArea from "@/components/ITStartup/ServicesArea";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function ContentCreativity() {
+  const router = useRouter();
   return (
     <>
       <Head>

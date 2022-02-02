@@ -6,8 +6,11 @@ import Head from "next/head";
 import * as Icon from "react-feather";
 import { useState } from "react";
 import { Modal, Form, Row, Col, FloatingLabel } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 export default function Careers() {
+  const router = useRouter();
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);

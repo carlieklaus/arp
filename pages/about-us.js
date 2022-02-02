@@ -3,8 +3,10 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import Head from "next/head";
 import Script from "next/script";
+import { useRouter } from "next/router";
 
 export default function AboutUs() {
+  const router = useRouter();
   return (
     <>
       <Head>

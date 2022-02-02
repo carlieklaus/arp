@@ -7,8 +7,10 @@ import RightTestimonial from "@/components/Testimonials/RightTestimonial";
 import { Loader } from "react-overlay-loader";
 import useSWR from "swr";
 import { API_URL } from "config";
+import { useRouter } from "next/router";
 
 export default function Testimonial() {
+  const router = useRouter();
   const testimonialFetcher = async () => {
     const res = await fetch(`${API_URL}/testimonials?_sort=id:desc`, {
       method: "GET",
