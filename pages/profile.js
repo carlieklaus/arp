@@ -8,8 +8,10 @@ import { Loader } from "react-overlay-loader";
 import Head from "next/head";
 import { API_URL } from "config";
 import useSWR from "swr";
+import { useRouter } from "next/router";
 
 const Profile = ({ jwt }) => {
+  import { useRouter } from "next/router";
   const userQuery = async () => {
     const query = await fetch(`${API_URL}/users/me`, {
       method: "GET",

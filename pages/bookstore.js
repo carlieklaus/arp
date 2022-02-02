@@ -12,8 +12,10 @@ import QueryString from "qs";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Bookstore = ({ total }) => {
+  const router = useRouter();
   const [books, setBooks] = useState(null);
   const [authors, setAuthors] = useState(null);
   const [loading, setLoading] = useState(false);
