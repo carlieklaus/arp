@@ -11,7 +11,7 @@ import useSWR from "swr";
 import { useRouter } from "next/router";
 
 const Profile = ({ jwt }) => {
-  import { useRouter } from "next/router";
+  const router = useRouter();
   const userQuery = async () => {
     const query = await fetch(`${API_URL}/users/me`, {
       method: "GET",
