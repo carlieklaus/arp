@@ -16,6 +16,12 @@ const PrintedMaterials = () => {
     <>
       <Head>
         <title>Printed Materials | Services </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

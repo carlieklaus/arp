@@ -16,6 +16,12 @@ const AuthorPublicitySpotlight = () => {
     <>
       <Head>
         <title>Author Publicity Spotlight</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

@@ -23,6 +23,12 @@ const FrequentlyAskedQuestions = () => {
     <>
       <Head>
         <title>Frequently Asked Questions </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

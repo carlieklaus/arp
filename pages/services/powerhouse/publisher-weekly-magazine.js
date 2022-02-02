@@ -17,6 +17,12 @@ const PublisherWeekly = () => {
     <>
       <Head>
         <title>Publisher Weekly Magazine</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

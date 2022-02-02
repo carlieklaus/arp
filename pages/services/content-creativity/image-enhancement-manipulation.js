@@ -16,6 +16,12 @@ const ImageEnhancement = () => {
     <>
       <Head>
         <title>Image Enhancement Manipulation | Services </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

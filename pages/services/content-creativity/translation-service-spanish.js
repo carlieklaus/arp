@@ -16,6 +16,12 @@ const TranslationService = () => {
     <>
       <Head>
         <title>Translation Service - Spanish | Services </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

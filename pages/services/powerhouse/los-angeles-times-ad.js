@@ -17,6 +17,12 @@ const LosAngelesTimesAd = () => {
     <>
       <Head>
         <title>Los Angeles Times Ad Opportunity</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

@@ -15,6 +15,12 @@ const PrivacyPolicy = () => {
     <>
       <Head>
         <title>Privacy Policy </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

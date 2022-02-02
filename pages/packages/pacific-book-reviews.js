@@ -16,6 +16,12 @@ const PacificBookReviews = () => {
     <>
       <Head>
         <title>Pacific Book Reviews</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

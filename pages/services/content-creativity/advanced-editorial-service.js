@@ -16,6 +16,12 @@ const AdvancedEditorialService = () => {
     <>
       <Head>
         <title>Advanced Editorial Service | Services </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
       <PageBanner pageTitle="Content and Creativity" />

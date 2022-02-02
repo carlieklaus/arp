@@ -9,6 +9,12 @@ export default function ContentCreativity() {
     <>
       <Head>
         <title>Content and Creativity | Author Reputation Press</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

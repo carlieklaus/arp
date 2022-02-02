@@ -11,6 +11,12 @@ export default function ContactUs() {
     <>
       <Head>
         <title>Contact Us | Author Reputation Press</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

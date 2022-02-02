@@ -16,6 +16,12 @@ const CBSRadioInterview = () => {
     <>
       <Head>
         <title>CBS Radio Interview on People of Distinction</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

@@ -17,6 +17,12 @@ const ExtensiveBlog = () => {
     <>
       <Head>
         <title>Extensive Blog Posting Campaign</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

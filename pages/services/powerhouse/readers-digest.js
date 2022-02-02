@@ -17,6 +17,12 @@ const ReadersDigest = () => {
     <>
       <Head>
         <title>Reader's Digest Magazine Ad</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

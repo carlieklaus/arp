@@ -19,6 +19,12 @@ export default function Careers() {
     <>
       <Head>
         <title>Careers | Author Reputation Press</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <NavbarStyleFour textLogo="white" />
 

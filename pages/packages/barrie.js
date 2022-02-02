@@ -15,6 +15,12 @@ const Barrie = () => {
     <>
       <Head>
         <title>Barrie | Publishing Package </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

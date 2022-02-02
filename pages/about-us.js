@@ -2,18 +2,22 @@ import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import Head from "next/head";
-import Image from "next/image";
-import { Container, Row, Col } from "react-bootstrap";
-import * as Icon from "react-feather";
+import Script from "next/script";
 
 export default function AboutUs() {
   return (
     <>
       <Head>
         <title>About Us | Author Reputation Press</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
-
+      {/* <Script src="/scripts/mailerlite.js" async /> */}
       <PageBanner pageTitle="About Us" />
 
       <div className="center-row">

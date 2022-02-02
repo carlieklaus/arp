@@ -35,6 +35,12 @@ const BigdataAnalytics = () => {
           content="/images/logo-book.png"
           key="ogimage"
         />
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <NavbarStyleFour textLogo="white" />
       <MainBanner />

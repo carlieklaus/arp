@@ -18,6 +18,12 @@ const OnlineVideoDiscovery = () => {
     <>
       <Head>
         <title>Online Video Discovery</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

@@ -72,6 +72,12 @@ const Login = () => {
     <>
       <Head>
         <title>Login | Author Reputation Press</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

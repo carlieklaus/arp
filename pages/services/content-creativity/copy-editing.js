@@ -17,6 +17,12 @@ const CopyEditing = () => {
     <>
       <Head>
         <title>Copy Editing | Services </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

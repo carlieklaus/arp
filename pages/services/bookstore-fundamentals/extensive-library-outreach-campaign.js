@@ -17,6 +17,12 @@ const ExtensiveLibrary = () => {
     <>
       <Head>
         <title>Extensive Library Outreach Campaign | Services </title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

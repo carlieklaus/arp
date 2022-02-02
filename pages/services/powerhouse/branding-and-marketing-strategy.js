@@ -16,6 +16,12 @@ const BrandingAndMarketing = () => {
     <>
       <Head>
         <title>Branding and Marketing Strategy</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 

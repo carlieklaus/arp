@@ -16,6 +16,12 @@ const Inside = () => {
     <>
       <Head>
         <title>Inside the Vatican Ads</title>
+        <link
+          rel="canonical"
+          href={`${
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
+          }${router.pathname}`}
+        />
       </Head>
       <Navbar />
 
