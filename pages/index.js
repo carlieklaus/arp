@@ -8,8 +8,10 @@ import Footer from "@/components/_App/Footer";
 import Projects from "@/components/MachineLearning/Projects";
 import Head from "next/head";
 import PublishingMarketing from "@/components/BigdataAnalytics/PublishingMarketing";
+import { useRouter } from "next/router";
 
 const BigdataAnalytics = () => {
+  const router = useRouter();
   return (
     <>
       <Head>
