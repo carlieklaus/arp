@@ -106,7 +106,7 @@ const Barrie = () => {
                     </ul>
                   </Col>
                   <Col sm={6} md={6} lg={6}>
-                    <h5>Deisgn and Content</h5>
+                    <h5>Design and Content</h5>
                     <ul>
                       <li>
                         <h6>Custom interior layout</h6>
