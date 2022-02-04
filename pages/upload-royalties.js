@@ -23,7 +23,11 @@ const schema = yup.object().shape({
     .mixed()
     .required("You need to provide a file")
     .test("type", "We only support excel and csv files", (value) => {
-      return value && value[0]?.type === "application/vnd.ms-excel";
+      return (
+        (value && value[0]?.type === "application/vnd.ms-excel") ||
+        value[0]?.type ===
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      );
     }),
 });
 
