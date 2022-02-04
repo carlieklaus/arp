@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const { arpNumber } = req.body;
 
     const royaltyRequest = await fetch(
-      `${API_URL}/royalties?arpNumber=${arpNumber}&status=READY`,
+      `${API_URL}/royalties?arpNumber=${arpNumber}`,
       {
         method: "GET",
         headers: {
@@ -17,8 +17,12 @@ export default async function handler(req, res) {
     const royaltyResponse = await royaltyRequest.json();
 
     if (royaltyRequest.ok) {
-      if (royaltyResponse.length > 0) {
-        const getAllAuthorEarnings = royaltyResponse.map(
+      const notClaimed = royaltyResponse.filter(
+        (item) => item.claim_request == null || item.claim_request == undefined
+      );
+
+      if (notClaimed.length > 0) {
+        const getAllAuthorEarnings = notClaimed.map(
           (item) => item?.authorEarning
         );
 

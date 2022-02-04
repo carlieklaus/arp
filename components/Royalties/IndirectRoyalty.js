@@ -93,7 +93,7 @@ const IndirectRoyalty = ({ user }) => {
                 {/* <th>Withdraw Eligible</th> */}
                 <th>Author Earning</th>
                 <th>Claimed</th>
-                <th>Status</th>
+                {/* <th>Status</th> */}
               </tr>
             </thead>
             <tbody>
@@ -111,7 +111,7 @@ const IndirectRoyalty = ({ user }) => {
                     {/* <td>{item?.withdrawEligible}</td> */}
                     <td>${item?.authorEarning}</td>
                     <td>{item?.claimed == false ? "No" : "Yes"}</td>
-                    <td>{item?.status}</td>
+                    {/* <td>{item?.status}</td> */}
                   </tr>
                 ))}
             </tbody>

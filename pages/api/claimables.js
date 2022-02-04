@@ -17,8 +17,11 @@ export default async function handler(req, res) {
     const royaltyResponse = await royaltyRequest.json();
 
     if (royaltyRequest.ok) {
-      if (royaltyResponse.length > 0) {
-        const getAllIds = royaltyResponse.map((item) => item?.id);
+      const notClaimed = royaltyResponse.filter(
+        (item) => item.claim_request == null || item.claim_request == undefined
+      );
+      if (notClaimed.length > 0) {
+        const getAllIds = notClaimed.map((item) => item?.id);
         res.status(200).json(getAllIds);
       } else {
         res.status(200).json([]);

@@ -138,26 +138,26 @@ const Royalties = ({ jwt, user }) => {
       if (request.ok) {
         const ids = claimableRoyaltyIds;
 
-        if (ids.length > 0) {
-          ids.map(async (item) => {
-            const request = await fetch(`${API_URL}/royalties/${item}`, {
-              method: "PUT",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${jwt}`,
-              },
-              body: JSON.stringify({
-                status: "PENDING",
-              }),
-            });
+        // if (ids.length > 0) {
+        //   ids.map(async (item) => {
+        //     const request = await fetch(`${API_URL}/royalties/${item}`, {
+        //       method: "PUT",
+        //       headers: {
+        //         "Content-Type": "application/json",
+        //         Authorization: `Bearer ${jwt}`,
+        //       },
+        //       body: JSON.stringify({
+        //         status: "PENDING",
+        //       }),
+        //     });
 
-            await request.json();
+        //     await request.json();
 
-            // if (!request.ok) {
-            //   throw new Error("Error in updating royalties");
-            // }
-          });
-        }
+        //     if (!request.ok) {
+        //       throw new Error("Error in updating royalties");
+        //     }
+        //   });
+        // }
 
         fileUploadHandler(response?.id);
         setShow(false);
