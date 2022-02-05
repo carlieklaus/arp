@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const { arpNumber } = req.body;
 
     const royaltyRequest = await fetch(
-      `${API_URL}/royalties?arpNumber=${arpNumber}&status=READY`,
+      `${API_URL}/royalties?arpNumber=${arpNumber}`,
       {
         method: "GET",
         headers: {
