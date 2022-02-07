@@ -14,16 +14,6 @@ const Inside = () => {
 
   return (
     <>
-      <Head>
-        <title>Inside the Vatican Ads</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
-
       <NextSeo
         title="Inside the Vatican Ads | Services"
         description=""

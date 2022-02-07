@@ -14,15 +14,6 @@ const InternetBasedMarketing = () => {
 
   return (
     <>
-      <Head>
-        <title>Internet-Based Marketing</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
       <NextSeo
         title="Extensive Media Coverage | Services"
         description=""
@@ -179,7 +170,7 @@ const InternetBasedMarketing = () => {
                       </p>
                     </Col>
 
-                    <Col lg={6} md={6} style={{ marginTop: "2rem" }}>
+                    {/* <Col lg={6} md={6} style={{ marginTop: "2rem" }}>
                       <h5>Google Marketing</h5>
                       <p>
                         Boost the visibility of your book to your target
@@ -196,7 +187,7 @@ const InternetBasedMarketing = () => {
                         record of successfully promoting books using the power
                         of Google search engine.
                       </p>
-                    </Col>
+                    </Col> */}
                   </Row>
                 </div>
               </div>
