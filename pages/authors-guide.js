@@ -145,7 +145,7 @@ const GetStarted = () => {
             <div className="col-lg-12 col-md-12 services-content">
               <div className="section-title">
                 <div className="services-title-back ">
-                  <h1>Get Author's Guide</h1>
+                  <h1>Take The Easy Path To Publish Your Work</h1>
                   <Button
                     className="btn btn-secondary"
                     onClick={backButtonHandler}
@@ -157,7 +157,11 @@ const GetStarted = () => {
               </div>
 
               <div className="mr-2">
-                <h5>Please fill up the information below</h5>
+                <h5>
+                  Author Reputation Press' Publishing guide provides a
+                  step-by-step method of bringing your manuscript from scratch
+                  to completion
+                </h5>
 
                 <Row className="mr-2">
                   <Col lg={6} md={6} className="center">

@@ -61,13 +61,35 @@ export default function BookEvents() {
                 </div>
                 <div className="bar"></div>
                 <p>
-                  Choose any of our wide array of services that will help you in
-                  publishing your literary works!
+                  Elevate the level of exposure you have for your book by taking
+                  part into two of the biggest and most prestigious literary
+                  events in the entire United States—the LA Times Festival of
+                  Books and the Miami Book Fair International. Author Reputation
+                  Press maintains a strong will to increase your exposure and
+                  literary experience through these events.
                 </p>
               </div>
 
               <div className="row">
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-12 col-md-12">
+                  <Link href="/services/book-events/los-angeles-times-festival-of-books">
+                    <div className="box" style={{ cursor: "pointer" }}>
+                      <Icon.Film />
+                      Los Angeles Times Festival of Books – Book Gallery
+                    </div>
+                  </Link>
+                </div>
+                <div className="col-lg-12 col-md-12">
+                  <Link href="/services/book-events/miami-book-fair-international">
+                    <div className="box" style={{ cursor: "pointer" }}>
+                      <Icon.Film />
+                      Miami Book Fair International – Book Gallery, Book Signing
+                      & Book Signing with Video Documentation
+                    </div>
+                  </Link>
+                </div>
+
+                {/* <div className="col-lg-6 col-md-6">
                   <Link href="/services/book-events/international-show">
                     <div className="box" style={{ cursor: "pointer" }}>
                       <Icon.Film /> Book Exhibition – International Show
@@ -119,7 +141,7 @@ export default function BookEvents() {
                       <Icon.Film /> Book Exhibit – NTS
                     </div>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

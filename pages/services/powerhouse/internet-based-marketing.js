@@ -15,7 +15,7 @@ const InternetBasedMarketing = () => {
   return (
     <>
       <NextSeo
-        title="Extensive Media Coverage | Services"
+        title="Internet Based Marketing | Services"
         description=""
         canonical={
           (
@@ -25,7 +25,7 @@ const InternetBasedMarketing = () => {
         }
         openGraph={{
           url: process.env.NEXT_PUBLIC_URL,
-          title: "Extensive Media Coverage | Services",
+          title: "Internet Based Marketing | Services",
           description: "",
           images: [
             {

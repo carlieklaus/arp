@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
