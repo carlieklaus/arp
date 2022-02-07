@@ -2,7 +2,7 @@ import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import * as Icon from "react-feather";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { Button } from "react-bootstrap";
 import { useRouter } from "next/router";
@@ -15,15 +15,32 @@ export default function Powerhouse() {
   };
   return (
     <>
-      <Head>
-        <title>Power House Platform | Author Reputation Press</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Power House Platform | Author Reputation Press"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Power House Platform | Author Reputation Press",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Services" />

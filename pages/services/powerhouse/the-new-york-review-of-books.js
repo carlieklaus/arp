@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
@@ -14,15 +14,32 @@ const TheNewYorkReview = () => {
 
   return (
     <>
-      <Head>
-        <title>The New York Review of Books Advertising</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="The New York Review of Books Advertising | Services"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "The New York Review of Books Advertising | Services",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Powerhouse Platform" />

@@ -3,7 +3,7 @@ import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import Link from "next/link";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { signIn } from "next-auth/client";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
@@ -70,15 +70,32 @@ const Login = () => {
 
   return (
     <>
-      <Head>
-        <title>Login | Author Reputation Press</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Login | Author Reputation Press"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Login | Author Reputation Press",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Login" />

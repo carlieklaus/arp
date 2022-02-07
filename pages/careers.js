@@ -2,7 +2,7 @@ import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import NavbarStyleFour from "@/components/_App/NavbarStyleFour";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import * as Icon from "react-feather";
 import { useState } from "react";
 import { Modal, Form, Row, Col, FloatingLabel } from "react-bootstrap";
@@ -20,15 +20,32 @@ export default function Careers() {
 
   return (
     <>
-      <Head>
-        <title>Careers | Author Reputation Press</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Careers | Author Reputation Press"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Careers | Author Reputation Press",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <NavbarStyleFour textLogo="white" />
 
       <PageBanner pageTitle="Careers" />

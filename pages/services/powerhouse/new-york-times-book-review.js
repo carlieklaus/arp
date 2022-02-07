@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import { Container, Button, Table, Row, Col } from "react-bootstrap";
 import Image from "next/image";
 import * as Icon from "react-feather";
-import Link from "next/link";
 
 const NewYorkTimes = () => {
   const router = useRouter();
@@ -17,15 +16,32 @@ const NewYorkTimes = () => {
 
   return (
     <>
-      <Head>
-        <title>New York Times Sunday Book Review Ad Opportunity</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="New York Times Sunday Book Review Ad Opportunity | Services"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "New York Times Sunday Book Review Ad Opportunity | Services",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Powerhouse Platform" />

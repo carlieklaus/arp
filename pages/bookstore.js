@@ -11,7 +11,7 @@ import { useDebouncedCallback } from "use-debounce";
 import QueryString from "qs";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 
 const Bookstore = ({ total }) => {
@@ -76,36 +76,33 @@ const Bookstore = ({ total }) => {
 
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="Readers get the right and best books of different genres at the right prices at Author Reputation Press online bookstore"
-        />
-
-        <meta
-          property="og:title"
-          content="Bookstore | Author Reputation Press LLC - Online Bookstore"
-          key="ogtitle"
-        />
-
-        <meta
-          property="og:description"
-          content="Readers get the right and best books of different genres at the right prices at Author Reputation Press online bookstore"
-          key="ogdesc"
-        />
-
-        <meta
-          property="og:image"
-          content="/images/logo-book.png"
-          key="ogimage"
-        />
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Bookstore | Author Reputation Press LLC - Online Bookstore"
+        description="Readers get the right and best books of different genres at the right prices at Author Reputation Press online bookstore"
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Bookstore | Author Reputation Press LLC - Online Bookstore",
+          description:
+            "Readers get the right and best books of different genres at the right prices at Author Reputation Press online bookstore",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <NavbarStyleFour textLogo="white" />
       <PageBanner pageTitle="Bookstore" />
       <Container style={{ position: "relative", marginTop: "10rem" }}>

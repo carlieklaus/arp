@@ -5,7 +5,7 @@ import FeedbackStyleTwo from "@/components/Common/FeedbackStyleTwo";
 import { getSession } from "next-auth/client";
 import { Loader } from "react-overlay-loader";
 
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { API_URL } from "config";
 import useSWR from "swr";
 import { useRouter } from "next/router";
@@ -26,15 +26,32 @@ const Profile = ({ jwt }) => {
   const { data: user, error } = useSWR(`${API_URL}/users/me`, userQuery);
   return (
     <>
-      <Head>
-        <title>Profile | Author Reputation Press</title>
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Profile | Author Reputation Press"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Profile | Author Reputation Press",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <Navbar />
 
       <PageBanner pageTitle="Profile" />

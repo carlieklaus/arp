@@ -6,7 +6,7 @@ import Services from "@/components/BigdataAnalytics/Services";
 import BigdataFunFacts from "@/components/BigdataAnalytics/BigdataFunFacts";
 import Footer from "@/components/_App/Footer";
 import Projects from "@/components/MachineLearning/Projects";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import PublishingMarketing from "@/components/BigdataAnalytics/PublishingMarketing";
 import { useRouter } from "next/router";
 
@@ -14,36 +14,32 @@ const BigdataAnalytics = () => {
   const router = useRouter();
   return (
     <>
-      <Head>
-        <meta
-          name="description"
-          content="Author Reputation Press is where you can find the most reliable team of author consultants with a combined experience of more than two decades in the industry."
-        />
-
-        <meta
-          property="og:title"
-          content="Author Reputation Press LLC"
-          key="ogtitle"
-        />
-
-        <meta
-          property="og:description"
-          content="Author Reputation Press is where you can find the most reliable team of author consultants with a combined experience of more than two decades in the industry."
-          key="ogdesc"
-        />
-
-        <meta
-          property="og:image"
-          content="/images/logo-book.png"
-          key="ogimage"
-        />
-        <link
-          rel="canonical"
-          href={`${
-            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com"
-          }${router.pathname}`}
-        />
-      </Head>
+      <NextSeo
+        title="Top Book Publishers - Author Reputation Press LLC"
+        description=""
+        canonical={
+          (
+            `https://authorreputationpress.com` +
+            (router.asPath === "/" ? "" : router.asPath)
+          ).split("?")[0]
+        }
+        openGraph={{
+          url: process.env.NEXT_PUBLIC_URL,
+          title: "Top Book Publishers - Author Reputation Press LLC",
+          description: "",
+          images: [
+            {
+              url: "/images/logo-book",
+              width: 800,
+              height: 600,
+              alt: "Author Reputation Press Logo",
+              type: "image/png",
+            },
+          ],
+          site_name:
+            process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
+        }}
+      />
       <NavbarStyleFour textLogo="white" />
       <MainBanner />
       <Projects />
