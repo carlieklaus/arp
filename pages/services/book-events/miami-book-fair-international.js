@@ -67,20 +67,6 @@ const MiamiBookFairInternational = () => {
                   Unleash the full potential of your marketing campaign through
                   Miami Book Fair International series of events.
                 </h5>
-                <p style={{ marginTop: "1rem" }}>
-                  Considered as one of the biggest and most prestigious book
-                  festivals in the entire United States, the Los Angeles Times
-                  Festival of Books attracts a wild number of book lovers and
-                  media lovers with more than 150,000 attendees.
-                </p>
-
-                <p style={{ marginTop: "1rem" }}>
-                  More than 200 exhibitors with books and merchandise for sale,
-                  activities and giveaways, including special themed areas.
-                  There will also be musical performances, food trucks and an
-                  Independent author pavilion with a variety of indie writers
-                  and titles.
-                </p>
 
                 <div style={{ marginTop: "2rem" }}>
                   <h5 style={{ marginTop: "1rem" }}>Book Gallery</h5>
