@@ -65,7 +65,7 @@ const MiamiBookFairInternational = () => {
 
                 <h5 style={{ marginTop: "2rem" }}>
                   Unleash the full potential of your marketing campaign through
-                  LA Times Festival of Books series of events.
+                  Miami Book Fair International series of events.
                 </h5>
                 <p style={{ marginTop: "1rem" }}>
                   Considered as one of the biggest and most prestigious book
