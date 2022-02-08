@@ -43,6 +43,10 @@ const GetStarted = () => {
 
   const [loading, setLoading] = useState(false);
 
+  const setSpecifyManuscript = (val) => {
+    specifyManuscript.current = val;
+  };
+
   const submitHandler = async (data) => {
     setLoading(true);
     try {
@@ -139,111 +143,175 @@ const GetStarted = () => {
 
       <PageBanner pageTitle="Get Author's Guide" />
 
-      <div className="services-area ptb-80 ">
-        <div className="container">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-lg-12 col-md-12 services-content">
-              <div className="section-title">
-                <div className="services-title-back ">
-                  <h1>Take The Easy Path To Publish Your Work</h1>
-                  <Button
-                    className="btn btn-secondary"
-                    onClick={backButtonHandler}
-                  >
-                    Go Back
-                  </Button>
-                </div>
-                <div className="bar"></div>
-              </div>
-
-              <div className="mr-2">
-                <h5>
-                  Author Reputation Press' Publishing guide provides a
-                  step-by-step method of bringing your manuscript from scratch
-                  to completion
-                </h5>
-              </div>
-            </div>
+      <Row
+        className="mr-2"
+        style={{
+          paddingLeft: "2rem",
+          paddingRight: "2rem",
+          paddingBottom: "5rem",
+        }}
+      >
+        <Col
+          lg={6}
+          className="mr-2"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h1>Take The Easy Path To Publish Your Work</h1>
+          <div className="mr-2" style={{ marginBottom: "2rem" }}>
+            <h5>
+              Author Reputation Press' Publishing guide provides a step-by-step
+              method of bringing your manuscript from scratch to completion
+            </h5>
           </div>
-
-          <Row
-            className="mr-2"
-            style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+          <Image
+            src="/guide/authorguide.jpg"
+            className="animate__animated animate__fadeInUp animate__delay-0.6s"
+            alt="Authors Guide"
+            width={900}
+            height={550}
+            layout="intrinsic"
+          />
+        </Col>
+        <Col
+          lg={6}
+          className=" mr-2"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              minWidth: "100%",
+              width: "100%",
+            }}
           >
-            <Col lg={6} className="mr-2 center">
-              <Image
-                src="/guide/authorguide.jpg"
-                className="animate__animated animate__fadeInUp animate__delay-0.6s"
-                alt="Authors Guide"
-                width={900}
-                height={550}
-                layout="intrinsic"
-              />
-            </Col>
-            <Col lg={6} className="center mr-2">
-              <Form
-                style={{ width: "40rem", maxWidth: "40rem" }}
-                onSubmit={handleSubmit(submitHandler)}
-              >
-                <Form.Group className="mb-3">
-                  <Form.Label> Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="Enter name"
-                    {...register("name")}
-                  />
-                  {errors?.name && (
-                    <p className="error-message">{errors?.name?.message}</p>
-                  )}
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="Enter email"
-                    {...register("email")}
-                  />
-                  {errors?.email && (
-                    <p className="error-message">{errors?.email?.message}</p>
-                  )}
-                </Form.Group>
+            <Form
+              className="get-author-guide"
+              onSubmit={handleSubmit(submitHandler)}
+            >
+              <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>
+                Get Your Author's Guide
+              </h2>
+              <Form.Group className="mb-3">
+                <Form.Label> Do you have a manuscript?</Form.Label>
+                <Form.Select
+                  aria-label="Select"
+                  onChange={(e) => setSpecifyManuscript(e.target.value)}
+                >
+                  <option value="1">Yes</option>
+                  <option value="2">No</option>
+                  <option value="3">Currently working</option>
+                </Form.Select>
+              </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Contact Number</Form.Label>
-                  <PhoneInputWithCountry
-                    defaultCountry="US"
-                    placeholder="Enter phone number"
-                    control={control}
-                    name="contact"
-                    defaultValue={""}
-                    rules={{ required: true }}
-                    // {...register("contact")}
-                  />
-                  {/* <Form.Control
-                          type="text"
-                          placeholder="Enter contact number"
-                          {...register("contact")}
-                        /> */}
-                  {errors?.contact && (
-                    <p className="error-message">{errors?.contact?.message}</p>
-                  )}
-                </Form.Group>
-
+              <Form.Group>
                 <FloatingLabel
                   controlId="floatingTextarea"
-                  label="Address"
+                  label="If other, please specify"
                   className="mb-3"
                 >
                   <Form.Control
                     as="textarea"
                     placeholder="Leave a comment here"
-                    {...register("address")}
                   />
-                  {errors?.address && (
-                    <p className="error-message">{errors?.address?.message}</p>
-                  )}
                 </FloatingLabel>
-                {/* <a
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>What are your goals to your book?</Form.Label>
+                <Form.Select aria-label="Select">
+                  <option selected disabled>
+                    Select options
+                  </option>
+                  <option value="1">Revenue</option>
+                  <option value="3">Publicity</option>
+                  <option value="2">Share Information/Story</option>
+                </Form.Select>
+              </Form.Group>
+              <Form.Group>
+                <FloatingLabel
+                  controlId="floatingTextarea"
+                  label="If other, please specify"
+                  className="mb-3"
+                >
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                  />
+                </FloatingLabel>
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label> Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter name"
+                  {...register("name")}
+                />
+                {errors?.name && (
+                  <p className="error-message">{errors?.name?.message}</p>
+                )}
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  {...register("email")}
+                />
+                {errors?.email && (
+                  <p className="error-message">{errors?.email?.message}</p>
+                )}
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Contact Number</Form.Label>
+                <PhoneInputWithCountry
+                  defaultCountry="US"
+                  placeholder="Enter phone number"
+                  control={control}
+                  name="contact"
+                  defaultValue={""}
+                  rules={{ required: true }}
+                  // {...register("contact")}
+                />
+                {/* <Form.Control
+                          type="text"
+                          placeholder="Enter contact number"
+                          {...register("contact")}
+                        /> */}
+                {errors?.contact && (
+                  <p className="error-message">{errors?.contact?.message}</p>
+                )}
+              </Form.Group>
+
+              <FloatingLabel
+                controlId="floatingTextarea"
+                label="Address"
+                className="mb-3"
+              >
+                <Form.Control
+                  as="textarea"
+                  placeholder="Leave a comment here"
+                  {...register("address")}
+                />
+                {errors?.address && (
+                  <p className="error-message">{errors?.address?.message}</p>
+                )}
+              </FloatingLabel>
+              {/* <a
                         href="/guide/testfile.pdf"
                         target="_blank"
                         download
@@ -251,23 +319,22 @@ const GetStarted = () => {
                       >
                         Download
                       </a> */}
-                <Button
-                  variant="primary"
-                  type="submit"
-                  disabled={loading}
-                  style={{ width: "100%" }}
-                >
-                  {loading ? (
-                    <Loader type="Puff" color="white" height={30} width={30} />
-                  ) : (
-                    "Submit"
-                  )}
-                </Button>
-              </Form>
-            </Col>
-          </Row>
-        </div>
-      </div>
+              <Button
+                variant="primary"
+                type="submit"
+                disabled={loading}
+                style={{ width: "100%" }}
+              >
+                {loading ? (
+                  <Loader type="Puff" color="white" height={30} width={30} />
+                ) : (
+                  "Send me the guide!"
+                )}
+              </Button>
+            </Form>
+          </div>
+        </Col>
+      </Row>
 
       <Footer />
     </>

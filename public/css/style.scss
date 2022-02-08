@@ -150,6 +150,26 @@ a {
   color: $error-color;
 }
 
+.get-author-guide {
+  width: 80%;
+  min-width: 80%;
+  border-style: solid;
+  border-radius: 1rem;
+  border-color: #9a8c98;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    min-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
 .services-title-back {
   display: flex;
   justify-content: space-between;
