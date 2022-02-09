@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NextSeo } from "next-seo";
 import Navbar from "@/components/_App/Navbar";
+import NavbarStyleFour from "@/components/_App/NavbarStyleFour";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import { useRouter } from "next/router";
@@ -141,14 +142,15 @@ const GetStarted = () => {
       />
       <Navbar />
 
-      <PageBanner pageTitle="Get Author's Guide" />
+      {/* <PageBanner pageTitle="Get Author's Guide" /> */}
 
       <Row
-        className="mr-2"
         style={{
           paddingLeft: "2rem",
           paddingRight: "2rem",
           paddingBottom: "5rem",
+          backgroundColor: "#495057",
+          paddingTop: "6rem",
         }}
       >
         <Col
@@ -161,9 +163,11 @@ const GetStarted = () => {
             justifyContent: "center",
           }}
         >
-          <h1>Take The Easy Path To Publish Your Work</h1>
+          <h1 className="text-white">
+            Take The Easy Path To Publish Your Work
+          </h1>
           <div className="mr-2" style={{ marginBottom: "2rem" }}>
-            <h5>
+            <h5 className="text-white">
               Author Reputation Press' Publishing guide provides a step-by-step
               method of bringing your manuscript from scratch to completion
             </h5>
@@ -201,11 +205,20 @@ const GetStarted = () => {
               className="get-author-guide"
               onSubmit={handleSubmit(submitHandler)}
             >
-              <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>
+              <h2
+                className="text-white"
+                style={{
+                  textAlign: "center",
+                  marginBottom: "2rem",
+                }}
+              >
                 Get Your Author's Guide
               </h2>
               <Form.Group className="mb-3">
-                <Form.Label> Do you have a manuscript?</Form.Label>
+                <Form.Label className="text-white">
+                  {" "}
+                  Do you have a manuscript?
+                </Form.Label>
                 <Form.Select
                   aria-label="Select"
                   onChange={(e) => setSpecifyManuscript(e.target.value)}
@@ -220,7 +233,7 @@ const GetStarted = () => {
                 <FloatingLabel
                   controlId="floatingTextarea"
                   label="If other, please specify"
-                  className="mb-3"
+                  className="mb-3 "
                 >
                   <Form.Control
                     as="textarea"
@@ -230,7 +243,9 @@ const GetStarted = () => {
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>What are your goals to your book?</Form.Label>
+                <Form.Label className="text-white">
+                  What are your goals to your book?
+                </Form.Label>
                 <Form.Select aria-label="Select">
                   <option selected disabled>
                     Select options
@@ -254,7 +269,7 @@ const GetStarted = () => {
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label> Name</Form.Label>
+                <Form.Label className="text-white"> Name</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter name"
@@ -265,7 +280,7 @@ const GetStarted = () => {
                 )}
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label className="text-white">Email address</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter email"
@@ -277,7 +292,7 @@ const GetStarted = () => {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Contact Number</Form.Label>
+                <Form.Label className="text-white">Contact Number</Form.Label>
                 <PhoneInputWithCountry
                   defaultCountry="US"
                   placeholder="Enter phone number"
