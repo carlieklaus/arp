@@ -27,7 +27,7 @@ const FeedbackStyleTwo = ({ books }) => {
           <div className="bar"></div>
           <p>
             These books are curated and published by Author Reputation Press and
-            is available in the bookstore
+            are available in the bookstore.
           </p>
         </div>
 
