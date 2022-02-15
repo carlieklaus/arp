@@ -118,12 +118,13 @@ const Bookstore = ({ total }) => {
             Loading...
           </div>
         )}
-        {books?.length === 0 && (
+        {books?.length === 0 && authors?.length === 0 && (
           <div className="no-results" style={{ padding: "1rem" }}>
             No results..
           </div>
         )}
-        {books?.length > 0 && (
+
+        {(books?.length > 0 || authors?.length > 0) && (
           <div className="search-results">
             {authors?.length > 0 &&
               authors.map((author) => (
