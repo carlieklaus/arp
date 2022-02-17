@@ -1,7 +1,6 @@
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_URL || "https://authorreputationpress.com/",
   generateRobotsTxt: true, // (optional)
-  sitemapBaseFileName: "sitemap0",
   exclude: [
     "/upload-authors",
     "/upload-royalties",
