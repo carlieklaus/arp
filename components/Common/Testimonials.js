@@ -7,11 +7,11 @@ import { Row, Col } from "react-bootstrap";
 const options = {
   loop: false,
   nav: false,
-  dots: false,
+  dots: true,
   autoplay: true,
   smartSpeed: 1000,
   autoplayTimeout: 5000,
-  items: 0,
+  items: 1,
   animateOut: "fadeOut",
 };
 
@@ -41,7 +41,7 @@ const Testimonials = ({ testimonials }) => {
                   <Row>
                     <Col lg={3} style={{ display: "flex" }}>
                       <div className="client-info">
-                        <a href={`/authors/${item?.author?.username}`}>
+                        {item?.author?.picture !== null && (
                           <Image
                             src={item?.author?.picture?.url}
                             alt={`${item?.author?.firstname} ${item?.author?.lastname}`}
@@ -49,11 +49,13 @@ const Testimonials = ({ testimonials }) => {
                             height={200}
                             layout="intrinsic"
                           />
-                          <h3>
+                        )}
+                        <h3>
+                          <a href={`/authors/${item?.author?.username}`}>
                             {`${item?.author?.firstname} ${item?.author?.lastname}`}
-                          </h3>
-                          <span>{item?.book}</span>
-                        </a>
+                          </a>
+                        </h3>
+                        <span>{item?.book}</span>
                       </div>
                     </Col>
                     <Col lg={9}>
