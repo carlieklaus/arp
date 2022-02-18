@@ -1,15 +1,18 @@
 import React from "react";
-import dynamic from "next/dynamic";
-const OwlCarousel = dynamic(import("react-owl-carousel3"));
+import OwlCarousel from "react-owl-carousel3";
+import * as Icon from "react-feather";
+import Image from "next/image";
+import { Row, Col } from "react-bootstrap";
 
 const options = {
   loop: false,
   nav: false,
-  dots: true,
+  dots: false,
   autoplay: true,
   smartSpeed: 1000,
   autoplayTimeout: 5000,
-  items: 1,
+  items: 0,
+  animateOut: "fadeOut",
 };
 
 const Testimonials = ({ testimonials }) => {
@@ -18,8 +21,9 @@ const Testimonials = ({ testimonials }) => {
   React.useEffect(() => {
     setDisplay(true);
   }, []);
+
   return (
-    <div className="feedback-area ptb-80">
+    <div className="ml-feedback-area ptb-80">
       <div className="container">
         <div className="section-title">
           <h2>What The Authors Have To Say About ARP</h2>
@@ -28,37 +32,34 @@ const Testimonials = ({ testimonials }) => {
 
         {display ? (
           <OwlCarousel
-            className="testimonials-slides owl-carousel owl-theme"
+            className="ml-feedback-slides owl-carousel owl-theme"
             {...options}
           >
-            {/*  */}
-
             {testimonials &&
               testimonials.map((item) => (
-                <div className="single-feedback-item">
-                  <p>{item?.description}</p>
-                  <div
-                    className="client-info "
-                    style={{ display: "flex", justifyContent: "center" }}
-                  >
-                    {item?.image !== null && (
-                      <div className="image">
-                        <img src={item?.image?.url} alt={item?.author} />
+                <div className="single-ml-feedback-item">
+                  <Row>
+                    <Col lg={3} style={{ display: "flex" }}>
+                      <div className="client-info">
+                        <a href={`/authors/${item?.author?.username}`}>
+                          <Image
+                            src={item?.author?.picture?.url}
+                            alt={`${item?.author?.firstname} ${item?.author?.lastname}`}
+                            width={200}
+                            height={200}
+                            layout="intrinsic"
+                          />
+                          <h3>
+                            {`${item?.author?.firstname} ${item?.author?.lastname}`}
+                          </h3>
+                          <span>{item?.book}</span>
+                        </a>
                       </div>
-                    )}
-
-                    <div
-                      className="title"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <h3>{item?.author}</h3>
-                      <span>{item?.book}</span>
-                    </div>
-                  </div>
+                    </Col>
+                    <Col lg={9}>
+                      <p>{item?.description}</p>
+                    </Col>
+                  </Row>
                 </div>
               ))}
           </OwlCarousel>
@@ -74,13 +75,10 @@ const Testimonials = ({ testimonials }) => {
       <div className="shape2 rotateme">
         <img src="/images/shape2.svg" alt="shape" />
       </div>
+      <div className="shape3">
+        <img src="/images/shape3.svg" alt="shape" />
+      </div>
       <div className="shape4">
-        <img src="/images/shape4.svg" alt="shape" />
-      </div>
-      <div className="shape5">
-        <img src="/images/shape5.png" alt="shape" />
-      </div>
-      <div className="shape6 rotateme">
         <img src="/images/shape4.svg" alt="shape" />
       </div>
       <div className="shape7">

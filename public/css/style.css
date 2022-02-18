@@ -5277,6 +5277,15 @@ Profile Area CSS
 .profile-box .image {
   border-radius: 5px;
   padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profile-box .image img {
@@ -9391,8 +9400,6 @@ ML Services CSS
 ML Feedback CSS
 =================================================*/
 .ml-feedback-area {
-  background: -webkit-gradient(linear, left bottom, right top, from(#d5fefd), color-stop(#e0fdff), color-stop(#effbff), color-stop(#fbfaff), to(#fffcff));
-  background: linear-gradient(to right top, #d5fefd, #e0fdff, #effbff, #fbfaff, #fffcff);
   position: relative;
   z-index: 1;
 }
@@ -9401,26 +9408,35 @@ ML Feedback CSS
   -webkit-box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.04);
           box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.04);
   margin-bottom: 45px;
-  background-color: #ffffff;
+  background: -webkit-gradient(linear, left bottom, right top, from(#d5fefd), color-stop(#e0fdff), color-stop(#effbff), color-stop(#fbfaff), to(#fffcff));
+  background: linear-gradient(to right top, #d5fefd, #e0fdff, #effbff, #fbfaff, #fffcff);
   position: relative;
-  padding: 60px 70px 60px 190px;
+  padding: 60px 70px 60px 70px;
   border-radius: 5px;
 }
 
 .single-ml-feedback-item .client-info {
-  position: absolute;
-  left: 60px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
 .single-ml-feedback-item .client-info img {
-  border-radius: 5px;
+  border-radius: 100px;
   border: 2px solid #f4f5fe;
-  width: 80px !important;
-  height: 80px !important;
+  width: 150px !important;
+  height: 150px !important;
   padding: 5px;
   display: inline-block !important;
 }
@@ -9474,8 +9490,8 @@ ML Feedback CSS
 }
 
 .ml-feedback-slides {
-  max-width: 750px;
-  margin: -40px auto 0;
+  max-width: 1124px;
+  margin: -30px auto 0;
 }
 
 .ml-feedback-slides .single-ml-feedback-item {
@@ -10300,7 +10316,7 @@ Testimonials CSS
 }
 
 .single-testimonials-item .client-info img {
-  border-radius: 5px;
+  border-radius: 20px;
   border: 2px solid #f4f5fe;
   width: 80px !important;
   height: 80px !important;

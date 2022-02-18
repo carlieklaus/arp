@@ -5030,7 +5030,9 @@ Profile Area CSS
   .image {
     border-radius: 5px;
     padding-right: 15px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       border-radius: 5px;
     }
@@ -9043,6 +9045,12 @@ ML Services CSS
 ML Feedback CSS
 =================================================*/
 .ml-feedback-area {
+  position: relative;
+  z-index: 1;
+}
+.single-ml-feedback-item {
+  box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.04);
+  margin-bottom: 45px;
   background: linear-gradient(
     to right top,
     #d5fefd,
@@ -9052,28 +9060,21 @@ ML Feedback CSS
     #fffcff
   );
   position: relative;
-  z-index: 1;
-}
-.single-ml-feedback-item {
-  box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.04);
-  margin-bottom: 45px;
-  background-color: $white-color;
-  position: relative;
-  padding: 60px 70px 60px 190px;
+  padding: 60px 70px 60px 70px;
   border-radius: 5px;
 
   .client-info {
-    position: absolute;
-    left: 60px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
     img {
-      border-radius: 5px;
+      border-radius: 100px;
       border: 2px solid #f4f5fe;
-      width: 80px !important;
-      height: 80px !important;
+      width: 150px !important;
+      height: 150px !important;
       padding: 5px;
       display: inline-block !important;
     }
@@ -9127,8 +9128,8 @@ ML Feedback CSS
   }
 }
 .ml-feedback-slides {
-  max-width: 750px;
-  margin: -40px auto 0;
+  max-width: 1124px;
+  margin: -30px auto 0;
 
   .single-ml-feedback-item {
     margin-top: 40px;
@@ -9893,7 +9894,7 @@ Testimonials CSS
       right: auto;
     }
     img {
-      border-radius: 5px;
+      border-radius: 20px;
       border: 2px solid #f4f5fe;
       width: 80px !important;
       height: 80px !important;

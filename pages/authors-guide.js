@@ -45,9 +45,9 @@ const GetStarted = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const setSpecifyManuscript = (val) => {
-    specifyManuscript.current = val;
-  };
+  // const setSpecifyManuscript = (val) => {
+  //   specifyManuscript.current = val;
+  // };
 
   const submitHandler = async (data) => {
     setLoading(true);
@@ -186,7 +186,7 @@ const GetStarted = () => {
                         <Form.Label> Do you have a manuscript?</Form.Label>
                         <Form.Select
                           aria-label="Select"
-                          onChange={(e) => setSpecifyManuscript(e.target.value)}
+                          // onChange={(e) => setSpecifyManuscript(e.target.value)}
                         >
                           <option value="1">Yes</option>
                           <option value="2">No</option>
