@@ -55,11 +55,11 @@ const Testimonials = ({ testimonials }) => {
                             {`${item?.author?.firstname} ${item?.author?.lastname}`}
                           </a>
                         </h3>
-                        <span>{item?.book}</span>
+                        <span style={{ color: "#ff612f" }}>{item?.book}</span>
                       </div>
                     </Col>
                     <Col lg={9}>
-                      <p>{item?.description}</p>
+                      <p style={{ textAlign: "center" }}>{item?.description}</p>
                     </Col>
                   </Row>
                 </div>
