@@ -8,6 +8,7 @@ import { Loader } from "react-overlay-loader";
 import useSWR from "swr";
 import { API_URL } from "config";
 import { useRouter } from "next/router";
+import Testimonials from "@/components/Common/Testimonials";
 
 export default function Testimonial() {
   const router = useRouter();
@@ -61,7 +62,7 @@ export default function Testimonial() {
 
       {/* <Loader fullPage loading /> */}
 
-      {!testimonials ? (
+      {/* {!testimonials ? (
         <Loader fullPage loading />
       ) : error ? (
         <h1>{error}</h1>
@@ -85,7 +86,9 @@ export default function Testimonial() {
             />
           )
         )
-      )}
+      )} */}
+
+      <Testimonials testimonials={testimonials} />
 
       <Footer />
     </>

@@ -1139,7 +1139,6 @@ Main Banner CSS
 
 .main-banner {
   position: relative;
-  height: 910px;
   z-index: 1;
   background: transparent url(/images/banner-bg1.jpg) right top no-repeat;
 }
@@ -3879,7 +3878,7 @@ Feedback CSS
 
 .single-feedback-item .client-info .image img {
   display: inline-block !important;
-  width: 75px;
+  width: 100px;
   border-radius: 50%;
   border: 3px solid #44ce6f;
 }
@@ -3902,7 +3901,7 @@ Feedback CSS
 
 .single-feedback-item::before {
   content: "\f11b";
-  color: #d9dcde;
+  color: #f6ae2d;
   font-family: Flaticon;
   font-size: 30px;
   font-style: normal;
