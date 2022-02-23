@@ -13,7 +13,7 @@ import Testimonials from "@/components/Common/Testimonials";
 export default function Testimonial() {
   const router = useRouter();
   const testimonialFetcher = async () => {
-    const res = await fetch(`${API_URL}/testimonies`, {
+    const res = await fetch(`${API_URL}/testimonies?_sort=sequence:ASC`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ export default function Testimonial() {
   };
 
   const { data: testimonials, error } = useSWR(
-    `${API_URL}/testimonies`,
+    `${API_URL}/testimonies?_sort=sequence:ASC`,
     testimonialFetcher
   );
 

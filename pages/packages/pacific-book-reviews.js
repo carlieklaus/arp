@@ -88,16 +88,12 @@ const PacificBookReviews = () => {
                       <th></th>
                       <th>Standard</th>
                       <th>Express</th>
-                      <th>Ultimate Advanced</th>
-                      <th>Dual Book Review Bundle*</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>Turnaround time for review</td>
                       <td>5-7 weeks</td>
-                      <td>3 weeks</td>
-                      <td>3 weeks</td>
                       <td>3 weeks</td>
                     </tr>
 
@@ -109,29 +105,15 @@ const PacificBookReviews = () => {
                       <td>
                         <Icon.Check />
                       </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
                     </tr>
                     <tr>
                       <td>Exclusive author interview posted on PBR Channels</td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td></td>
                     </tr>
                     <tr>
                       <td>Press release distributed to media outlets</td>
                       <td></td>
-                      <td></td>
-                      <td>
-                        <Icon.Check />
-                      </td>
                       <td></td>
                     </tr>
                     <tr>
@@ -141,37 +123,19 @@ const PacificBookReviews = () => {
                       </td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td></td>
                     </tr>
                     <tr>
                       <td>Author spotlight page</td>
                       <td></td>
-                      <td></td>
-                      <td>
-                        <Icon.Check />
-                      </td>
                       <td></td>
                     </tr>
                     <tr>
                       <td>Exclusive author interview</td>
                       <td></td>
                       <td></td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td></td>
                     </tr>
                     <tr>
                       <td>400-600 word professional review</td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
                       <td>
                         <Icon.Check />
                       </td>
@@ -183,13 +147,9 @@ const PacificBookReviews = () => {
                       <td>PBR homepage featured book of the month</td>
                       <td>Eligible</td>
                       <td>Eligible</td>
-                      <td>Eligible</td>
-                      <td>Eligible</td>
                     </tr>
                     <tr>
                       <td>PBR homepage top 5 reviews</td>
-                      <td>Eligible</td>
-                      <td>Eligible</td>
                       <td>Eligible</td>
                       <td>Eligible</td>
                     </tr>
@@ -197,12 +157,6 @@ const PacificBookReviews = () => {
                       <td>
                         Review link for Amazon***, Barnes & Noble and more
                         listings
-                      </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td>
-                        <Icon.Check />
                       </td>
                       <td>
                         <Icon.Check />
@@ -221,12 +175,6 @@ const PacificBookReviews = () => {
                       <td>
                         <Icon.Check />
                       </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
                     </tr>
                     <tr>
                       <td>Review posting on PBR’s social media sites</td>
@@ -236,17 +184,9 @@ const PacificBookReviews = () => {
                       <td>
                         <Icon.Check />
                       </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
                     </tr>
                     <tr>
                       <td>Starred review</td>
-                      <td>Eligible</td>
-                      <td>Eligible</td>
                       <td>Eligible</td>
                       <td>Eligible</td>
                     </tr>
@@ -261,17 +201,9 @@ const PacificBookReviews = () => {
                       <td>
                         <Icon.Check />
                       </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
-                      <td>
-                        <Icon.Check />
-                      </td>
                     </tr>
                     <tr>
                       <td>Pacific Book Awards Nomination</td>
-                      <td>Guaranteed</td>
-                      <td>Guaranteed</td>
                       <td>Guaranteed</td>
                       <td>Guaranteed</td>
                     </tr>
