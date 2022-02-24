@@ -88,6 +88,14 @@ export default function BookEvents() {
                     </div>
                   </Link>
                 </div>
+                <div className="col-lg-12 col-md-12">
+                  <Link href="/services/book-events/international-book-exhibit">
+                    <div className="box" style={{ cursor: "pointer" }}>
+                      <Icon.Film />
+                      International Book Exhibit
+                    </div>
+                  </Link>
+                </div>
 
                 {/* <div className="col-lg-6 col-md-6">
                   <Link href="/services/book-events/international-show">

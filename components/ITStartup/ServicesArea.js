@@ -99,9 +99,9 @@ const ServicesArea = () => {
                   </Link>
                 </div>
                 <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/translation-service-spanish">
+                  <Link href="/services/content-creativity/translation-services">
                     <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Translation Service - Spanish
+                      <Icon.Codesandbox /> Translation Services
                     </div>
                   </Link>
                 </div>

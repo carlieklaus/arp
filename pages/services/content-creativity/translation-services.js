@@ -16,7 +16,7 @@ const TranslationService = () => {
   return (
     <>
       <NextSeo
-        title="Translation Service - Spanish | Services"
+        title="Translation Services | Services"
         description=""
         canonical={
           (
@@ -26,7 +26,7 @@ const TranslationService = () => {
         }
         openGraph={{
           url: process.env.NEXT_PUBLIC_URL,
-          title: "Translation Service - Spanish | Services",
+          title: "Translation Services | Services",
           description: "",
           images: [
             {
@@ -52,7 +52,7 @@ const TranslationService = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h1>Translation Service - Spanish</h1>
+                    <h1>Translation Services</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}
@@ -62,47 +62,43 @@ const TranslationService = () => {
                   </div>
                   <div className="bar"></div>
                 </div>
-                <h3>
-                  $0.113/Word (Spanish to English) – $0.112/Word (English to
-                  Spanish)
-                </h3>
-
                 <h5 style={{ marginTop: "2rem" }}>
-                  Your Excellent Choice for Professional Spanish Translation
-                  Services
+                  Your Excellent Choice for Professional Translation Services
                 </h5>
                 <p style={{ marginTop: "1rem" }}>
-                  Using our Spanish translation services, you can reach out to
-                  new audiences in different languages. Author Reputation Press
-                  provides Spanish book translation services to authors who want
-                  to reach Hispanic audiences with their book, whether it is a
+                  Using our translation services, you can reach out to new
+                  audiences in different languages. Author Reputation Press
+                  provides book translation services to authors who want to
+                  reach a global audience with their book, whether it is a
                   novel, poetry collection, or memoir.
                 </p>
                 <p style={{ marginTop: "1rem" }}>
-                  Our resident translator has a deep knowledge of and
-                  fascination with the Spanish language, as well as a great
-                  understanding and immersion in Hispanic culture, having
-                  translated over 50 books. With a flexible writing style, our
-                  professional translator can convey the meaning of your
-                  original work to readers without deviating from the source’s
-                  theme.
+                  We offer the most spoken languages in the world for our
+                  translation services such as, but not limited to, Mandarin
+                  Chinese, Spanish, UK English, Modern Standard Arabic,
+                  Portuguese, Bengali, Russian, Japanese, and Punjabi. In
+                  addition, we can also translate files vice versa.
                 </p>
                 <p style={{ marginTop: "1rem" }}>
-                  These are all backed by professional level skills in the
-                  Spanish and English languages earned by our translator through
-                  a Master’s Degree in Modern Languages, honed by seven years of
-                  translation experience.
+                  Our professional translators are meticulously screened to help
+                  our authors receive nothing but the best. They make sure that
+                  the accuracy, clarity, and the seamlessness of their
+                  translated manuscripts are thoroughly maintained and
+                  proof-read, without losing a bit of professionalism. Our
+                  translators have years of experience in handling various
+                  projects from different major industries. Thus, first-class
+                  results are always ensured.
                 </p>
 
                 <h5 style={{ marginTop: "2rem" }}>Breaking the Barrier</h5>
                 <p style={{ marginTop: "1rem" }}>
-                  Break through the language barrier. Our Spanish translation
-                  services enable authors to reach a global audience and
-                  increase their readership exponentially, regardless of
-                  geography. Currently, 572 million people worldwide speak
-                  Spanish. We assist authors in capturing a sizable portion of
-                  that market. Our resident translator’s portfolio includes over
-                  200 translated books.
+                  Break through the language barrier. Our translation services
+                  enable authors to reach a global audience and increase their
+                  readership exponentially, regardless of geography. We assist
+                  authors in capturing a sizable portion of that market. With
+                  the help of our translators’ expertise, we will be able to
+                  accomplish more translation services without having to worry
+                  of a poor-quality outcome.
                 </p>
                 <p style={{ marginTop: "1rem" }}>
                   Your work will be translated in the style and tone of the
@@ -115,22 +111,22 @@ const TranslationService = () => {
                   <ul>
                     <li>
                       <h6>
+                        Your manuscript will be forwarded to our translators
+                        indicating the language/languages in which you wish your
+                        manuscript to be translated to.
+                      </h6>
+                    </li>
+                    <li>
+                      <h6>
                         Your work will be manually translated with a genuine
-                        Spanish style and tone as if it was originally written
-                        in that language.
+                        style and tone of the language of your choice as if it
+                        was originally written in that language.
                       </h6>
                     </li>
                     <li>
                       <h6>
-                        Our resident translator can translate works in any
-                        genre.
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        Completely trusted by Amazon and New York
-                        Times-best-selling authors, our translator maintains a
-                        high level of reputation in the industry.
+                        Our translators can translate works in any genre and
+                        maintains a high level of reputation in the industry.
                       </h6>
                     </li>
                     <li>
