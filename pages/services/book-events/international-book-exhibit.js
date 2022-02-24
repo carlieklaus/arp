@@ -91,10 +91,10 @@ const InternationalBookExhibit = () => {
                       <h6>Full-page Ad in Exhibit Catalog</h6>
                     </li>
                     <li>
-                      <h6>Full-page Ad in Exhibit Catalog</h6>
+                      <h6>1 Print title on display</h6>
                     </li>
                     <li>
-                      <h6>Full-page Ad in Exhibit Catalog</h6>
+                      <h6>Blog Feature on ARPress’ Website</h6>
                     </li>
                     <li>
                       <h6>ARPress’ Social Media Feature</h6>
