@@ -216,6 +216,13 @@ a {
   height: 20rem;
 }
 
+.author-guide {
+  @media only screen and (min-width: 992px) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
 .no-results {
   position: absolute;
   width: 100%;

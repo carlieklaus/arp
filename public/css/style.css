@@ -209,6 +209,13 @@ a:hover, a:focus {
   height: 20rem;
 }
 
+@media only screen and (min-width: 992px) {
+  .author-guide {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
 .no-results {
   position: absolute;
   width: 100%;
