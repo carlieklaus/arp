@@ -119,7 +119,7 @@ const GetStarted = () => {
         }}
       />
 
-      <div className="main-banner" style={{ minHeight: "90vh" }}>
+      <div className="main-banner">
         <div className="d-table">
           <div className="d-table-cell">
             <div
@@ -137,11 +137,11 @@ const GetStarted = () => {
                 <div className="col-lg-8 col-md-12 col sm-12 author-guide">
                   <div className="hero-content">
                     <h1>Take The Easy Path To Publish Your Work</h1>
-                    <p>
+                    <h5 style={{ textAlign: "center" }}>
                       Author Reputation Press' publishing guide provides a
                       step-by-step method of bringing your manuscript from
                       scratch to completion
-                    </p>
+                    </h5>
                   </div>
                   <Image
                     src="/guide/authorbanner.jpg"
@@ -172,7 +172,7 @@ const GetStarted = () => {
                         </Form.Select>
                       </Form.Group>
 
-                      <Form.Group className="mb-3">
+                      <Form.Group>
                         <Form.Label>
                           What are your goals to your book?
                         </Form.Label>
@@ -184,6 +184,15 @@ const GetStarted = () => {
                           <option value="3">Publicity</option>
                           <option value="2">Share Information/Story</option>
                         </Form.Select>
+                      </Form.Group>
+
+                      <Form.Group className="mb-3">
+                        <FloatingLabel
+                          controlId="floatingTextarea"
+                          label="If other, please specify"
+                        >
+                          <Form.Control as="textarea" />
+                        </FloatingLabel>
                       </Form.Group>
 
                       <Form.Group className="mb-3">
