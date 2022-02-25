@@ -1,18 +1,34 @@
 import React from "react";
-import OwlCarousel from "react-owl-carousel3";
-import * as Icon from "react-feather";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Row, Col } from "react-bootstrap";
+import Link from "next/link";
+const OwlCarousel = dynamic(import("react-owl-carousel3"));
 
 const options = {
-  loop: false,
+  loop: true,
   nav: false,
   dots: true,
   autoplay: true,
   smartSpeed: 1000,
+  margin: 30,
   autoplayTimeout: 5000,
-  items: 1,
-  animateOut: "fadeOut",
+  responsive: {
+    0: {
+      items: 1,
+    },
+    576: {
+      items: 3,
+    },
+    768: {
+      items: 3,
+    },
+    1024: {
+      items: 3,
+    },
+    1200: {
+      items: 3,
+    },
+  },
 };
 
 const Testimonials = ({ testimonials }) => {
@@ -23,45 +39,44 @@ const Testimonials = ({ testimonials }) => {
   }, []);
 
   return (
-    <div className="ml-feedback-area ptb-80">
+    <div className="ml-feedback-area pt-80 ptb-80">
       <div className="container">
         <div className="section-title">
           <h2>What The Authors Have To Say About ARP</h2>
           <div className="bar"></div>
         </div>
-
+      </div>
+      <div className="container-fluid">
         {display ? (
           <OwlCarousel
-            className="ml-feedback-slides owl-carousel owl-theme"
+            className="ml-projects-slides owl-carousel owl-theme"
             {...options}
           >
             {testimonials &&
               testimonials.map((item) => (
-                <div className="single-ml-feedback-item">
-                  <Row>
-                    <Col lg={3} style={{ display: "flex" }}>
-                      <div className="client-info">
-                        {item?.author?.picture !== null && (
-                          <Image
-                            src={item?.author?.picture?.url}
-                            alt={`${item?.author?.firstname} ${item?.author?.lastname}`}
-                            width={200}
-                            height={200}
-                            layout="intrinsic"
-                          />
-                        )}
-                        <h3>
-                          <a href={`/authors/${item?.author?.username}`}>
-                            {`${item?.author?.firstname} ${item?.author?.lastname}`}
-                          </a>
-                        </h3>
-                        <span style={{ color: "#ff612f" }}>{item?.book}</span>
-                      </div>
-                    </Col>
-                    <Col lg={9}>
-                      <p style={{ textAlign: "center" }}>{item?.description}</p>
-                    </Col>
-                  </Row>
+                <div
+                  className="single-ml-projects-box testimonies"
+                  key={item?.id}
+                >
+                  {item?.author?.picture && (
+                    <Image
+                      src={item?.author?.picture?.url}
+                      width={100}
+                      height={100}
+                      layout="fixed"
+                    />
+                  )}
+                  <h5 style={{ marginTop: "1rem" }}>
+                    <Link href={`/authors/${item?.author?.username}`}>
+                      <a>
+                        {item?.author?.firstname} {item?.author?.lastname}
+                      </a>
+                    </Link>
+                  </h5>
+                  <p>{item?.book}</p>
+                  <p style={{ color: "black", marginTop: "2rem" }}>
+                    {item?.description}
+                  </p>
                 </div>
               ))}
           </OwlCarousel>

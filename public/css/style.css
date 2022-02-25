@@ -216,6 +216,11 @@ a:hover, a:focus {
   }
 }
 
+.testimonies {
+  padding: 4rem;
+  text-align: center;
+}
+
 .no-results {
   position: absolute;
   width: 100%;
