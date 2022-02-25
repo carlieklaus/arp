@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { Button, Form, Row, Col, FloatingLabel } from "react-bootstrap";
+import { Button, Form, FloatingLabel } from "react-bootstrap";
 import Image from "next/image";
 
 import { useForm } from "react-hook-form";
@@ -11,6 +11,7 @@ import { API_URL } from "config";
 import Swal from "sweetalert2";
 import Loader from "react-loader-spinner";
 import PhoneInputWithCountry from "react-phone-number-input/react-hook-form";
+import Link from "next/link";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -82,9 +83,11 @@ const GetStarted = () => {
         "Success",
         "Please check your email for the link of the guide",
         "success"
-      );
-      reset({});
-      setLoading(false);
+      ).then(() => {
+        reset({});
+        setLoading(false);
+        router.push("/");
+      });
     } catch (error) {
       console.error(error);
     }
@@ -126,13 +129,17 @@ const GetStarted = () => {
               className=""
               style={{ paddingLeft: "4rem", paddingRight: "4rem" }}
             >
-              <Image
-                src="/images/logo-2.png"
-                alt="Author Reputation Press Logo"
-                width={350}
-                height={100}
-                layout="fixed"
-              />
+              <Link href="/">
+                <a>
+                  <Image
+                    src="/images/logo-2.png"
+                    alt="Author Reputation Press Logo"
+                    width={350}
+                    height={100}
+                    layout="fixed"
+                  />
+                </a>
+              </Link>
               <div className="row h-100 justify-content-center align-items-center">
                 <div className="col-lg-8 col-md-12 col sm-12 author-guide">
                   <div className="hero-content">
