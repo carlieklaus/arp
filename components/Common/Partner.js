@@ -120,14 +120,7 @@ const Partner = () => {
       <div className="partner-area partner-section">
         <div className="container">
           <div className="partner-inner">
-            <div
-              className="row justify-content-center"
-              style={{
-                paddingLeft: "15rem",
-                paddingRight: "15rem",
-                marginTop: "3rem",
-              }}
-            >
+            <div className="row justify-content-center submit-manuscript-form">
               <Form onSubmit={handleSubmit(submitHandler)}>
                 <Form.Group className="mb-3">
                   <Form.Label>Name</Form.Label>
