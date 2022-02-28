@@ -241,6 +241,13 @@ a:hover, a:focus {
   }
 }
 
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .submit-manuscript-form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1042px) {
   .submit-manuscript-form {
     padding-left: 3rem;
