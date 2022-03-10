@@ -137,7 +137,7 @@ const Bookstore = ({ total }) => {
                             src={author?.picture?.url}
                             alt={author?.username}
                             layout="responsive"
-                            width={50}
+                            width={40}
                             height={50}
                           />
                         )}
@@ -165,8 +165,8 @@ const Bookstore = ({ total }) => {
                         <Image
                           src={book?.bookCover?.url}
                           alt={book?.title}
-                          layout="intrinsic"
-                          width={50}
+                          layout="responsive"
+                          width={40}
                           height={50}
                         />
                       </Col>
