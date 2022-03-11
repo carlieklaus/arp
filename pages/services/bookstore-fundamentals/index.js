@@ -2,15 +2,35 @@ import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import * as Icon from "react-feather";
-import Head from "next/head";
 import Link from "next/link";
 import { Button } from "react-bootstrap";
 import GoogleMapsBookshops from "@/components/BigdataAnalytics/GoogleMapsBookshops";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import useSWR from "swr";
+import { API_URL } from "config";
 
 export default function BookstoreFundamentals() {
   const router = useRouter();
+
+  const servicesQuery = async () => {
+    const query = await fetch(
+      `${API_URL}/subservices?service.id=3&_sort=name:ASC`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return await query.json();
+  };
+
+  const { data: subservices, error: servicesError } = useSWR(
+    `${API_URL}/subservices?service.id=3&_sort=name:ASC`,
+    servicesQuery
+  );
 
   const backButtonHandler = () => {
     router.back();
@@ -69,53 +89,31 @@ export default function BookstoreFundamentals() {
               </div>
 
               <div className="row">
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/bookstore-fundamentals/extensive-library-outreach-campaign">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.BookOpen /> Extensive Library Outreach Campaign
+                {subservices &&
+                  subservices.map((item) => (
+                    <div className="col-lg-6 col-md-6">
+                      <Link
+                        href={`/services/bookstore-fundamentals/${item?.slug}`}
+                      >
+                        <div className="box" style={{ cursor: "pointer" }}>
+                          <Icon.Globe /> {item?.name}
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
+                  ))}
 
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/bookstore-fundamentals/book-returnability-program">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.BookOpen /> Book Returnability Program
+                {servicesError && (
+                  <div>
+                    <div className="col-lg-12 col-md-12">
+                      <Link href={`/`}>
+                        <div className="box" style={{ cursor: "pointer" }}>
+                          Sorry but there are some error fetching the
+                          subservices
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/bookstore-fundamentals/ingram-distribution">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.BookOpen /> Ingram Distribution
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/bookstore-fundamentals/book-royalty-program">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.BookOpen /> 100% Book Royalty Program
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/bookstore-fundamentals/printed-materials">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.BookOpen /> Printed Materials
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/bookstore-fundamentals/special-stockpiling">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.BookOpen /> Special Stockpiling
-                    </div>
-                  </Link>
-                </div>
+                  </div>
+                )}
               </div>
 
               <GoogleMapsBookshops />

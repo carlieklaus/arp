@@ -2,14 +2,34 @@ import Navbar from "@/components/_App/Navbar";
 import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import * as Icon from "react-feather";
-import Head from "next/head";
 import Link from "next/link";
 import { Button } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import useSWR from "swr";
+import { API_URL } from "config";
 
 export default function BookEvents() {
   const router = useRouter();
+
+  const servicesQuery = async () => {
+    const query = await fetch(
+      `${API_URL}/subservices?service.id=4&_sort=name:ASC`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return await query.json();
+  };
+
+  const { data: subservices, error: servicesError } = useSWR(
+    `${API_URL}/subservices?service.id=4&_sort=name:ASC`,
+    servicesQuery
+  );
 
   const backButtonHandler = () => {
     router.back();
@@ -71,85 +91,29 @@ export default function BookEvents() {
               </div>
 
               <div className="row">
-                <div className="col-lg-12 col-md-12">
-                  <Link href="/services/book-events/los-angeles-times-festival-of-books">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film />
-                      Los Angeles Times Festival of Books – Book Gallery
+                {subservices &&
+                  subservices.map((item) => (
+                    <div className="col-lg-6 col-md-6">
+                      <Link href={`/services/book-events/${item?.slug}`}>
+                        <div className="box" style={{ cursor: "pointer" }}>
+                          <Icon.Globe /> {item?.name}
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
-                <div className="col-lg-12 col-md-12">
-                  <Link href="/services/book-events/miami-book-fair-international">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film />
-                      Miami Book Fair International – Book Gallery, Book Signing
-                      & Book Signing with Video Documentation
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-lg-12 col-md-12">
-                  <Link href="/services/book-events/international-book-exhibit">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film />
-                      International Book Exhibit
-                    </div>
-                  </Link>
-                </div>
+                  ))}
 
-                {/* <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/international-show">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Exhibition – International Show
+                {servicesError && (
+                  <div>
+                    <div className="col-lg-12 col-md-12">
+                      <Link href={`/`}>
+                        <div className="box" style={{ cursor: "pointer" }}>
+                          Sorry but there are some error fetching the
+                          subservices
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/package-international-show">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Exhibit Package – International Show
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/national-show">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Exhibit – National Show
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/package-national-show">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Exhibit Package – National Show
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/national-book-signing">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Signing – National
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/international-book-signing">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Signing – International
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/book-events/nts">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Film /> Book Exhibit – NTS
-                    </div>
-                  </Link>
-                </div> */}
+                  </div>
+                )}
               </div>
             </div>
           </div>

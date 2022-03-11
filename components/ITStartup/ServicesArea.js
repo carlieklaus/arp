@@ -3,9 +3,30 @@ import * as Icon from "react-feather";
 import Link from "next/link";
 import { Button } from "react-bootstrap";
 import { useRouter } from "next/router";
+import useSWR from "swr";
+import { API_URL } from "config";
 
 const ServicesArea = () => {
   const router = useRouter();
+
+  const servicesQuery = async () => {
+    const query = await fetch(
+      `${API_URL}/subservices?service.id=1&_sort=name:ASC`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return await query.json();
+  };
+
+  const { data: subservices, error: servicesError } = useSWR(
+    `${API_URL}/subservices?service.id=1&_sort=name:ASC`,
+    servicesQuery
+  );
 
   const backButtonHandler = () => {
     router.back();
@@ -35,92 +56,29 @@ const ServicesArea = () => {
               </div>
 
               <div className="row">
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/black-and-white">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Black and White Package
+                {subservices &&
+                  subservices.map((item) => (
+                    <div className="col-lg-6 col-md-6">
+                      <Link href={`/services/content-creativity/${item?.slug}`}>
+                        <div className="box" style={{ cursor: "pointer" }}>
+                          <Icon.Globe /> {item?.name}
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
+                  ))}
 
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/full-color">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Full Color
+                {servicesError && (
+                  <div>
+                    <div className="col-lg-12 col-md-12">
+                      <Link href={`/`}>
+                        <div className="box" style={{ cursor: "pointer" }}>
+                          Sorry but there are some error fetching the
+                          subservices
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/childrens-book">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Children's Book Packages
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/advanced-editorial-service">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Advanced Editorial Services
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/copy-editing">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Copy Editing
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/book-indexing">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Book Indexing Services
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/illustration-services">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Illustration Services
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/image-enhancement-manipulation">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Image Enhancement and Manipulation
-                    </div>
-                  </Link>
-                </div>
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/translation-services">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Translation Services
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/audiobook-service">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Audiobook Service
-                    </div>
-                  </Link>
-                </div>
-
-                <div className="col-lg-6 col-md-6">
-                  <Link href="/services/content-creativity/data-entry">
-                    <div className="box" style={{ cursor: "pointer" }}>
-                      <Icon.Codesandbox /> Data Entry
-                    </div>
-                  </Link>
-                </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
