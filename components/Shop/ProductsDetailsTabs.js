@@ -101,6 +101,33 @@ const ProductsDetailsTabs = ({ product }) => {
                   </Col>
                 </Row>
               </li>
+              <li>
+                <Row>
+                  <Col sm={12} md={3} lg={2}>
+                    <span>ISBN</span>
+                  </Col>
+                  <Col sm={12} md={6} lg={6}>
+                    {product?.book_types.length > 0 && (
+                      <Table size="sm">
+                        <thead>
+                          <tr>
+                            <th>Book Type</th>
+                            <th>ISBN</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {product?.book_types.map((type) => (
+                            <tr key={type?.id}>
+                              <td>{type?.name}</td>
+                              <td>{type?.isbn}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </Table>
+                    )}
+                  </Col>
+                </Row>
+              </li>
             </ul>
           </div>
         </TabPanel>
