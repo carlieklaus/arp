@@ -103,12 +103,6 @@ const Login = () => {
       <div className="ptb-80">
         <div className="container">
           <div className="auth-form">
-            <div className="auth-head">
-              <p>
-                Don't have an account yet? <Link href="/sign-up">Sign Up</Link>
-              </p>
-            </div>
-
             <form onSubmit={handleSubmit(loginSubmitHandler)}>
               <div className="mb-3">
                 <label className="form-label">Email</label>
