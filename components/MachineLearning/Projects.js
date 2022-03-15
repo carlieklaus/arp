@@ -3,7 +3,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import useSWR from "swr";
-import { API_URL } from "config";
+import { API_URL, MAX_BOOKS_FEATURED, NUMBER_FEATURED_BOOK } from "config";
 import { Loader, LoadingOverlay } from "react-overlay-loader";
 
 const OwlCarousel = dynamic(import("react-owl-carousel3"));
@@ -11,7 +11,7 @@ const OwlCarousel = dynamic(import("react-owl-carousel3"));
 const options = {
   loop: true,
   nav: false,
-  dots: true,
+  dots: false,
   autoplay: true,
   smartSpeed: 1000,
   margin: 30,
@@ -42,8 +42,8 @@ const Projects = () => {
     setDisplay(true);
   }, []);
 
-  const bookFetcher = async () => {
-    const res = await fetch(`${API_URL}/books?featured=true`, {
+  const bookCountQuery = async () => {
+    const res = await fetch(`${API_URL}/books/count`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -53,10 +53,51 @@ const Projects = () => {
     return res.json();
   };
 
+  const { data: bookCount, error: bookCountError } = useSWR(
+    `${API_URL}/books/count`,
+    bookCountQuery
+  );
+
+  const getRandomIntInclusive = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+
+  const bookFetcher = async () => {
+    const res = await fetch(
+      `${API_URL}/books?_limit=${MAX_BOOKS_FEATURED}&_start=${NUMBER_FEATURED_BOOK}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return res.json();
+  };
+
   const { data: products, error } = useSWR(
-    `${API_URL}/books?featured=true`,
+    `${API_URL}/books?_limit=${MAX_BOOKS_FEATURED}&_start=${NUMBER_FEATURED_BOOK}`,
     bookFetcher
   );
+
+  const shuffle = (array) => {
+    var m = array.length,
+      t,
+      i;
+
+    while (m) {
+      i = Math.floor(Math.random() * m--);
+
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+
+    return array;
+  };
 
   return (
     <div className="ml-projects-area pt-5 ptb-80">
@@ -90,7 +131,7 @@ const Projects = () => {
             ) : error ? (
               <h1>{error}</h1>
             ) : (
-              products.map((product) => (
+              shuffle(products).map((product) => (
                 <div className="single-ml-projects-box" key={product?.slug}>
                   <Image
                     src={product?.bookCover?.url}

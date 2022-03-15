@@ -1,6 +1,5 @@
-import { useEffect, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
-import * as Icon from "react-feather";
 import useSWR from "swr";
 import { API_URL } from "config";
 import { Loader } from "react-overlay-loader";
