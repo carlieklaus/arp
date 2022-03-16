@@ -109,7 +109,7 @@ const Inside = () => {
                 <div style={{ marginTop: "2rem" }}>
                   <h5>Objectives </h5>
 
-                  <h6>Our Movie Screenplay Package Includes:</h6>
+                  <h6>Our Package Includes:</h6>
                   <ul>
                     <li>
                       The ad aims to promote your book to Catholic readers
