@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import GoTop from "./GoTop";
+import Facebook from "./Facebook";
 
 const Layout = ({ children }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       </Head>
       {children}
 
+      <Facebook />
       <GoTop scrollStepInPx="100" delayInMs="10.50" />
     </>
   );

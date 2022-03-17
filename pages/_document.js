@@ -1,4 +1,3 @@
-import Facebook from "@/components/_App/Facebook";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -23,7 +22,6 @@ class MyDocument extends Document {
         </Head>
         <body dir={dir} lang={locale}>
           <Main />
-          <Facebook />
           <NextScript />
           <script
             async
