@@ -9,6 +9,7 @@ import Projects from "@/components/MachineLearning/Projects";
 import { NextSeo } from "next-seo";
 import PublishingMarketing from "@/components/BigdataAnalytics/PublishingMarketing";
 import { useRouter } from "next/router";
+import Facebook from "@/components/_App/Facebook";
 
 const BigdataAnalytics = () => {
   const router = useRouter();
@@ -41,6 +42,8 @@ const BigdataAnalytics = () => {
         }}
       />
       <NavbarStyleFour textLogo="white" />
+      <Facebook />
+
       <MainBanner />
       <Projects />
       <DiscoverArea />
