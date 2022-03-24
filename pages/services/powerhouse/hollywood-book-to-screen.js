@@ -65,7 +65,7 @@ const HollywoodBookToScreen = () => {
                   Hollywood Book-to-Screen Service For Your Book's Film
                   Adaptation
                 </h4>
-                <p style={{ marginTop: "1rem" }}>
+                <p style={{ marginTop: "1rem", textAlign: "justify" }}>
                   With the Book-to-Screen service, you can see your book
                   transformed into a motion picture. After a thorough
                   examination and study of the story, a cinematic version will
@@ -77,7 +77,7 @@ const HollywoodBookToScreen = () => {
                   <h5 style={{ textDecoration: "underline" }}>
                     Hollywood Movie Script Coverage{" "}
                   </h5>
-                  <p style={{ marginTop: "1rem" }}>
+                  <p style={{ marginTop: "1rem", textAlign: "justify" }}>
                     Let us create a written outline of your book in a database
                     through our Movie Script Coverage and be discovered by major
                     studios in search of stories to adapt into motion pictures.
@@ -95,7 +95,7 @@ const HollywoodBookToScreen = () => {
                   <h5 style={{ textDecoration: "underline" }}>
                     Hollywood Movie Treatment{" "}
                   </h5>
-                  <p style={{ marginTop: "1rem" }}>
+                  <p style={{ marginTop: "1rem", textAlign: "justify" }}>
                     Movie Treatment service is one of the first steps in writing
                     a screenplay, and it aims to provide a summary of your
                     work's screenplay idea and give you the Hollywood style of
@@ -118,7 +118,7 @@ const HollywoodBookToScreen = () => {
                   </p>
                   <ul>
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         Professional screenwriters who have experience adapting
                         books to film and television will write a 7–10-page
                         treatment detailing how to convert your manuscript into
@@ -126,14 +126,14 @@ const HollywoodBookToScreen = () => {
                       </p>
                     </li>
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         Directory registration of your movie treatment to gain
                         traction among movie reviewers and film producers
                       </p>
                     </li>
 
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         US Copyright Office application to help you retain full
                         ownership of your treatment, which you can use during
                         your pitch appointments on your screenplay applications
@@ -146,7 +146,7 @@ const HollywoodBookToScreen = () => {
                   <h5 style={{ textDecoration: "underline" }}>
                     Hollywood Movie Screenplay
                   </h5>
-                  <p style={{ marginTop: "1rem" }}>
+                  <p style={{ marginTop: "1rem", textAlign: "justify" }}>
                     Your story’s path to Hollywood fame rests entirely in your
                     hands, and we want to help you chart that course with our
                     Movie Screenplay service. We are connected to a network of
@@ -167,13 +167,13 @@ const HollywoodBookToScreen = () => {
                   </p>
                   <ul>
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         A carefully written screenplay by one of the first-rate
                         screenwriters based on your approved movie treatment
                       </p>
                     </li>
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         Character dialogue and detailed story events will be
                         included in the screenplay, which will be created using
                         industry-standard formatting and tools.
@@ -181,20 +181,20 @@ const HollywoodBookToScreen = () => {
                     </li>
 
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         Submission of your draft screenplay to a producer for
                         review in preparation for a film adaptation Directory
                       </p>
                     </li>
 
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         Registration of your screenplay to gain attention from
                         co-writers, movie reviewers, and producers
                       </p>
                     </li>
                     <li>
-                      <p>
+                      <p style={{ textAlign: "justify" }}>
                         US Copyright Office application to help you retain full
                         ownership of your screenplay, which you can use to
                         produce your own indie film
