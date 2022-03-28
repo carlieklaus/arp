@@ -72,12 +72,7 @@ const InternetBasedMarketing = () => {
 
                 <div style={{ marginTop: "2rem" }}>
                   <Row>
-                    <Col
-                      lg={6}
-                      md={6}
-                      style={{ marginTop: "2rem" }}
-                      style={{ marginTop: "2rem" }}
-                    >
+                    <Col lg={6} md={6} style={{ marginTop: "2rem" }}>
                       <h5>Blog Tour Service</h5>
                       <p>
                         Through our Blog Tour Service, authors get the chance to
@@ -170,24 +165,25 @@ const InternetBasedMarketing = () => {
                       </p>
                     </Col>
 
-                    {/* <Col lg={6} md={6} style={{ marginTop: "2rem" }}>
-                      <h5>Google Marketing</h5>
+                    <Col lg={6} md={6} style={{ marginTop: "2rem" }}>
+                      <h5>Advanced Web Design</h5>
                       <p>
-                        Boost the visibility of your book to your target
-                        audience through our Google Marketing service. This
-                        platform allows you to use specific targeting parameters
-                        such as location, age, language, audience interest,
-                        topic, keywords, and even specific websites that are
-                        part of Google’s network.
+                        With a dedicated website accessible to millions of
+                        readers across the world, we at Author Reputation Press
+                        seek to establish a strong online presence for our
+                        authors. Our web developers work around the clock to
+                        create the best possible web design for your book and
+                        author brand.
                       </p>
                       <p>
-                        As the largest web search engine, Google can draw a lot
-                        of attention for your book if given the right marketing
-                        strategy. Author Reputation Press maintains a track
-                        record of successfully promoting books using the power
-                        of Google search engine.
+                        We also assist you in expanding your network by
+                        connecting your author website to online bookstores,
+                        book clubs, and author organizations, bringing your name
+                        in front of other authors. The possibilities are
+                        limitless and taking advantage of this chance will
+                        almost certainly increase your book's sales.
                       </p>
-                    </Col> */}
+                    </Col>
                   </Row>
                 </div>
               </div>
