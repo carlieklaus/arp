@@ -6,7 +6,6 @@ import ProductSlider from "@/components/Shop/ProductSlider";
 import ProductsDetailsTabs from "@/components/Shop/ProductsDetailsTabs";
 import { useRouter } from "next/router";
 import { API_URL } from "config";
-import Head from "next/head";
 import { NextSeo } from "next-seo";
 
 const ProductDetails = ({ product }) => {

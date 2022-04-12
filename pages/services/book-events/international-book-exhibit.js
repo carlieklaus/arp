@@ -4,8 +4,9 @@ import Footer from "@/components/_App/Footer";
 import PageBanner from "@/components/Common/PageBanner";
 import { useRouter } from "next/router";
 import { Container, Button } from "react-bootstrap";
-import { NextSeo } from "next-seo";
+// import { NextSeo } from "next-seo";
 import { Table } from "react-bootstrap";
+import ServicesSeo from "@/components/_App/ServicesSeo";
 
 const InternationalBookExhibit = () => {
   const router = useRouter();
@@ -16,7 +17,8 @@ const InternationalBookExhibit = () => {
 
   return (
     <>
-      <NextSeo
+      <ServicesSeo name={"International Book Exhibit"} />
+      {/* <NextSeo
         title="International Book Exhibit | Services"
         description=""
         canonical={
@@ -31,7 +33,7 @@ const InternationalBookExhibit = () => {
           description: "",
           images: [
             {
-              url: "/images/logo-book",
+              url: "/images/logo-book.png",
               width: 800,
               height: 600,
               alt: "Author Reputation Press Logo",
@@ -41,7 +43,7 @@ const InternationalBookExhibit = () => {
           site_name:
             process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
         }}
-      />
+      /> */}
       <Navbar />
 
       <PageBanner pageTitle="Book Events and Tours" />

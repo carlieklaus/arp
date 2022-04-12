@@ -28,7 +28,7 @@ const AuthorProfile = ({ user }) => {
           description: "Author's Profile",
           images: [
             {
-              url: "/images/logo-book",
+              url: "/images/logo-book.png",
               width: 800,
               height: 600,
               alt: "Author Reputation Press Logo",

@@ -5,7 +5,8 @@ import PageBanner from "@/components/Common/PageBanner";
 import { useRouter } from "next/router";
 import { Container, Button } from "react-bootstrap";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
+// import { NextSeo } from "next-seo";
+import ServicesSeo from "@/components/_App/ServicesSeo";
 
 const BlackAndWhite = () => {
   const router = useRouter();
@@ -16,7 +17,8 @@ const BlackAndWhite = () => {
 
   return (
     <>
-      <NextSeo
+      <ServicesSeo name={"Black And White"} />
+      {/* <NextSeo
         title="Black and White | Services"
         description=""
         canonical={
@@ -31,7 +33,7 @@ const BlackAndWhite = () => {
           description: "",
           images: [
             {
-              url: "/images/logo-book",
+              url: "/images/logo-book.png",
               width: 800,
               height: 600,
               alt: "Author Reputation Press Logo",
@@ -41,7 +43,7 @@ const BlackAndWhite = () => {
           site_name:
             process.env.NEXT_PUBLIC_URL ?? "https://authorreputationpress.com/",
         }}
-      />
+      /> */}
       <Navbar />
 
       <PageBanner pageTitle="Content and Creativity" />

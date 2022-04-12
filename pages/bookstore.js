@@ -92,7 +92,7 @@ const Bookstore = ({ total }) => {
             "Readers get the right and best books of different genres at the right prices at Author Reputation Press online bookstore",
           images: [
             {
-              url: "/images/logo-book",
+              url: "/images/logo-book.png",
               width: 800,
               height: 600,
               alt: "Author Reputation Press Logo",
