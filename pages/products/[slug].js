@@ -130,7 +130,7 @@ const ProductDetails = ({ product }) => {
                     }`}
                     data-item-id={`${product?.id}${type?.name}`}
                     data-item-price={type?.price}
-                    data-item-url={`/products/${product?.slug}/`}
+                    data-item-url={`/products/${product?.slug}`}
                     data-item-name={product?.title}
                     data-item-image={product?.bookCover?.url}
                     data-item-description={type?.name}
