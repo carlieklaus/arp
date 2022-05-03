@@ -453,7 +453,7 @@ const Royalties = ({ jwt, user }) => {
                 </p>
                 <p>2. Print the downloaded form.</p>
                 <p>
-                  3. Fill the form religously and make sure you sign it in a
+                  3. Fill out the form religously and make sure you sign it in a
                   handwritten manner.
                 </p>
                 <p>
