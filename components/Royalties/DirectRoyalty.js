@@ -83,12 +83,12 @@ const DirectRoyalty = ({ user }) => {
               <tr>
                 <th>Title</th>
                 <th>Date</th>
-                <th>ISBN</th>
+                {/* <th>ISBN</th> */}
                 <th>Format</th>
-                <th>Source</th>
+                {/* <th>Source</th> */}
                 <th>Quantity</th>
-                <th>Net Sale</th>
-                <th>Percentage</th>
+                {/* <th>Net Sale</th> */}
+                {/* <th>Percentage</th> */}
                 {/* <th>Withdraw Eligible</th> */}
                 <th>Author Earning</th>
                 <th>Claimed</th>
@@ -101,12 +101,12 @@ const DirectRoyalty = ({ user }) => {
                   <tr key={item?.id}>
                     <td>{item?.title}</td>
                     <td>{dayjs(item?.date).format("MMM DD")}</td>
-                    <td>{item?.isbn}</td>
+                    {/* <td>{item?.isbn}</td> */}
                     <td>{item?.bookFormat}</td>
-                    <td>{item?.source}</td>
+                    {/* <td>{item?.source}</td> */}
                     <td>{item?.quantity}</td>
-                    <td>${item?.netsale}</td>
-                    <td>{item?.percentage}%</td>
+                    {/* <td>${item?.netsale}</td> */}
+                    {/* <td>{item?.percentage}%</td> */}
                     {/* <td>{item?.withdrawEligible}</td> */}
                     <td>${item?.authorEarning}</td>
                     <td>{item?.claimed == false ? "No" : "Yes"}</td>
