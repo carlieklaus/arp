@@ -77,7 +77,7 @@ const Navbar = ({ textLogo = "white" }) => {
               <div className="brand-logo">
                 <a onClick={toggleNavbar} className="navbar-brand">
                   <Image
-                    src="/images/logo-book.png.png"
+                    src="/images/logo-book.png"
                     height="50%"
                     width="50%"
                     alt="logo"

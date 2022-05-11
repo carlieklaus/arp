@@ -26,7 +26,7 @@ const SearchServices = () => {
   useEffect(() => {}, [services, subservices]);
 
   const servicesQuery = async () => {
-    const query = await fetch(`${API_URL}/services`, {
+    const query = await fetch(`${API_URL}/services?_sort=id`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
