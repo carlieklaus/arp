@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "@/utils/ActiveLink";
 import * as Icon from "react-feather";
 import Image from "next/image";
