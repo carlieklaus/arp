@@ -85,6 +85,7 @@ const DirectRoyalty = ({ user }) => {
                 <th>Date</th>
                 {/* <th>ISBN</th> */}
                 <th>Format</th>
+                <th>Location</th>
                 {/* <th>Source</th> */}
                 <th>Quantity</th>
                 {/* <th>Net Sale</th> */}
@@ -100,9 +101,10 @@ const DirectRoyalty = ({ user }) => {
                 directRoyalties.map((item) => (
                   <tr key={item?.id}>
                     <td>{item?.title}</td>
-                    <td>{dayjs(item?.date).format("MMM YYYY")}</td>
+                    <td>{dayjs(item?.date).format("MMMM YYYY")}</td>
                     {/* <td>{item?.isbn}</td> */}
                     <td>{item?.bookFormat}</td>
+                    <td>{item?.location === "N/A" ? "-" : item?.location}</td>
                     {/* <td>{item?.source}</td> */}
                     <td>{item?.quantity}</td>
                     {/* <td>${item?.netsale}</td> */}

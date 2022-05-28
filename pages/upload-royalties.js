@@ -12,6 +12,7 @@ import { API_URL } from "config";
 import Swal from "sweetalert2";
 import XLSX from "xlsx";
 import { Loader } from "react-overlay-loader";
+import dayjs from "dayjs";
 
 const schema = yup.object().shape({
   email: yup
@@ -98,7 +99,7 @@ const UploadRoyalties = () => {
             changed.map(async (y) => {
               const createRoyalty = {
                 arpNumber: String(y["Arp Number"]).toUpperCase(),
-                date: y?.Date,
+                date: dayjs(y?.Date).toISOString(),
                 isbn: String(y?.ISBN),
                 authorEarning: y["author earning"],
                 claimed:
@@ -117,6 +118,7 @@ const UploadRoyalties = () => {
                     : "",
                 type: data?.type,
                 uploadedBy: data?.email,
+                location: y?.location,
               };
 
               const request = await fetch(`${API_URL}/royalties`, {
