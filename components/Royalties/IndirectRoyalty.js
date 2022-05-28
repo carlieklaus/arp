@@ -105,7 +105,11 @@ const IndirectRoyalty = ({ user }) => {
                     <td>{dayjs(item?.date).format("MMMM YYYY")}</td>
                     {/* <td>{item?.isbn}</td> */}
                     <td>{item?.bookFormat}</td>
-                    <td>{item?.location === "N/A" ? "-" : item?.location}</td>
+                    <td>
+                      {item?.location === "N/A" || item?.location == ""
+                        ? "-"
+                        : item?.location}
+                    </td>
                     {/* <td>{item?.source}</td> */}
                     <td>{item?.quantity}</td>
                     {/* <td>${item?.netsale}</td> */}
