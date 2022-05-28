@@ -34,7 +34,7 @@ const IndirectRoyalty = ({ user }) => {
 
   const indirectRoyaltyQuery = async () => {
     const query = await fetch(
-      `${API_URL}/royalties?arpNumber=${user?.arpNumber}&type=Indirect&_limit=${ROYALTY_PER_PAGE}&_start=${indirectStart}`,
+      `${API_URL}/royalties?arpNumber=${user?.arpNumber}&type=Indirect&_limit=${ROYALTY_PER_PAGE}&_start=${indirectStart}&_sort=date:DESC`,
       {
         method: "GET",
         headers: {
@@ -46,7 +46,7 @@ const IndirectRoyalty = ({ user }) => {
   };
 
   const { data: indirectRoyalties, error: indirectRoyaltyError } = useSWR(
-    `${API_URL}/royalties?arpNumber=${user?.arpNumber}&type=Indirect&_limit=${ROYALTY_PER_PAGE}&_start=${indirectStart}`,
+    `${API_URL}/royalties?arpNumber=${user?.arpNumber}&type=Indirect&_limit=${ROYALTY_PER_PAGE}&_start=${indirectStart}&_sort=date:DESC`,
     indirectRoyaltyQuery
   );
 
@@ -101,7 +101,7 @@ const IndirectRoyalty = ({ user }) => {
                 indirectRoyalties.map((item) => (
                   <tr key={item?.id}>
                     <td>{item?.title}</td>
-                    <td>{dayjs(item?.date).format("MMM DD")}</td>
+                    <td>{dayjs(item?.date).format("MMM YYYY")}</td>
                     {/* <td>{item?.isbn}</td> */}
                     <td>{item?.bookFormat}</td>
                     {/* <td>{item?.source}</td> */}
