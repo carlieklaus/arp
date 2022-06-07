@@ -264,7 +264,7 @@ const Royalties = ({ jwt, user }) => {
               {totalClaimableAmount != null ||
               totalClaimableAmount != undefined ? (
                 <NumberFormat
-                  value={totalClaimableAmount}
+                  value={parseFloat(totalClaimableAmount).toFixed(2)}
                   displayType={"text"}
                   thousandSeparator={true}
                   prefix={"$"}
@@ -370,7 +370,18 @@ const Royalties = ({ jwt, user }) => {
                       {" "}
                       {dayjs(item?.updated_at).format("MMM DD, YYYY h:mm A")}
                     </td>
-                    <td>${item?.totalClaimableAmount}</td>
+                    <td>
+                      <NumberFormat
+                        value={parseFloat(item?.totalClaimableAmount).toFixed(
+                          2
+                        )}
+                        displayType={"text"}
+                        thousandSeparator={true}
+                        prefix={"$"}
+                        decimalScale={2}
+                        decimalSeparator={"."}
+                      />
+                    </td>
                     <td>{item?.status}</td>
 
                     <Modal
@@ -391,7 +402,9 @@ const Royalties = ({ jwt, user }) => {
                             <h5>
                               Total Claimable Amount:
                               <NumberFormat
-                                value={item?.totalClaimableAmount}
+                                value={parseFloat(
+                                  item?.totalClaimableAmount
+                                ).toFixed(2)}
                                 displayType={"text"}
                                 thousandSeparator={true}
                                 prefix={"$"}
@@ -420,7 +433,18 @@ const Royalties = ({ jwt, user }) => {
                                       <td>{royalty?.source}</td>
                                       <td>{royalty?.quantity}</td>
                                       <td>{royalty?.netsale}</td>
-                                      <td>{royalty?.authorEarning}</td>
+                                      <td>
+                                        <NumberFormat
+                                          value={parseFloat(
+                                            royalty?.authorEarning
+                                          ).toFixed(2)}
+                                          displayType={"text"}
+                                          thousandSeparator={true}
+                                          prefix={"$"}
+                                          decimalScale={2}
+                                          decimalSeparator={"."}
+                                        />
+                                      </td>
                                       <td>{royalty?.type}</td>
                                     </tr>
                                   ))}

@@ -118,7 +118,7 @@ const IndirectRoyalty = ({ user }) => {
                     {/* <td>{item?.withdrawEligible}</td> */}
                     <td style={{ textAlign: "right" }}>
                       <NumberFormat
-                        value={item?.authorEarning}
+                        value={parseFloat(item?.authorEarning).toFixed(2)}
                         displayType={"text"}
                         thousandSeparator={true}
                         prefix={"$"}
