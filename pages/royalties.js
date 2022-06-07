@@ -22,6 +22,7 @@ import useSWR from "swr";
 import { API_URL } from "config";
 import { useRouter } from "next/router";
 import dayjs from "dayjs";
+import NumberFormat from "react-number-format";
 
 import { NextSeo } from "next-seo";
 
@@ -258,7 +259,22 @@ const Royalties = ({ jwt, user }) => {
           }}
         >
           <div>
-            <h3>Total Claimable Royalty: ${totalClaimableAmount ?? ""}</h3>
+            <h3>
+              Total Claimable Royalty:{" "}
+              {totalClaimableAmount != null ||
+              totalClaimableAmount != undefined ? (
+                <NumberFormat
+                  value={totalClaimableAmount}
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  prefix={"$"}
+                  decimalScale={2}
+                  decimalSeparator={"."}
+                />
+              ) : (
+                ""
+              )}
+            </h3>
             <p className="error-message">
               Note: You can only claim your royalty when it reaches or exceeds
               $50.
@@ -373,8 +389,15 @@ const Royalties = ({ jwt, user }) => {
                           <h6>Royalties associated with this claim request</h6>
                           <div className="mr-2">
                             <h5>
-                              Total Claimable Amount: $
-                              {item?.totalClaimableAmount}
+                              Total Claimable Amount:
+                              <NumberFormat
+                                value={item?.totalClaimableAmount}
+                                displayType={"text"}
+                                thousandSeparator={true}
+                                prefix={"$"}
+                                decimalScale={2}
+                                decimalSeparator={"."}
+                              />
                             </h5>
                           </div>
                           <div className="mr-2">

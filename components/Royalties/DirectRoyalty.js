@@ -81,7 +81,7 @@ const DirectRoyalty = ({ user }) => {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>Title</th>
+                <th style={{ textAlign: "left" }}>Title</th>
                 <th>Date</th>
                 {/* <th>ISBN</th> */}
                 <th>Format</th>
@@ -91,7 +91,7 @@ const DirectRoyalty = ({ user }) => {
                 {/* <th>Net Sale</th> */}
                 {/* <th>Percentage</th> */}
                 {/* <th>Withdraw Eligible</th> */}
-                <th>Author Earning</th>
+                <th style={{ textAlign: "right" }}>Author Earning</th>
                 <th>Claimed</th>
                 {/* <th>Status</th> */}
               </tr>
@@ -100,7 +100,7 @@ const DirectRoyalty = ({ user }) => {
               {directRoyalties.length > 0 &&
                 directRoyalties.map((item) => (
                   <tr key={item?.id}>
-                    <td>{item?.title}</td>
+                    <td style={{ textAlign: "left" }}>{item?.title}</td>
                     <td>{dayjs(item?.date).format("MMMM YYYY")}</td>
                     {/* <td>{item?.isbn}</td> */}
                     <td>{item?.bookFormat}</td>
@@ -114,7 +114,16 @@ const DirectRoyalty = ({ user }) => {
                     {/* <td>${item?.netsale}</td> */}
                     {/* <td>{item?.percentage}%</td> */}
                     {/* <td>{item?.withdrawEligible}</td> */}
-                    <td>${item?.authorEarning}</td>
+                    <td style={{ textAlign: "right" }}>
+                      <NumberFormat
+                        value={item?.authorEarning}
+                        displayType={"text"}
+                        thousandSeparator={true}
+                        prefix={"$"}
+                        decimalScale={2}
+                        decimalSeparator={"."}
+                      />
+                    </td>
                     <td>{item?.claimed == false ? "No" : "Yes"}</td>
                     {/* <td>{item?.status}</td> */}
                   </tr>

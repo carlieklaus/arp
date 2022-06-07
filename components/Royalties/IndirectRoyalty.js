@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { Loader } from "react-overlay-loader";
 import { Table } from "react-bootstrap";
 import dayjs from "dayjs";
+import NumberFormat from "react-number-format";
 
 const IndirectRoyalty = ({ user }) => {
   const [indirectPage, setIndirectPage] = useState(1);
@@ -82,7 +83,7 @@ const IndirectRoyalty = ({ user }) => {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>Title</th>
+                <th style={{ textAlign: "left" }}>Title</th>
                 <th>Date</th>
                 {/* <th>ISBN</th> */}
                 <th>Format</th>
@@ -92,7 +93,7 @@ const IndirectRoyalty = ({ user }) => {
                 {/* <th>Net Sale</th> */}
                 {/* <th>Percentage</th> */}
                 {/* <th>Withdraw Eligible</th> */}
-                <th>Author Earning</th>
+                <th style={{ textAlign: "right" }}>Author Earning</th>
                 <th>Claimed</th>
                 {/* <th>Status</th> */}
               </tr>
@@ -101,7 +102,7 @@ const IndirectRoyalty = ({ user }) => {
               {indirectRoyalties.length > 0 &&
                 indirectRoyalties.map((item) => (
                   <tr key={item?.id}>
-                    <td>{item?.title}</td>
+                    <td style={{ textAlign: "left" }}>{item?.title}</td>
                     <td>{dayjs(item?.date).format("MMMM YYYY")}</td>
                     {/* <td>{item?.isbn}</td> */}
                     <td>{item?.bookFormat}</td>
@@ -115,7 +116,16 @@ const IndirectRoyalty = ({ user }) => {
                     {/* <td>${item?.netsale}</td> */}
                     {/* <td>{item?.percentage}%</td> */}
                     {/* <td>{item?.withdrawEligible}</td> */}
-                    <td>${item?.authorEarning}</td>
+                    <td style={{ textAlign: "right" }}>
+                      <NumberFormat
+                        value={item?.authorEarning}
+                        displayType={"text"}
+                        thousandSeparator={true}
+                        prefix={"$"}
+                        decimalScale={2}
+                        decimalSeparator={"."}
+                      />
+                    </td>
                     <td>{item?.claimed == false ? "No" : "Yes"}</td>
                     {/* <td>{item?.status}</td> */}
                   </tr>
