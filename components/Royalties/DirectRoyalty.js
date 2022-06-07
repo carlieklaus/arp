@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { Loader } from "react-overlay-loader";
 import { Table } from "react-bootstrap";
 import dayjs from "dayjs";
+import NumberFormat from "react-number-format";
 
 const DirectRoyalty = ({ user }) => {
   const [directPage, setDirectPage] = useState(1);
