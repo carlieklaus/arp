@@ -346,6 +346,7 @@ const Royalties = ({ jwt, user }) => {
                 <th>Delivery Address</th>
                 <th>Date and Time Submitted</th>
                 <th>Date and Time Updated</th>
+                <th>Date Claimed</th>
                 <th>Total Claimable Amount</th>
                 <th>Status</th>
               </tr>
@@ -369,6 +370,12 @@ const Royalties = ({ jwt, user }) => {
                     <td>
                       {" "}
                       {dayjs(item?.updated_at).format("MMM DD, YYYY h:mm A")}
+                    </td>
+                    <td>
+                      {" "}
+                      {item?.dateClaimed != null
+                        ? dayjs(item?.dateClaimed).format("MMM DD, YYYY")
+                        : "-"}
                     </td>
                     <td>
                       <NumberFormat
