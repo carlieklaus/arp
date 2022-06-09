@@ -59,7 +59,7 @@ const Socrates = () => {
                 <div className="bar"></div>
               </div>
 
-              <h3>Price: $3,100</h3>
+              <h3>Price: $3,699</h3>
               <p style={{ marginTop: "1rem" }}>
                 The Socrates publishing package offers the best-in-class
                 combination of publishing and marketing services to give your
@@ -74,7 +74,7 @@ const Socrates = () => {
 
               <Container>
                 <Row>
-                  <Col sm={6} md={6} lg={4}>
+                  <Col sm={6} md={6} lg={6}>
                     <h5>Available Format</h5>
                     <ul>
                       <li>
@@ -88,7 +88,7 @@ const Socrates = () => {
                       </li>
                     </ul>
                   </Col>
-                  <Col sm={6} md={6} lg={4}>
+                  <Col sm={6} md={6} lg={6}>
                     <h5>Cover</h5>
                     <ul>
                       <li>
@@ -99,27 +99,52 @@ const Socrates = () => {
                       </li>
                     </ul>
                   </Col>
-                  <Col sm={6} md={6} lg={4}>
-                    <h5>Interior Layout</h5>
+                  <Col sm={6} md={6} lg={6}>
+                    <h5>Add Ons</h5>
                     <ul>
                       <li>
+                        <h6>Author's Discount on Bulk Order</h6>
+                      </li>
+                      <li>
+                        <h6>Lowest SRP</h6>
+                      </li>
+                      <li>
+                        <h6>1 Paperback Author's Copy</h6>
+                      </li>
+                      <li>
+                        <h6>1 Hardback Author's Copy</h6>
+                      </li>
+                      <li>
+                        <h6>20 Paperback Free Copies</h6>
+                      </li>
+                      <li>
+                        <h6>10 Hardback Free Copies</h6>
+                      </li>
+                      <li>
+                        <h6>Book Returns Insurance for 36 months</h6>
+                      </li>
+                      <li>
                         <h6>
-                          Trim sizes: 6.0 “x 9.0” and 5.5″ X 8.5″ and 8.5″ x
-                          11.0″
+                          Promotions on ARP’s blogsite and social media pages
                         </h6>
                       </li>
                       <li>
-                        <h6>Custom Text & Layout Formatting</h6>
+                        <h6>Professional’s Review</h6>
                       </li>
                       <li>
-                        <h6>Unlimited Image Insertion</h6>
+                        <h6>Comprehensive Facebook Ad Campaign – 45 Days</h6>
                       </li>
                       <li>
-                        <h6>Unlimited Corrections – Production Stage</h6>
+                        <h6>
+                          Social Media Management/Social Media Blast – 60 Days
+                        </h6>
+                      </li>
+                      <li>
+                        <h6>Amazon Bookseller’s Campaign – 60 Days</h6>
                       </li>
                     </ul>
                   </Col>
-                  <Col sm={6} md={6} lg={4}>
+                  <Col sm={6} md={6} lg={6}>
                     <h5>Registrations And Distribution</h5>
                     <ul>
                       <li>
@@ -148,29 +173,24 @@ const Socrates = () => {
                       </li>
                     </ul>
                   </Col>
-                  <Col sm={6} md={6} lg={4}>
-                    <h5>Add Ons</h5>
+
+                  <Col sm={6} md={6} lg={6}>
+                    <h5>Interior Layout</h5>
                     <ul>
                       <li>
-                        <h6>1 Paperback and 1 Hardback Author’s Copy</h6>
-                      </li>
-                      <li>
-                        <h6>15 Paperbacks and 5 Hardbacks (free copies)</h6>
-                      </li>
-                      <li>
                         <h6>
-                          Free promotions on our blog site and social media
-                          pages.
+                          Trim size: 6.0″ x 9.0″ and 5.5″ X 8.5″ and 8.5″ x
+                          11.0″
                         </h6>
                       </li>
                       <li>
-                        <h6>Lowest SRP (Guaranteed)</h6>
+                        <h6>Standard Text & Layout Formatting</h6>
                       </li>
                       <li>
-                        <h6>Author Discount for Bulk Book Orders</h6>
+                        <h6>Unlimited Image Insertion</h6>
                       </li>
                       <li>
-                        <h6>Book Returns Insurance for 24 months.</h6>
+                        <h6>Unlimited Corrections – Production Stage</h6>
                       </li>
                     </ul>
                   </Col>

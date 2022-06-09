@@ -69,7 +69,7 @@ const BlackAndWhite = () => {
                 <h5>Custom Print Your Book With Our Black and White Package</h5>
                 <p style={{ marginTop: "1rem" }}>
                   The route to self-publishing is often a tricky path. Authors
-                  who are new to this approach may face a number of daunting
+                  who are new to this approach may face several daunting
                   challenges including the costs and requirements for launching
                   their first book. On the other hand, self-publishing authors
                   who have been in the business for quite some time may have
@@ -79,7 +79,7 @@ const BlackAndWhite = () => {
                   Our Black & White publishing service offers the most
                   affordable packages for turning your manuscript into print.
                   It’s ideal for novels, short stories, poetry collections,
-                  memoirs, essays, and other plain text books.
+                  memoirs, essays, and other plain textbooks.
                 </p>
               </div>
             </div>
@@ -109,10 +109,7 @@ const BlackAndWhite = () => {
                 <div className="pricing-features">
                   <ul>
                     <li className="active">Paperback</li>
-                    <li className="active"> E-book</li>
-                    <li className="active">
-                      Standard Text & Layout Formatting
-                    </li>
+                    <li className="active">E-book</li>
                   </ul>
                 </div>
 
@@ -132,7 +129,7 @@ const BlackAndWhite = () => {
 
                 <div className="price">
                   <span>
-                    <sup>$</sup>2,100 <span></span>
+                    <sup>$</sup>2,699 <span></span>
                   </span>
                 </div>
 
@@ -160,7 +157,7 @@ const BlackAndWhite = () => {
 
                 <div className="price">
                   <span>
-                    <sup>$</sup>3,100 <span></span>
+                    <sup>$</sup>3,699 <span></span>
                   </span>
                 </div>
 

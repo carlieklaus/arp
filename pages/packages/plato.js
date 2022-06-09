@@ -59,7 +59,7 @@ const Plato = () => {
                 <div className="bar"></div>
               </div>
 
-              <h3>Price: $2,100</h3>
+              <h3>Price: $2,699</h3>
               <p style={{ marginTop: "1rem" }}>
                 The Plato publishing service is the better deal for
                 self-publishing authors. In addition to the paperback and E-book
@@ -101,7 +101,51 @@ const Plato = () => {
                       </li>
                     </ul>
                   </Col>
-
+                  <Col sm={6} md={6} lg={6}>
+                    <h5>Add Ons</h5>
+                    <ul>
+                      <li>
+                        <h6>Author's Discount on Bulk Order</h6>
+                      </li>
+                      <li>
+                        <h6>Lowest SRP</h6>
+                      </li>
+                      <li>
+                        <h6>1 Paperback Author's Copy</h6>
+                      </li>
+                      <li>
+                        <h6>1 Hardback Author's Copy</h6>
+                      </li>
+                      <li>
+                        <h6>10 Paperback Free Copies</h6>
+                      </li>
+                      <li>
+                        <h6>5 Hardback Free Copies</h6>
+                      </li>
+                      <li>
+                        <h6>Book Returns Insurance for 12 months</h6>
+                      </li>
+                      <li>
+                        <h6>
+                          Promotions on ARP’s blogsite and social media pages
+                        </h6>
+                      </li>
+                      <li>
+                        <h6>Professional’s Review</h6>
+                      </li>
+                      <li>
+                        <h6>Comprehensive Facebook Ad Campaign – 30 Days</h6>
+                      </li>
+                      <li>
+                        <h6>
+                          Social Media Management/Social Media Blast – 30 Days
+                        </h6>
+                      </li>
+                      <li>
+                        <h6>Amazon Bookseller’s Campaign – 30 Days</h6>
+                      </li>
+                    </ul>
+                  </Col>
                   <Col sm={6} md={6} lg={6}>
                     <h5>Registrations And Distribution</h5>
                     <ul>
@@ -131,29 +175,24 @@ const Plato = () => {
                       </li>
                     </ul>
                   </Col>
+
                   <Col sm={6} md={6} lg={6}>
-                    <h5>Add Ons</h5>
+                    <h5>Interior Layout</h5>
                     <ul>
                       <li>
-                        <h6>1 Paperback and hardback author’s copy</h6>
-                      </li>
-                      <li>
-                        <h6>7 Paperbacks and 3 hardbacks (Free Copies)</h6>
-                      </li>
-                      <li>
                         <h6>
-                          Free Promotions on our blog site and social media
-                          pages
+                          Trim size: 6.0″ x 9.0″ and 5.5″ X 8.5″ and 8.5″ x
+                          11.0″
                         </h6>
                       </li>
                       <li>
-                        <h6>Lowest SRP (Guaranteed)</h6>
+                        <h6>Standard Text & Layout Formatting</h6>
                       </li>
                       <li>
-                        <h6>Author Discount for Bulk Book Orders</h6>
+                        <h6>Unlimited Image Insertion</h6>
                       </li>
                       <li>
-                        <h6>Book Returns Insurance for 12 Months</h6>
+                        <h6>Unlimited Corrections – Production Stage</h6>
                       </li>
                     </ul>
                   </Col>
