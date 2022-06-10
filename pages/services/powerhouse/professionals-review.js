@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { Container, Button } from "react-bootstrap";
 import * as Icon from "react-feather";
 
-const PublishersReview = () => {
+const ProfessionalsReview = () => {
   const router = useRouter();
 
   const backButtonHandler = () => {
@@ -16,7 +16,7 @@ const PublishersReview = () => {
   return (
     <>
       <NextSeo
-        title="Publisher's Review | Services"
+        title="Professional's Review | Services"
         description=""
         canonical={
           (
@@ -26,7 +26,7 @@ const PublishersReview = () => {
         }
         openGraph={{
           url: process.env.NEXT_PUBLIC_URL,
-          title: "Publisher's Review | Services",
+          title: "Professional's Review | Services",
           description: "",
           images: [
             {
@@ -50,7 +50,7 @@ const PublishersReview = () => {
               <div className="col-lg-12 col-md-12 services-content">
                 <div className="section-title">
                   <div className="services-title-back ">
-                    <h1>Publisher's Review</h1>
+                    <h1>Professional's Review</h1>
                     <Button
                       className="btn btn-secondary"
                       onClick={backButtonHandler}
@@ -85,10 +85,10 @@ const PublishersReview = () => {
                 <p style={{ marginTop: "1rem" }}>
                   Aside from readers, booksellers and librarians rely on reviews
                   to decide what books to stock. They often prefer reviews from
-                  mainstream media, publications, and the publishers themselves.
-                  A review that gives a positive feedback for your book and
-                  credited to a well-known source will catch a bookseller’s
-                  attention.
+                  mainstream media, publications, and the Professionals
+                  themselves. A review that gives a positive feedback for your
+                  book and credited to a well-known source will catch a
+                  bookseller’s attention.
                 </p>
 
                 <p style={{ marginTop: "1rem" }}>
@@ -98,13 +98,15 @@ const PublishersReview = () => {
                   Combined with effective sales pitch, book reviews
                 </p>
                 <hr />
-                <h4>How The Publisher's Review Can Help You Sell More Books</h4>
+                <h4>
+                  How The Professional's Review Can Help You Sell More Books
+                </h4>
                 <div style={{ marginTop: "2rem" }}>
                   <h5>We Will Add The Review To Your ARP Bookstore Listing</h5>
                   <p>
                     Our online bookstore has a section dedicated to book
-                    reviews. The Publisher’s Review will be posted there so that
-                    the more professional reviews your book has, the more
+                    reviews. The Professional's Review will be posted there so
+                    that the more professional reviews your book has, the more
                     seriously readers will take your work.
                   </p>
                 </div>
@@ -142,7 +144,7 @@ const PublishersReview = () => {
 
                 <div style={{ marginTop: "2rem" }}>
                   <h5 style={{ textAlign: "center" }}>
-                    Our Publisher's Review service includes two tiers with
+                    Our Professional's Review service includes two tiers with
                     different prices depending on the length of fulfillment
                     time. Please see the details in the table below:
                   </h5>
@@ -234,4 +236,4 @@ const PublishersReview = () => {
   );
 };
 
-export default PublishersReview;
+export default ProfessionalsReview;

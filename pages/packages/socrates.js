@@ -100,6 +100,55 @@ const Socrates = () => {
                     </ul>
                   </Col>
                   <Col sm={6} md={6} lg={6}>
+                    <h5>Interior Layout</h5>
+                    <ul>
+                      <li>
+                        <h6>
+                          Trim size: 6.0″ x 9.0″ and 5.5″ X 8.5″ and 8.5″ x
+                          11.0″
+                        </h6>
+                      </li>
+                      <li>
+                        <h6>Standard Text & Layout Formatting</h6>
+                      </li>
+                      <li>
+                        <h6>Unlimited Image Insertion</h6>
+                      </li>
+                      <li>
+                        <h6>Unlimited Corrections – Production Stage</h6>
+                      </li>
+                    </ul>
+                  </Col>
+                  <Col sm={6} md={6} lg={6}>
+                    <h5>Registrations And Distribution</h5>
+                    <ul>
+                      <li>
+                        <h6>Registration with Books In Print database</h6>
+                      </li>
+                      <li>
+                        <h6>Copyrights Registrations</h6>
+                      </li>
+                      <li>
+                        <h6>Assignment of ISBN</h6>
+                      </li>
+                      <li>
+                        <h6>Library of Congress Registration</h6>
+                      </li>
+                      <li>
+                        <h6>Worldwide Online Book Distribution</h6>
+                      </li>
+                      <li>
+                        <h6>Online book sales and Royalty Accounting</h6>
+                      </li>
+                      <li>
+                        <h6>Quarterly Royalty Payments</h6>
+                      </li>
+                      <li>
+                        <h6>ARP Bookstore Availability</h6>
+                      </li>
+                    </ul>
+                  </Col>
+                  <Col sm={6} md={6} lg={6}>
                     <h5>Add Ons</h5>
                     <ul>
                       <li>
@@ -141,56 +190,6 @@ const Socrates = () => {
                       </li>
                       <li>
                         <h6>Amazon Bookseller’s Campaign – 60 Days</h6>
-                      </li>
-                    </ul>
-                  </Col>
-                  <Col sm={6} md={6} lg={6}>
-                    <h5>Registrations And Distribution</h5>
-                    <ul>
-                      <li>
-                        <h6>Registration with Books In Print database</h6>
-                      </li>
-                      <li>
-                        <h6>Copyrights Registrations</h6>
-                      </li>
-                      <li>
-                        <h6>Assignment of ISBN</h6>
-                      </li>
-                      <li>
-                        <h6>Library of Congress Registration</h6>
-                      </li>
-                      <li>
-                        <h6>Worldwide Online Book Distribution</h6>
-                      </li>
-                      <li>
-                        <h6>Online book sales and Royalty Accounting</h6>
-                      </li>
-                      <li>
-                        <h6>Quarterly Royalty Payments</h6>
-                      </li>
-                      <li>
-                        <h6>ARP Bookstore Availability</h6>
-                      </li>
-                    </ul>
-                  </Col>
-
-                  <Col sm={6} md={6} lg={6}>
-                    <h5>Interior Layout</h5>
-                    <ul>
-                      <li>
-                        <h6>
-                          Trim size: 6.0″ x 9.0″ and 5.5″ X 8.5″ and 8.5″ x
-                          11.0″
-                        </h6>
-                      </li>
-                      <li>
-                        <h6>Standard Text & Layout Formatting</h6>
-                      </li>
-                      <li>
-                        <h6>Unlimited Image Insertion</h6>
-                      </li>
-                      <li>
-                        <h6>Unlimited Corrections – Production Stage</h6>
                       </li>
                     </ul>
                   </Col>
