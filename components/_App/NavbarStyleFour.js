@@ -229,6 +229,7 @@ const NavbarStyleFour = ({ textLogo = "white" }) => {
                     <a
                       onClick={toggleNavbar}
                       target="_blank"
+                      rel="nofollow"
                       className="nav-link"
                     >
                       Blog
