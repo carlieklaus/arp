@@ -16,19 +16,12 @@ const schema = yup.object().shape({
     .email("Invalid email format")
     .required("Email Address is required"),
   contact: yup.string().required("Contact is required"),
-  // .matches(
-  //   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
-  //   "Contact number is not valid"
-  // ),
   manuscript: yup
     .mixed()
-    .test("fileSize", "File is required", (value) => {
-      return value === undefined;
-    })
     .test("fileSize", "The file is too large", (value) => {
       return value && Number(value[0]?.size) < Number(500000000);
     })
-    .test("type", "We only support pdf, docx,  files", (value) => {
+    .test("type", "We only support pdf", (value) => {
       return value && value[0]?.type === "application/pdf";
     }),
 });
