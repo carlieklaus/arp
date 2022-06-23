@@ -66,7 +66,7 @@ const RadioInterview = () => {
                   on Ric Bratton’s show “This Week in America”
                 </h4>
                 <p style={{ marginTop: "1rem" }}>
-                  a popular radio program in the United States distributed
+                  The popular radio program in the United States distributed
                   across multiple channels. The interview is a perfect
                   opportunity to reach out to your potential readers and tell
                   them why they need to read your book.
