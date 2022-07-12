@@ -15,7 +15,7 @@ const AdvanceBookTrailer = () => {
   return (
     <>
       <NextSeo
-        title="Advance Book Trailer | Services"
+        title="Advanced Book Trailer | Services"
         description=""
         canonical={
           (
@@ -25,7 +25,7 @@ const AdvanceBookTrailer = () => {
         }
         openGraph={{
           url: process.env.NEXT_PUBLIC_URL,
-          title: "Advance Book Trailer | Services",
+          title: "Advanced Book Trailer | Services",
           description: "",
           images: [
             {
