@@ -42,7 +42,7 @@ const RefundPolicy = () => {
       />
       <Navbar />
 
-      <PageBanner pageTitle="Company" />
+      <PageBanner pageTitle="" />
 
       <div className="services-area ptb-80 ">
         <div className="container">
@@ -134,8 +134,21 @@ const RefundPolicy = () => {
                       More than 180 calendar days after paying for the service:
                       No refund will be issued.
                     </li>
+                    <li>
+                      After We start fulfillment of marketing service/s. No
+                      refund issued.
+                    </li>
                   </ul>
-                  <li>After We start fulfillment of marketing service/s:</li>
+                </ol>
+              </div>
+              <div className="mr-2">
+                <h5>BOOK ORDERS</h5>
+
+                <ol style={{ lineHeight: "2rem" }}>
+                  <li>
+                    After customer has given final approval of the order and
+                    books have been printed and underway to customer's address:
+                  </li>
                   <ul>
                     <li>No refund will be issued.</li>
                   </ul>
