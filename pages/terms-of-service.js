@@ -75,7 +75,7 @@ const TermsOfService = () => {
               </div>
 
               <div className="mr-2">
-                <h5>Use Licence</h5>
+                <h5>Use License</h5>
                 <p>
                   Permission is granted to temporarily download one copy of the
                   materials (information or software) on Author Reputation
