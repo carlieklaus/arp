@@ -23,23 +23,51 @@ class MyDocument extends Document {
         <body dir={dir} lang={locale}>
           <Main />
           <NextScript />
+
           <script
             async
             src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"
           ></script>
-          {/* <script async src="/scripts/olark.js"></script> */}
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-188319408-1"
           />
           <script src="/scripts/googleanalytics.js"></script>
-
           <div
             hidden
             id="snipcart"
             data-api-key={`${process.env.SNIPCART_SECRET_KEY}`}
             data-config-modal-style="side"
-          ></div>
+          >
+            <billing section="bottom">
+              <fieldset class="snipcart-form__set">
+                <div class="snipcart-form__field">
+                  <div class="snipcart-form__field-checkbox">
+                    <snipcart-label class="snipcart__font--tiny" for="phone">
+                      Phone Number
+                    </snipcart-label>
+                    <snipcart-input name="phone"></snipcart-input>
+                  </div>
+                </div>
+              </fieldset>
+            </billing>
+            <billing section="bottom">
+              <fieldset class="snipcart-form__set">
+                <div class="snipcart-form__field">
+                  <div class="snipcart-form__field-checkbox">
+                    <snipcart-checkbox name="disclaimer"></snipcart-checkbox>
+                    <snipcart-label
+                      for="disclaimer"
+                      class="snipcart__font--tiny snipcart-form__label--checkbox"
+                    >
+                      By checking the box, you agree to receive calls and email
+                      notification from ARP for order updates.
+                    </snipcart-label>
+                  </div>
+                </div>
+              </fieldset>
+            </billing>
+          </div>
         </body>
       </Html>
     );
