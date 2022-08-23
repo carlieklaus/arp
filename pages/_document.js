@@ -39,7 +39,7 @@ class MyDocument extends Document {
             data-api-key={`${process.env.SNIPCART_SECRET_KEY}`}
             data-config-modal-style="side"
           >
-            <billing section="bottom">
+            <billing section="top">
               <fieldset class="snipcart-form__set">
                 <div class="snipcart-form__field">
                   <snipcart-label class="snipcart__font--tiny" for="phone">
