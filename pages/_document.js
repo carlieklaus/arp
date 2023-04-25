@@ -28,11 +28,11 @@ class MyDocument extends Document {
             async
             src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"
           ></script>
-          <script
+          {/* <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-188319408-1"
-          />
-          <script src="/scripts/googleanalytics.js"></script>
+          /> */}
+          {/* <script src="/scripts/googleanalytics.js"></script> */}
           <div
             hidden
             id="snipcart"
